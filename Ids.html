@@ -1,541 +1,357 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author"      content="Riley">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>Amateur Radio Club at UNC Charlotte</title>
-
-	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
-
+	<link rel="shortcut icon" href="assets/images/favicon.png">
 	<link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">
 
 	<!-- Custom styles for our template -->
-	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
-	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/w0unc.css">
+
+	<title>Amateur Radio Club at UNC Charlotte</title>
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 	<script src="assets/js/html5shiv.js"></script>
 	<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
+</head>
+
+<body>
 
 
-	<body class="home">
-	<!-- Fixed navbar -->
-	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container">
-			<div class="navbar-header">
-				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="W0UNC" height="60"></a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right">
-					<li class="active"><a href="index.html">Home</a></li>
-					<li class="active"><a href="index.html#about">About</a></li>
-					<li class="active"><a href="repeater.html" >Repeater Information</a></li>
-					<li class="active"><a href="https://github.com/w0unc/UNC-Charlotte-ARC-Radio-Images" target="_blank" >Code Plugs</a></li>
-					<li class="active"><a href="index.html#calendar">Calendar</a></a></li>
-					<li class="active"><a href="projects.html" >Current Projects</a></li>
-					<li class="active"><a href="Ids.html" >Club MDC1200/Fleetsync ID's</a></li>
-					<li class="active">Club Mail (Coming Soon)</a></li>
-					<
-					<!--<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="sidebar-left.html">Left Sidebar</a></li>
-							<li class="active"><a href="sidebar-right.html">Right Sidebar</a></li>
-						</ul>
-					</li> -->
-
-
+			<a class="navbar-brand d-lg-none" href="index.html"><img src="assets/images/logo.png" alt="W0UNC" height="60"></a>
+			<a class="navbar-brand d-none d-xl-block" href="index.html"><img src="assets/images/logo.png" alt="W0UNC" height="60"></a>
+			<a class="navbar-brand d-none d-lg-block" href="index.html">Amateur Radio Club at UNC Charlotte</a>
+			<a class="navbar-brand d-lg-none" href="index.html">W0UNC</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="index.html#about">About</a>
+					</li>
+					<li class="nav-item">
+							<a class="nav-link" href="index.html#calendar">Calendar</a>
+					</li>
+					<li class="nav-item">
+							<a class="nav-link" href="repeater.html">Repeater</a>
+					</li>
+					<li class="nav-item">
+							<a class="nav-link" href="projects.html">Projects</a>
+					</li>
+					<li class="nav-item">
+							<a class="nav-link" href="ids.html">MDC1200/FleetSync IDs</a>
+					</li>
 				</ul>
-			</div><!--/.nav-collapse -->
+			</div>
+		</div>
+	</nav>
+	<!-- End Navbar -->
+
+
+	<!-- Header -->
+	<div class="container">
+		<h2 class="text-center top-space">MDC1200/FleetSync IDs</h2>
+		<div class="row">
+			<div class="col-md-4 col-sm-6 highlight">
+				<h3>About MDC1200</h3>
+				<p>Many of our club members have Motorola commercial radios that use MDC1200. MDC1200 is a low-data rate system that allows for User ID, Selective Calling, Paging and Radio Check. IDs are transmitted at the beginning and end of transmission. We are looking into implementing status messages in the near future. Once we do another table will be created on this page containing them. IDs are based on the DTMF lettering of the last 4 characters of a call sign to create a semi-unique value. The Club fleet ID is 862.</p>
+			</div>
+			<div class="col-md-4 col-sm-6 highlight">
+				<h3>Kenwood FleetSync</h3>
+				<p>For the few members that run Kenwood equipment, our club also uses FleetSync at <b>1200 baud</b>. ID's based on the same system as our MDC1200 ID's. The same 4 digit ID's are used in both systems.</p>
+			</div>
 		</div>
 	</div>
-	<!-- /.navbar -->
-	<!-- Header -->
-	<header id="head">
-		<div class="container">
-			<div class="row">
-				<h1 class="lead">The Amateur Radio Club at UNC Charlotte: FleetSync/MDC1200</h1>
-				<p class="tagline"></p>
-				<p><a class="btn btn-default btn-lg" href="#faq" role="button">MORE INFO</a></p>
+	<!-- End Header -->
+
+
+	<!-- MDC/FleetSync ID Table & Status Code List -->
+	<div class="container top-space text-center">
+		<div class="row">
+			<div class="col-md-4 col-sm-6 highlight">
+				<h3>MDC/FleetSync ID Table</h3>
+				<table class="table-striped table-hover mx-auto">
+					<thead class="thead-dark">
+						<tr>
+							<th class="px-3">Call Sign</th>
+							<th class="px-3">Fleet ID</th>
+							<th class="px-3">Individual ID</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>W0UNC</td>
+							<td>862</td>
+							<td>0862</td>
+						</tr>
+						<tr>
+							<td>K4IPS</td>
+							<td>862</td>
+							<td>4477</td>
+						</tr>
+						<tr>
+							<td>K4TZE</td>
+							<td>862</td>
+							<td>4893</td>
+						</tr>
+						<tr>
+							<td>KN4VCY</td>
+							<td>862</td>
+							<td>4829</td>
+						</tr>
+						<tr>
+							<td>N5CCM</td>
+							<td>862</td>
+							<td>5226</td>
+						</tr>
+						<tr>
+							<td>W4ZLA</td>
+							<td>862</td>
+							<td>4952</td>
+						</tr>
+						<tr>
+							<td>KN4WXU</td>
+							<td>862</td>
+							<td>4998</td>
+						</tr>
+						<tr>
+							<td>KN4ISQ</td>
+							<td>862</td>
+							<td>4478</td>
+						</tr>
+						<tr>
+							<td>W0VVV</td>
+							<td>862</td>
+							<td>0888</td>
+						</tr>
+						<tr>
+							<td>KM4VRL</td>
+							<td>862</td>
+							<td>4875</td>
+						</tr>
+						<tr>
+							<td>KN4HFJ</td>
+							<td>862</td>
+							<td>4435</td>
+						</tr>
+						<tr>
+							<td>K4PTZ</td>
+							<td>862</td>
+							<td>4789</td>
+						</tr>
+						<tr>
+							<td>W0DXV</td>
+							<td>862</td>
+							<td>0398</td>
+						</tr>
+						<tr>
+							<td>KN4UHC</td>
+							<td>862</td>
+							<td>4842</td>
+						</tr>
+						<tr>
+							<td>KK4OHE</td>
+							<td>862</td>
+							<td>4643</td>
+						</tr>
+						<tr>
+							<td>KN4UGZ</td>
+							<td>862</td>
+							<td>4849</td>
+						</tr>
+						<tr>
+							<td>KN4IDE</td>
+							<td>862</td>
+							<td>4433</td>
+						</tr>
+						<tr>
+							<td>KM4PLK</td>
+							<td>862</td>
+							<td>4755</td>
+						</tr>
+						<tr>
+							<td>W0UNC</td>
+							<td>862</td>
+							<td>0862</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-md-4 col-sm-6 highlight">
+				<h3>Status Code List</h3>
+				<table class="table-striped table-hover mx-auto">
+					<thead>
+						<tr>
+							<th class="px-3">Status Number</th>
+							<th class="px-5">Message</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>10</td>
+							<td>Testing</td>
+						</tr>
+						<tr>
+							<td>12</td>
+							<td>ACK</td>
+						</tr>
+						<tr>
+							<td>20</td>
+							<td>10-20?</td>
+						</tr>
+						<tr>
+							<td>21</td>
+							<td>Atkins</td>
+						</tr>
+						<tr>
+							<td>22</td>
+							<td>Cone</td>
+						</tr>
+						<tr>
+							<td>23</td>
+							<td>SAC</td>
+						</tr>
+						<tr>
+							<td>24</td>
+							<td>Prospector</td>
+						</tr>
+						<tr>
+							<td>25</td>
+							<td>McEniry</td>
+						</tr>
+						<tr>
+							<td>26</td>
+							<td>Woodward</td>
+						</tr>
+						<tr>
+							<td>27</td>
+							<td>CRI Deck</td>
+						</tr>
+						<tr>
+							<td>28</td>
+							<td>EPIC</td>
+						</tr>
+						<tr>
+							<td>29</td>
+							<td>NOC</td>
+						</tr>
+						<tr>
+							<td>30</td>
+							<td>GOTO Discord</td>
+						</tr>
+						<tr>
+							<td>31</td>
+							<td>GOTO CRI Deck</td>
+						</tr>
+						<tr>
+							<td>32</td>
+							<td>GOTO Union</td>
+						</tr>
+						<tr>
+							<td>33</td>
+							<td>GOTO South Deck</td>
+						</tr>
+						<tr>
+							<td>34</td>
+							<td>GOTO EPIC</td>
+						</tr>
+						<tr>
+							<td>40</td>
+							<td>SWITCH to TA</td>
+						</tr>
+						<tr>
+							<td>41</td>
+							<td>SWITCH to TAC-1</td>
+						</tr>
+						<tr>
+							<td>42</td>
+							<td>SWITCH to TAC-2</td>
+						</tr>
+						<tr>
+							<td>43</td>
+							<td>SWITCH to GMRS</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</div>
-	</header>
-	<!-- /Header -->
+	</div>
+	<!-- End MDC/FleetSync ID Table & Status Code List -->
 
 
-	<a name="Website"></a>
-	<div class="container">
-
-		<h2 class="text-center top-space">Motorola MDC1200</h2>
-		<br>
-		<div class="row">
-				<h3>About MDC1200</h3>
-				<p>Many of our club members have Motorola commercial radios that use MDC1200. MDC1200 is a low-data rate system that allows for User ID, Selective Calling, Paging and Radio Check. IDs are transmitted at the beginning and end of transmission. We are looking into implementing status messages in the near future. Once we do another table will be created on this page containing them. IDs are based on the DTMF lettering of the last 4 characters of a callsign to create a semi-unique value. The Club fleet ID is 862.</p>
-		</div> <!-- /row -->
-		<h2 class="text-center top-space">Kenwood FleetSync</h2>
-		<br>
-		<div class="row">
-				<h3>About Fleetsync</h3>
-				<p>For the few members that run Kenwood equipment, our club also uses Fleetsync at <b>1200 baud</b>. ID's based on the same system as our MDC1200 ID's. The same 4 digit ID's are used in both systems.</p>
-		</div> <!-- /row -->
-	</div>	<!-- /container -->
-
-		<!-- container -->
-	<a name="IDTable"></a>
-	<div class="container">
-
-		<h2 class="text-center top-space">MDC/Fleetsync ID Table</h2>
-		<br>
-		<div class="row" align="center" >
-				<h3></h3>
-				<p>
-					<table border = "1">
-							<tr>
-									<td>
-										Callsign
-									</td>
-									<td>
-										Fleet ID
-									</td>
-									<td>
-									 	Individual ID
-									</td>
-							</tr>
-							<tr>
-									<td align="center">
-										W0UNC
-									</td>
-									<td align="center">
-										862
-									</td>
-									<td align="center">
-										0862
-									</td>
-							</tr>
-							<tr>
-									<td align="center">
-										K4IPS
-									</td>
-									<td align="center">
-										862
-									</td>
-									<td align="center">
-										4477
-									</td>
-							</tr>
-							<tr>
-									<td align="center">
-										K4TZE
-									</td>
-									<td align="center">
-										862
-									</td>
-									<td align="center">
-										4893
-									</td>
-							</tr>
-							<tr>
-									<td align="center">
-										KN4VCY
-									</td>
-									<td align="center">
-										862
-									</td>
-									<td align="center">
-										4829
-									</td>
-							</tr>
-							<tr>
-									<td align="center">
-										N5CCM
-									</td>
-									<td align="center">
-										862
-									</td>
-									<td align="center">
-										5226
-									</td>
-							</tr>
-							<tr>
-									<td align="center">
-										W4ZLA
-									</td>
-									<td align="center">
-										862
-									</td>
-									<td align="center">
-										4952
-									</td>
-							</tr>
-							<tr>
-									<td align="center">
-										KN4WXU
-									</td>
-									<td align="center">
-										862
-									</td>
-									<td align="center">
-										4998
-									</td>
-							</tr>
-							<tr>
-									<td align="center">
-										KN4ISQ
-									</td>
-									<td align="center">
-										862
-									</td>
-									<td align="center">
-										4478
-									</td>
-							</tr>
-							<tr>
-									<td align="center">
-										W0VVV
-									</td>
-									<td align="center">
-										862
-									</td>
-									<td align="center">
-										0888
-									</td>
-							</tr>
-							<tr>
-									<td align="center">
-										KM4VRL
-									</td>
-									<td align="center">
-										862
-									</td>
-									<td align="center">
-										4875
-									</td>
-							</tr>
-							<tr>
-									<td align="center">
-										KN4HFJ
-									</td>
-									<td align="center">
-										862
-									</td>
-									<td align="center">
-										4435
-									</td>
-							</tr>
-							<tr>
-									<td align="center">
-										K4PTZ
-									</td>
-									<td align="center">
-										862
-									</td>
-									<td align="center">
-										4789
-									</td>
-							</tr>
-							<tr>
-									<td align="center">
-										W0DXV
-									</td>
-									<td align="center">
-										862
-									</td>
-									<td align="center">
-										0398
-									</td>
-							</tr>
-							<tr>
-									<td align="center">
-										KN4UHC
-									</td>
-									<td align="center">
-										862
-									</td>
-									<td align="center">
-										4842
-									</td>
-							</tr>
-							<tr>
-									<td align="center">
-										KK4OHE
-									</td>
-									<td align="center">
-										862
-									</td>
-									<td align="center">
-										4643
-									</td>
-							</tr>
-							<tr>
-									<td align="center">
-										KN4UGZ
-									</td>
-									<td align="center">
-										862
-									</td>
-									<td align="center">
-										4849
-									</td>
-							</tr>
-							<tr>
-									<td align="center">
-										KN4IDE
-									</td>
-									<td align="center">
-										862
-									</td>
-									<td align="center">
-										4433
-									</td>
-							</tr>
-							<tr>
-									<td align="center">
-										KM4PLK
-									</td>
-									<td align="center">
-										862
-									</td>
-									<td align="center">
-										4755
-									</td>
-							</tr>
-							<tr>
-									<td align="center">
-										W0UNC
-									</td>
-									<td align="center">
-										862
-									</td>
-									<td align="center">
-										0862
-									</td>
-							</tr>
-
-					</table>
-				</p>
-		</div> <!-- /row -->
-	</div>	<!-- /container -->
+	<!-- Footer -->
+	<footer class="top-space" id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 widget">
+					<h3 class="widget-title">Contact</h3>
+					<div class="widget-body">
+						<p><a href="mailto:club@w0unc.org">club@w0unc.org</a></p>
+						<b>Mailing Address:</b><br>
+						Amateur Radio Club at UNC Charlotte</br>
+						SGOC Complex</br>
+						Student Union, Room 212</br>
+						University of North Carolina at Charlotte</br>
+						9201 University City Boulevard</br>
+						Charlotte, NC 28223-0001</br>
+					</div>
+				</div>
+				<div class="col-md-3 widget">
+					<h3 class="widget-title">Follow Us</h3>
+					<div class="widget-body">
+						<p class="follow-me-icons">
+							<a href="https://twitter.com/w0unc"><i class="fab fa-twitter"></i></a>
+							<a href="https://github.com/w0unc"><i class="fab fa-github"></i></a>
+							<a href="https://facebook.com/w0unc"><i class="fab fa-facebook"></i></a>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 widget">
+					<h3 class="widget-title">Links</h3>
+					<div class="widget-body">
+						<p class="simplenav">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="index.html#about">About</a></li>
+							<li><a href="index.html#calendar">Calendar</a></li>
+							<li><a href="repeater.html">Repeater</a></li>
+							<li><a href="projects.html">Projects</a></li>
+							<li><a href="ids.html">MDC1200/FleetSync IDs</a></li>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid top-space py-3" id="footer-copyright">
+			<div class="container">
+				&copy; 2019 Amateur Radio Club at UNC Charlotte
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer -->
 
 
-	<a name="status"></a>
-	<div class="container">
-
-		<h2 class="text-center top-space">Status Code List</h2>
-		<br>
-		<div class="row" align="center" >
-				<h3 align = "center"> Work in Progress </h3>
-				<p align = "center">
-							<table border = "1">
-								<tr>
-										<td align="center">
-											Status Number
-										</td>
-										<td align="center">
-									 		Message
-										</td>
-								</tr>
-								<tr>
-										<td align="center">
-										10
-										</td>
-										<td align="center">
-										Testing
-										</td>
-								</tr>
-								<tr>
-										<td align="center">
-										12
-										</td>
-										<td align="center">
-										ACK
-										</td>
-								</tr>
-								<tr>
-										<td align="center">
-										20
-										</td>
-										<td align="center">
-										10-20?
-										</td>
-								</tr>
-								<tr>
-										<td align="center">
-										21
-										</td>
-										<td align="center">
-										Atkins
-										</td>
-								</tr>
-								<tr>
-										<td align="center">
-										22
-										</td>
-										<td align="center">
-										Cone
-										</td>
-								</tr>
-								<tr>
-										<td align="center">
-										23
-										</td>
-										<td align="center">
-										SAC
-										</td>
-								</tr>
-								<tr>
-										<td align="center">
-										24
-										</td>
-										<td align="center">
-										Prospector
-										</td>
-								</tr>
-								<tr>
-										<td align="center">
-										25
-										</td>
-										<td align="center">
-										McEniry
-										</td>
-								</tr>
-								<tr>
-										<td align="center">
-										26
-										</td>
-										<td align="center">
-										Woodward
-										</td>
-								</tr>
-								<tr>
-										<td align="center">
-										27
-										</td>
-										<td align="center">
-										CRI Deck
-										</td>
-								</tr>
-								<tr>
-										<td align="center">
-										28
-										</td>
-										<td align="center">
-										EPIC
-										</td>
-								</tr>
-								<tr>
-										<td align="center">
-										29
-										</td>
-										<td align="center">
-										NOC
-										</td>
-								</tr>
-								<tr>
-										<td align="center">
-										30
-										</td>
-										<td align="center">
-										GOTO Discord
-										</td>
-								</tr>
-								<tr>
-										<td align="center">
-										31
-										</td>
-										<td align="center">
-										GOTO CRI Deck
-										</td>
-								</tr>
-								<tr>
-										<td align="center">
-										32
-										</td>
-										<td align="center">
-										GOTO Union
-										</td>
-								</tr>
-								<tr>
-										<td align="center">
-										33
-										</td>
-										<td align="center">
-										GOTO South Deck
-										</td>
-								</tr>
-								<tr>
-										<td align="center">
-										34
-										</td>
-										<td align="center">
-										GOTO EPIC
-										</td>
-								</tr>
-								<tr>
-										<td align="center">
-										40
-										</td>
-										<td align="center">
-										SWITCH to TA
-										</td>
-								</tr>
-								<tr>
-										<td align="center">
-										41
-										</td>
-										<td align="center">
-										SWITCH to TAC-1
-										</td>
-								</tr>
-								<tr>
-										<td align="center">
-										42
-										</td>
-										<td align="center">
-										SWITCH to TAC-2
-										</td>
-								</tr>
-								<tr>
-										<td align="center">
-										43
-										</td>
-										<td align="center">
-										SWITCH to GMRS
-										</td>
-								</tr>
-							</table>
-				</p>
-		</div> <!-- /row -->
-	</div>	<!-- /container -->
+	<!-- JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<!-- End JavaScript -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </body>
-</head>
+</body>
+</html>
