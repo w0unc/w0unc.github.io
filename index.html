@@ -7,21 +7,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<link rel="shortcut icon" href="assets/images/favicon.png">
-	<link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">
 
-	<!-- Custom styles for our template -->
+	<!-- Fonts -->
+	<link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/all.min.css">
 	<link rel="stylesheet" href="assets/css/w0unc.css">
 
 	<title>Amateur Radio Club at UNC Charlotte</title>
-
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-	<script src="assets/js/html5shiv.js"></script>
-	<script src="assets/js/respond.min.js"></script>
-	<![endif]-->
 </head>
 
 <body>
@@ -30,8 +25,8 @@
 	<!-- Navbar -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container">
-			<a class="navbar-brand d-lg-none" href="index.html"><img src="assets/images/logo.png" alt="W0UNC" height="60"></a>
-			<a class="navbar-brand d-none d-xl-block" href="index.html"><img src="assets/images/logo.png" alt="W0UNC" height="60"></a>
+			<a class="navbar-brand d-lg-none" href="index.html"><img alt="W0UNC" height="60" src="assets/images/logo.png"></a>
+			<a class="navbar-brand d-none d-xl-block" href="index.html"><img alt="W0UNC" height="60" src="assets/images/logo.png"></a>
 			<a class="navbar-brand d-none d-md-block" href="index.html">Amateur Radio Club at UNC Charlotte</a>
 			<a class="navbar-brand d-md-none" href="index.html">W0UNC</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,8 +49,14 @@
 					<li class="nav-item">
 							<a class="nav-link" href="projects.html">Projects</a>
 					</li>
-					<li class="nav-item">
-							<a class="nav-link" href="ids.html">MDC1200/FleetSync IDs</a>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Code Plugs & IDs
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="ids.html">MDC1200 / FleetSync IDs</a>
+							<a class="dropdown-item" href="https://github.com/w0unc/UNC-Charlotte-ARC-Radio-Images">Code Plugs</a>
+						</div>
 					</li>
 				</ul>
 			</div>
@@ -66,44 +67,40 @@
 
 	<!-- Header -->
 	<div class="jumbotron jumbotron-fluid text-center" id="header">
-		<div class="container align-bottom">
-			<h1 class="display-4">The Amateur Radio Club at UNC Charlotte</h1>
+		<div class="container py-5">
+			<div class="py-lg-5"></div>
+			<h1 class="display-4 mb-3">The Amateur Radio Club at UNC Charlotte</h1>
 			<a class="btn btn-default btn-lg" href="#faq" role="button">MORE INFO</a>
+			<div class="py-lg-5"></div>
 		</div>
 	</div>
 	<!-- End Header -->
 
 
 	<!-- About -->
-	<div class="container top-space text-center" id="about">
-		<h2 class="thin pb-3">About Us</h2>
-		<p class="text-muted">The Amateur Radio Club of UNC Charlotte is a student interest group whose purposes are to provide the local community with emergency communications, educate students, faculty, and staff in becoming amateur radio operators, and to foster fellowship within the amateur radio community. This is registered student organization on the campus of UNC Charlotte, and it is a fledgling group.</p>
+	<div class="container py-5 text-center" id="about">
+		<h2 class="pb-3">About Us</h2>
+		<p>The Amateur Radio Club of UNC Charlotte is a student interest group whose purposes are to provide the local community with emergency communications, educate students, faculty, and staff in becoming amateur radio operators, and to foster fellowship within the amateur radio community. This is registered student organization on the campus of UNC Charlotte, and it is a fledgling group.</p>
 	</div>
 	<!-- End About-->
 
 
 	<!-- Information -->
-	<div class="jumbotron jumbotron-fluid top-space text-center">
+	<div class="jumbotron jumbotron-fluid py-5 text-center">
 		<div class="container">
-			<h1 class="thin pb-3">Information</h1>
+			<h2 class="pb-3">Information</h2>
 			<div class="row">
-				<div class="col-md-4 col-sm-6 highlight">
-					<div class="h-caption"><h4><i class="fas fa-microphone fa-5"></i><br>Repeater</h4></div>
-					<div class="h-body">
-						<p>We have a repeater on the roof of the library broadcasting with on frequency 442.650MHz (+5MHz) 88.5 tone. We stress that you must be an FCC Licensed Operator (or hold a comparable authorization) to access our repeater.</p>
-					</div>
+				<div class="col-md-4 col-sm-6">
+					<h4><i class="fas fa-microphone fa-5"></i><br>Repeater</h4>
+					<p>We have a repeater on the roof of the library broadcasting with on frequency 442.650MHz (+5MHz) 88.5 tone. We stress that you must be an FCC Licensed Operator (or hold a comparable authorization) to access our repeater.</p>
 				</div>
-				<div class="col-md-4 col-sm-6 highlight">
-					<div class="h-caption"><h4><i class="fas fa-bolt fa-5"></i><br>Meetings</h4></div>
-					<div class="h-body">
-						<p>We meet monthly at a predesignated time and place. Check our <a href="https://ninerengage.uncc.edu/organization/amateur-radio-club">NinerEngage</a> page for meeting announcements. Any undergraduate, graduate, alumni, or faculty may attend the meetings.</p>
-					</div>
+				<div class="col-md-4 col-sm-6">
+					<h4><i class="fas fa-bolt fa-5"></i><br>Meetings</h4>
+					<p>We meet monthly at a predesignated time and place. Check our <a href="https://ninerengage.uncc.edu/organization/amateur-radio-club">NinerEngage</a> page for meeting announcements. Any undergraduate, graduate, alumni, or faculty may attend the meetings.</p>
 				</div>
-				<div class="col-md-4 col-sm-6 highlight">
-					<div class="h-caption"><h4><i class="fas fa-comments fa-5"></i><br>Contact</h4></div>
-					<div class="h-body">
-						<p>The easiest way to contact us is though the repeater, you can also contact us by emailing <a href="mailto:club@w0unc.org">club@w0unc.org</a>.</p>
-					</div>
+				<div class="col-md-4 col-sm-6">
+					<h4><i class="fas fa-comments fa-5"></i><br>Contact</h4>
+					<p>The easiest way to contact us is though the repeater, you can also contact us by emailing <a href="mailto:club@w0unc.org">club@w0unc.org</a>.</p>
 				</div>
 			</div>
 		</div>
@@ -112,29 +109,31 @@
 
 
 	<!-- Events Calendar -->
-	<div class="container top-space text-center py-5" id="calendar">
-		<h2>Events Calendar</h2>
-		<iframe src="https://calendar.google.com/calendar/embed?src=w0unc.org_tetn04t1v0rmkvnk1knm379egc%40group.calendar.google.com&ctz=America/New_York?showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;ctz=America%2FNew_York" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<div class="container py-5 text-center" id="calendar">
+		<h2 class="pb-3">Events Calendar</h2>
+		<div class="embed-responsive embed-responsive-16by9">
+			<iframe class="embed-responsive-item" src="https://calendar.google.com/calendar/embed?src=w0unc.org_tetn04t1v0rmkvnk1knm379egc%40group.calendar.google.com&ctz=America/New_York?showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;ctz=America%2FNew_York" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+		</div>
 	</div>
 	<!-- End Events Calendar -->
 
 
 	<!-- Frequently Asked Questions -->
-	<div class="container top-space" id="faq">
-		<h2 class="text-center">Frequently Asked Questions</h2>
+	<div class="container py-5" id="faq">
+		<h2 class="pb-3 text-center">Frequently Asked Questions</h2>
 		<div class="row">
 			<div class="col-sm-6">
-				<h3>What is Amateur Radio?</h3>
+				<h4>What is Amateur Radio?</h4>
 				<p>Amateur Radio is a hobby that is enjoyed across the nation and the world. One of the primary purposes of Amateur Radio is emergency preparedness—in the event of a natural disaster, often the only available form of communication is via radio. Amateur Radio Operators assist in this by providing necessary communications as a public service.</p>
 			</div>
 			<div class="col-sm-6">
-				<h3>How do I get involved?</h3>
+				<h4>How do I get involved?</h4>
 				<p>The easiest way to get involved with our club is to come to a meeting! If you cannot make our regular meetings, you can also send an email to <a href="mailto:club@w0unc.org">club@w0unc.org</a> or contact us though our repeater.</p>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-6">
-				<h3>How can I get my license?</h3>
+				<h4>How can I get my license?</h4>
 				<p>Getting your license is relatively straightforward and often times the easiest method is to memorize the test questions. Our favorite practice exam is located <a href="http://aa9pw.com/radio/">here</a>. For assistance with studying or recommendations, you can contact the club and we will be happy to assist!</p>
 			</div>
 		</div>
@@ -143,7 +142,7 @@
 
 
 	<!-- Tagline -->
-	<div class="jumbotron top-space">
+	<div class="jumbotron my-5">
 		<div class="container">
 			<h4><i>When all else fails... Amateur Radio</i></h4>
 		</div>
@@ -152,48 +151,55 @@
 
 
 	<!-- Footer -->
-	<footer class="top-space" id="footer">
-		<div class="container">
+	<footer id="footer">
+		<div class="container py-lg-5">
 			<div class="row">
-				<div class="col-md-3 widget">
-					<h3 class="widget-title">Contact</h3>
-					<div class="widget-body">
-						<p><a href="mailto:club@w0unc.org">club@w0unc.org</a></p>
-						<b>Mailing Address:</b><br>
-						Amateur Radio Club at UNC Charlotte</br>
-						SGOC Complex</br>
-						Student Union, Room 212</br>
-						University of North Carolina at Charlotte</br>
-						9201 University City Boulevard</br>
-						Charlotte, NC 28223-0001</br>
+				<div class="col-md-3 my-3">
+					<h3>Contact</h3>
+					<ul class="list-unstyled">
+						<li><a href="mailto:club@w0unc.org">club@w0unc.org</a></li>
+						<li></li>
+						<li><b>Mailing Address:</b></li>
+						<li>Amateur Radio Club at UNC Charlotte</li>
+						<li>SGOC Complex</li>
+						<li>Student Union, Room 212</li>
+						<li>University of North Carolina at Charlotte</li>
+						<li>9201 University City Boulevard</li>
+						<li>Charlotte, NC 28223-0001</li>
+					</ul>
+				</div>
+				<div class="col-md-3 my-3">
+					<h3>Follow Us</h3>
+					<div>
+						<a href="https://twitter.com/w0unc"><i class="fab fa-twitter fa-3x"></i></a>
+						<a href="https://github.com/w0unc"><i class="fab fa-github fa-3x"></i></a>
+						<a href="https://facebook.com/w0unc"><i class="fab fa-facebook fa-3x"></i></a>
 					</div>
 				</div>
-				<div class="col-md-3 widget">
-					<h3 class="widget-title">Follow Us</h3>
-					<div class="widget-body">
-						<p class="follow-me-icons">
-							<a href="https://twitter.com/w0unc"><i class="fab fa-twitter"></i></a>
-							<a href="https://github.com/w0unc"><i class="fab fa-github"></i></a>
-							<a href="https://facebook.com/w0unc"><i class="fab fa-facebook"></i></a>
-						</p>
+				<div class="col-md-3 my-3">
+					<h3>Links</h3>
+					<div class="d-none d-md-block">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="index.html#about">About</a></li>
+						<li><a href="index.html#calendar">Calendar</a></li>
+						<li><a href="repeater.html">Repeater</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="ids.html">MDC1200 / FleetSync IDs</a></li>
+						<li><a href="https://github.com/w0unc/UNC-Charlotte-ARC-Radio-Images">Code Plugs</a></li>
 					</div>
-				</div>
-				<div class="col-md-3 widget">
-					<h3 class="widget-title">Links</h3>
-					<div class="widget-body">
-						<p class="simplenav">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="index.html#about">About</a></li>
-							<li><a href="index.html#calendar">Calendar</a></li>
-							<li><a href="repeater.html">Repeater</a></li>
-							<li><a href="projects.html">Projects</a></li>
-							<li><a href="ids.html">MDC1200/FleetSync IDs</a></li>
-						</p>
+					<div class="list-group d-md-none">
+						<a href="index.html" class="list-group-item list-group-item-action list-group-item-dark">Home</a>
+						<a href="index.html#about" class="list-group-item list-group-item-action list-group-item-dark">About</a>
+						<a href="index.html#calendar" class="list-group-item list-group-item-action list-group-item-dark">Calendar</a>
+						<a href="repeater.html" class="list-group-item list-group-item-action list-group-item-dark">Repeater</a>
+						<a href="projects.html" class="list-group-item list-group-item-action list-group-item-dark">Projects</a>
+						<a href="ids.html" class="list-group-item list-group-item-action list-group-item-dark">MDC1200 / FleetSync IDs</a>
+						<a href="https://github.com/w0unc/UNC-Charlotte-ARC-Radio-Images" class="list-group-item list-group-item-action list-group-item-dark">Code Plugs</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="container-fluid top-space py-3" id="footer-copyright">
+		<div class="container-fluid py-3 text-center" id="footer-copyright">
 			<div class="container">
 				&copy; 2019 Amateur Radio Club at UNC Charlotte
 			</div>
@@ -203,9 +209,8 @@
 
 
 	<!-- JavaScript -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="assets/js/jquery-3.4.1.slim.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
 	<!-- End JavaScript -->
 
 
