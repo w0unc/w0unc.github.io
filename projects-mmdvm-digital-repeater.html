@@ -26,9 +26,9 @@
 	<!-- Navbar -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container">
-			<a class="navbar-brand d-none d-lg-block" href="index.html"><img alt="W0UNC" height="60" src="assets/images/logo.png"></a>
-			<a class="navbar-brand d-none d-sm-block" href="index.html">Amateur Radio Club at UNC Charlotte</a>
-			<a class="navbar-brand d-sm-none" href="index.html">W0UNC</a>
+			<a class="navbar-brand d-none d-lg-block" href="index.html"><img alt="WØUNC" height="60" src="assets/images/logo.png"></a>
+			<a class="navbar-brand d-none d-md-block" href="index.html">Amateur Radio Club at UNC Charlotte</a>
+			<a class="navbar-brand d-md-none" href="index.html">WØUNC</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -37,11 +37,17 @@
 					<li class="nav-item active">
 						<a class="nav-link" href="index.html">Home</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="index.html#about">About</a>
-					</li>
-					<li class="nav-item">
-							<a class="nav-link" href="index.html#events">Events</a>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Info
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="index.html#about">About</a>
+							<a class="dropdown-item" href="index.html#events">Events</a>
+							<a class="dropdown-item" href="index.html#faq">FAQ</a>
+							<a class="dropdown-item" href="mailto:club@w0unc.org">Contact</a>
+							<a class="dropdown-item" href="https://ninerengage.uncc.edu/organization/amateur-radio-club" target="_blank">NinerEngage</a>
+						</div>
 					</li>
 					<li class="nav-item">
 							<a class="nav-link" href="repeater.html">Repeater</a>
@@ -49,13 +55,16 @@
 					<li class="nav-item">
 							<a class="nav-link" href="projects.html">Projects</a>
 					</li>
+					<li class="nav-item">
+							<a class="nav-link" href="testing.html">Testing</a>
+					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							Code Plugs & IDs
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a class="dropdown-item" href="ids.html">MDC1200 / FleetSync IDs</a>
-							<a class="dropdown-item" href="https://github.com/w0unc/UNC-Charlotte-ARC-Radio-Images">Code Plugs</a>
+							<a class="dropdown-item" href="https://github.com/w0unc/UNC-Charlotte-ARC-Radio-Images" target="_blank">Code Plugs</a>
 						</div>
 					</li>
 				</ul>
@@ -75,10 +84,10 @@
 
 
 	<!-- Content -->
-	<div class="container py-5">
+	<div class="container pb-5 py-3 py-lg-5">
 		<div class="row">
-			<div class="col-md-4">
-				<h3 class="pb-3 text-center">Description</h3>
+			<div class="col-md-4 pb-3 pb-md-0">
+				<h3 class="pb-2 text-center">Description</h3>
 				<p><b>An experiment in multi-mode digital repeaters</b> This project involves interfacing an MMDVM controller into a desktop repeater. This repeater will operate primarily on DMR and will be linked on-demand to the BrandMeister Network. It is also planned to feature a patch into the main W0UNC machine.</p>
 				<p>Confirmed DMR Talkgroups:<br>
 				<b>SL1 TG 9</b>   - System Local<br>
@@ -86,7 +95,7 @@
 				<p>Dynamic Linked Talkgroups will be determined once the repeater is operational.</p>
 			</div>
 			<div class="col-md-4">
-				<h3 class="pb-3 text-center">Progress</h3>
+				<h3 class="pb-2 text-center">Progress</h3>
 				<table class="mx-auto">
 					<tr>
 						<td class="w-25 pr-3">Brainstorm</td>
@@ -130,8 +139,8 @@
 					</tr>
 				</table>
 			</div>
-			<div class="col-md-4">
-				<h3 class="pb-3 text-center">Status</h3>
+			<div class="col-md-4 pt-3 pt-lg-0">
+				<h3 class="pb-2 text-center">Status</h3>
 				<p>This project is currently going through the design phase. We will decide if the project is feasible and what costs it will incur. If the club decides to go ahead with the project, we will provide updates here.</p>
 			</div>
 		</div>
@@ -143,11 +152,10 @@
 	<footer id="footer">
 		<div class="container py-lg-5">
 			<div class="row">
-				<div class="col-md-3 my-3">
+				<div class="col-lg-3 col-sm-6 py-3 py-lg-0">
 					<h3>Contact</h3>
-					<ul class="list-unstyled">
+					<ul class="list-unstyled mb-0">
 						<li><a href="mailto:club@w0unc.org">club@w0unc.org</a></li>
-						<li></li>
 						<li><b>Mailing Address:</b></li>
 						<li>Amateur Radio Club at UNC Charlotte</li>
 						<li>SGOC Complex</li>
@@ -157,40 +165,45 @@
 						<li>Charlotte, NC 28223-0001</li>
 					</ul>
 				</div>
-				<div class="col-md-3 my-3">
-					<h3>Follow Us</h3>
-					<div>
-						<a href="https://twitter.com/w0unc"><i class="fab fa-twitter fa-3x"></i></a>
-						<a href="https://github.com/w0unc"><i class="fab fa-github fa-3x"></i></a>
-						<a href="https://facebook.com/w0unc"><i class="fab fa-facebook fa-3x"></i></a>
-					</div>
-				</div>
-				<div class="col-md-3 my-3">
+				<div class="col-lg-3 col-sm-6 py-3 py-lg-0">
 					<h3>Links</h3>
-					<div class="d-none d-md-block">
+					<ul class="list-unstyled d-none d-sm-block">
 						<li><a href="index.html">Home</a></li>
 						<li><a href="index.html#about">About</a></li>
 						<li><a href="index.html#events">Events</a></li>
+						<li><a href="index.html#faq">FAQ</a></li>
+						<li><a href="https://ninerengage.uncc.edu/organization/amateur-radio-club" target="_blank">NinerEngage</a></li>
 						<li><a href="repeater.html">Repeater</a></li>
 						<li><a href="projects.html">Projects</a></li>
+						<li><a href="testing.html">Testing</a></li>
 						<li><a href="ids.html">MDC1200 / FleetSync IDs</a></li>
-						<li><a href="https://github.com/w0unc/UNC-Charlotte-ARC-Radio-Images">Code Plugs</a></li>
-					</div>
-					<div class="list-group d-md-none">
+						<li><a href="https://github.com/w0unc/UNC-Charlotte-ARC-Radio-Images" target="_blank">Code Plugs</a></li>
+					</ul>
+					<div class="list-group d-sm-none">
 						<a href="index.html" class="list-group-item list-group-item-action list-group-item-dark">Home</a>
 						<a href="index.html#about" class="list-group-item list-group-item-action list-group-item-dark">About</a>
 						<a href="index.html#events" class="list-group-item list-group-item-action list-group-item-dark">Events</a>
+						<a href="index.html#faq" class="list-group-item list-group-item-action list-group-item-dark">FAQ</a>
+						<a href="https://ninerengage.uncc.edu/organization/amateur-radio-club" class="list-group-item list-group-item-action list-group-item-dark" target="_blank">NinerEngage</a>
 						<a href="repeater.html" class="list-group-item list-group-item-action list-group-item-dark">Repeater</a>
 						<a href="projects.html" class="list-group-item list-group-item-action list-group-item-dark">Projects</a>
 						<a href="ids.html" class="list-group-item list-group-item-action list-group-item-dark">MDC1200 / FleetSync IDs</a>
-						<a href="https://github.com/w0unc/UNC-Charlotte-ARC-Radio-Images" class="list-group-item list-group-item-action list-group-item-dark">Code Plugs</a>
+						<a href="https://github.com/w0unc/UNC-Charlotte-ARC-Radio-Images" class="list-group-item list-group-item-action list-group-item-dark" target="_blank">Code Plugs</a>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6 py-3 py-lg-0">
+					<h3>Follow Us</h3>
+					<div>
+						<a href="https://twitter.com/w0unc" target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
+						<a href="https://github.com/w0unc" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+						<a href="https://facebook.com/w0unc" target="_blank"><i class="fab fa-facebook fa-3x"></i></a>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="container-fluid py-3 text-center" id="footer-copyright">
 			<div class="container">
-				&copy; 2019 Amateur Radio Club at UNC Charlotte
+				<span>© 2019 Amateur Radio Club at UNC Charlotte</span>
 			</div>
 		</div>
 	</footer>
