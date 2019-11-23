@@ -1,407 +1,76 @@
-<!DOCTYPE HTML>
-
-<html lang="en">
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="assets/images/favicon.png">
-
-	<!-- Fonts -->
-	<link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/all.min.css">
-	<link rel="stylesheet" href="assets/css/w0unc.css">
-
-	<title>Amateur Radio Club at UNC Charlotte</title>
-</head>
-
-<body>
+---
+layout:		default
+title:		MDC1200 / FleetSync IDs
+---
 
 
-	<!-- Navbar -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<div class="container">
-			<a class="navbar-brand d-none d-lg-block" href="index.html"><img alt="WØUNC" height="60" src="assets/images/logo.png"></a>
-			<a class="navbar-brand d-none d-md-block" href="index.html">Amateur Radio Club at UNC Charlotte</a>
-			<a class="navbar-brand d-md-none" href="index.html">WØUNC</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="index.html">Home</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Info
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="index.html#about">About</a>
-							<a class="dropdown-item" href="index.html#events">Events</a>
-							<a class="dropdown-item" href="index.html#faq">FAQ</a>
-							<a class="dropdown-item" href="mailto:club@w0unc.org">Contact</a>
-							<a class="dropdown-item" href="https://ninerengage.uncc.edu/organization/amateur-radio-club" target="_blank">NinerEngage</a>
-						</div>
-					</li>
-					<li class="nav-item">
-							<a class="nav-link" href="repeater.html">Repeater</a>
-					</li>
-					<li class="nav-item">
-							<a class="nav-link" href="projects.html">Projects</a>
-					</li>
-					<li class="nav-item">
-							<a class="nav-link" href="testing.html">Testing</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Code Plugs & IDs
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="ids.html">MDC1200 / FleetSync IDs</a>
-							<a class="dropdown-item" href="https://github.com/w0unc/UNC-Charlotte-ARC-Radio-Images" target="_blank">Code Plugs</a>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<!-- End Navbar -->
-
-
-	<!-- Header -->
-	<div class="jumbotron jumbotron-fluid text-center" id="header">
-		<div class="container py-lg-3">
-			<h1 class="display-4">MDC1200 / FleetSync IDs</h1>
-		</div>
-	</div>
-	<!-- End Header -->
-
-
-	<!-- MDC1200 & FleetSync Description -->
-	<div class="container py-lg-5">
+<!-- MDC1200 & FleetSync Description -->
+<div class="jumbotron jumbotron-fluid my-4 my-md-5">
+	<div class="container">
 		<div class="row">
-			<div class="col-sm-6 py-3 py-lg-0">
+			<div class="col-sm-6 my-3">
 				<h3 class="pb-2 text-center">About MDC1200</h3>
-				<p>Many of our club members have Motorola commercial radios that use MDC1200. MDC1200 is a low-data rate system that allows for User ID, Selective Calling, Paging and Radio Check. IDs are transmitted at the beginning and end of transmission. We are looking into implementing status messages in the near future. Once we do another table will be created on this page containing them. IDs are based on the DTMF lettering of the last 4 characters of a call sign to create a semi-unique value. The Club fleet ID is 862.</p>
+				<p>
+					Many of our club members have Motorola commercial radios that use MDC1200. MDC1200 is a low-data rate system that allows for User ID, Selective Calling, Paging and Radio Check. IDs are transmitted at the beginning and end of transmission. We are looking into implementing status messages in the near future. Once we do another table will be created on this page containing them. IDs are based on the DTMF lettering of the last 4 characters of a call sign to create a semi-unique value. The Club fleet ID is 862.
+				</p>
 			</div>
-			<div class="col-sm-6 py-3 py-lg-0">
+			<div class="col-sm-6 my-3">
 				<h3 class="pb-2 text-center">Kenwood FleetSync</h3>
-				<p>For the few members that run Kenwood equipment, our club also uses FleetSync at <b>1200 baud</b>. ID's are based on the same system as our MDC1200 ID's. The same 4 digit ID's are used in both systems.</p>
+				<p>
+					For the few members that run Kenwood equipment, our club also uses FleetSync at <span class="font-weight-bold">1200 baud</span>. ID's are based on the same system as our MDC1200 ID's. The same 4 digit ID's are used in both systems.
+				</p>
 			</div>
 		</div>
 	</div>
-	<!-- End MDC1200 & FleetSync Description -->
+</div>
+<!-- End MDC1200 & FleetSync Description -->
 
 
-	<!-- MDC/FleetSync ID Table & Status Code List -->
-	<div class="container pb-5 py-lg-5 text-center">
-		<div class="row">
-			<div class="col-lg-6 py-3 py-lg-0">
-				<h3>MDC / FleetSync ID Table</h3>
-				<table class="table-striped table-hover mx-auto">
-					<thead class="thead-dark">
+<!-- MDC/FleetSync ID Table & Status Code List -->
+<div class="container my-4 my-md-5 text-center">
+	<div class="row">
+		<div class="col-lg-6 my-3">
+			<h3 class="pb-2">MDC / FleetSync ID Table</h3>
+			<table class="table-striped table-hover mx-auto">
+				<thead class="thead-dark">
+					<tr>
+						<th class="px-3">Call Sign</th>
+						<th class="px-3">Fleet ID</th>
+						<th class="px-3">Individual ID</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for id in site.data.ids %}
 						<tr>
-							<th class="px-3">Call Sign</th>
-							<th class="px-3">Fleet ID</th>
-							<th class="px-3">Individual ID</th>
+							<td>{{ id.CallSign }}</td>
+							<td>{{ id.FleetID }}</td>
+							<td>{{ id.IndividualID }}</td>
 						</tr>
-					</thead>
-					<tbody>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+		<div class="col-lg-6 my-3">
+			<h3 class="pb-2">Status Code List</h3>
+			<table class="table-striped table-hover mx-auto">
+				<thead class="thead-dark">
+					<tr>
+						<th class="px-3">MDC Status</th>
+						<th class="px-3">FleetSync Status</th>
+						<th class="px-3">Message</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for code in site.data.status %}
 						<tr>
-							<td>WØUNC</td>
-							<td>862</td>
-							<td>0862</td>
+							<td>{{ code.MDCStatus }}</td>
+							<td>{{ code.FleetSyncStatus }}</td>
+							<td>{{ code.Message }}</td>
 						</tr>
-						<tr>
-							<td>K4IPS</td>
-							<td>862</td>
-							<td>4477</td>
-						</tr>
-						<tr>
-							<td>K4TZE</td>
-							<td>862</td>
-							<td>4893</td>
-						</tr>
-						<tr>
-							<td>KN4VCY</td>
-							<td>862</td>
-							<td>4829</td>
-						</tr>
-						<tr>
-							<td>N5CCM</td>
-							<td>862</td>
-							<td>5226</td>
-						</tr>
-						<tr>
-							<td>W4ZLA</td>
-							<td>862</td>
-							<td>4952</td>
-						</tr>
-						<tr>
-							<td>KN4WXU</td>
-							<td>862</td>
-							<td>4998</td>
-						</tr>
-						<tr>
-							<td>KN4ISQ</td>
-							<td>862</td>
-							<td>4478</td>
-						</tr>
-						<tr>
-							<td>W0VVV</td>
-							<td>862</td>
-							<td>0888</td>
-						</tr>
-						<tr>
-							<td>KM4VRL</td>
-							<td>862</td>
-							<td>4875</td>
-						</tr>
-						<tr>
-							<td>KN4HFJ</td>
-							<td>862</td>
-							<td>4435</td>
-						</tr>
-						<tr>
-							<td>K4PTZ</td>
-							<td>862</td>
-							<td>4789</td>
-						</tr>
-						<tr>
-							<td>W0DXV</td>
-							<td>862</td>
-							<td>0398</td>
-						</tr>
-						<tr>
-							<td>KN4UHC</td>
-							<td>862</td>
-							<td>4842</td>
-						</tr>
-						<tr>
-							<td>KK4OHE</td>
-							<td>862</td>
-							<td>4643</td>
-						</tr>
-						<tr>
-							<td>KN4UGZ</td>
-							<td>862</td>
-							<td>4849</td>
-						</tr>
-						<tr>
-							<td>KN4IDE</td>
-							<td>862</td>
-							<td>4433</td>
-						</tr>
-						<tr>
-							<td>KM4PLK</td>
-							<td>862</td>
-							<td>4755</td>
-						</tr>
-						<tr>
-							<td>WØUNC</td>
-							<td>862</td>
-							<td>0862</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="col-lg-6 py-3 py-lg-0">
-				<h3>Status Code List</h3>
-				<table class="table-striped table-hover mx-auto">
-					<thead>
-						<tr>
-							<th class="px-3">MDC Status</th>
-							<th class="px-3">FleetSync Status</th>
-							<th class="px-3">Message</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td></td>
-							<td>10</td>
-							<td>Testing</td>
-						</tr>
-						<tr>
-							<td>1</td>
-							<td>12</td>
-							<td>ACK</td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>20</td>
-							<td>10-20?</td>
-						</tr>
-						<tr>
-							<td>3</td>
-							<td>21</td>
-							<td>Atkins</td>
-						</tr>
-						<tr>
-							<td>4</td>
-							<td>22</td>
-							<td>Cone</td>
-						</tr>
-						<tr>
-							<td>5</td>
-							<td>23</td>
-							<td>SAC</td>
-						</tr>
-						<tr>
-							<td>6</td>
-							<td>24</td>
-							<td>Prospector</td>
-						</tr>
-						<tr>
-							<td>7</td>
-							<td>25</td>
-							<td>McEniry</td>
-						</tr>
-						<tr>
-							<td>8</td>
-							<td>26</td>
-							<td>Woodward</td>
-						</tr>
-						<tr>
-							<td>9</td>
-							<td>27</td>
-							<td>CRI Deck</td>
-						</tr>
-						<tr>
-							<td>10</td>
-							<td>28</td>
-							<td>EPIC</td>
-						</tr>
-						<tr>
-							<td>11</td>
-							<td>29</td>
-							<td>NOC (Not On Campus)</td>
-						</tr>
-						<tr>
-							<td>12</td>
-							<td>30</td>
-							<td>GOTO Discord</td>
-						</tr>
-						<tr>
-							<td>13</td>
-							<td>31</td>
-							<td>West Deck</td>
-						</tr>
-						<tr>
-							<td>14</td>
-							<td>32</td>
-							<td>Union</td>
-						</tr>
-						<tr>
-							<td>15</td>
-							<td>33</td>
-							<td>South Deck</td>
-						</tr>
-						<tr>
-							<td>16</td>
-							<td>34</td>
-							<td>East Deck</td>
-						</tr>
-						<tr>
-							<td></td>
-							<td>40</td>
-							<td>SWITCH to Talkaround</td>
-						</tr>
-						<tr>
-							<td></td>
-							<td>41</td>
-							<td>SWITCH to TAC-1</td>
-						</tr>
-						<tr>
-							<td></td>
-							<td>42</td>
-							<td>SWITCH to TAC-2</td>
-						</tr>
-						<tr>
-							<td></td>
-							<td>43</td>
-							<td>SWITCH to GMRS</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
+					{% endfor %}
+				</tbody>
+			</table>
 		</div>
 	</div>
-	<!-- End MDC/FleetSync ID Table & Status Code List -->
-
-
-	<!-- Footer -->
-	<footer id="footer">
-		<div class="container py-lg-5">
-			<div class="row">
-				<div class="col-lg-3 col-sm-6 py-3 py-lg-0">
-					<h3>Contact</h3>
-					<ul class="list-unstyled mb-0">
-						<li><a href="mailto:club@w0unc.org">club@w0unc.org</a></li>
-						<li><b>Mailing Address:</b></li>
-						<li>Amateur Radio Club at UNC Charlotte</li>
-						<li>SGOC Complex</li>
-						<li>Student Union, Room 212</li>
-						<li>University of North Carolina at Charlotte</li>
-						<li>9201 University City Boulevard</li>
-						<li>Charlotte, NC 28223-0001</li>
-					</ul>
-				</div>
-				<div class="col-lg-3 col-sm-6 py-3 py-lg-0">
-					<h3>Links</h3>
-					<ul class="list-unstyled d-none d-sm-block">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="index.html#about">About</a></li>
-						<li><a href="index.html#events">Events</a></li>
-						<li><a href="index.html#faq">FAQ</a></li>
-						<li><a href="https://ninerengage.uncc.edu/organization/amateur-radio-club" target="_blank">NinerEngage</a></li>
-						<li><a href="repeater.html">Repeater</a></li>
-						<li><a href="projects.html">Projects</a></li>
-						<li><a href="testing.html">Testing</a></li>
-						<li><a href="ids.html">MDC1200 / FleetSync IDs</a></li>
-						<li><a href="https://github.com/w0unc/UNC-Charlotte-ARC-Radio-Images" target="_blank">Code Plugs</a></li>
-					</ul>
-					<div class="list-group d-sm-none">
-						<a href="index.html" class="list-group-item list-group-item-action list-group-item-dark">Home</a>
-						<a href="index.html#about" class="list-group-item list-group-item-action list-group-item-dark">About</a>
-						<a href="index.html#events" class="list-group-item list-group-item-action list-group-item-dark">Events</a>
-						<a href="index.html#faq" class="list-group-item list-group-item-action list-group-item-dark">FAQ</a>
-						<a href="https://ninerengage.uncc.edu/organization/amateur-radio-club" class="list-group-item list-group-item-action list-group-item-dark" target="_blank">NinerEngage</a>
-						<a href="repeater.html" class="list-group-item list-group-item-action list-group-item-dark">Repeater</a>
-						<a href="projects.html" class="list-group-item list-group-item-action list-group-item-dark">Projects</a>
-						<a href="ids.html" class="list-group-item list-group-item-action list-group-item-dark">MDC1200 / FleetSync IDs</a>
-						<a href="https://github.com/w0unc/UNC-Charlotte-ARC-Radio-Images" class="list-group-item list-group-item-action list-group-item-dark" target="_blank">Code Plugs</a>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 py-3 py-lg-0">
-					<h3>Follow Us</h3>
-					<div>
-						<a href="https://twitter.com/w0unc" target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
-						<a href="https://github.com/w0unc" target="_blank"><i class="fab fa-github fa-3x"></i></a>
-						<a href="https://facebook.com/w0unc" target="_blank"><i class="fab fa-facebook fa-3x"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container-fluid py-3 text-center" id="footer-copyright">
-			<div class="container">
-				<span>© 2019 Amateur Radio Club at UNC Charlotte</span>
-			</div>
-		</div>
-	</footer>
-	<!-- End Footer -->
-
-
-	<!-- JavaScript -->
-	<script src="assets/js/jquery-3.4.1.slim.min.js"></script>
-	<script src="assets/js/bootstrap.bundle.min.js"></script>
-	<!-- End JavaScript -->
-
-
-</body>
-</html>
+</div>
+<!-- End MDC/FleetSync ID Table & Status Code List -->

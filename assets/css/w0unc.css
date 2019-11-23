@@ -1,24 +1,28 @@
 /*******************************/
+/*         TYPOGRAPHY          */
+/*******************************/
+
+
+
+
+
+/*******************************/
 /*           HEADER            */
 /*******************************/
 
 #header {
-	background: #000000 url(../images/header.jpg) no-repeat scroll 0% 50%;
+	background: #000000 url(../img/header.jpg) no-repeat scroll 0% 50%;
 	background-size: cover;
 	color: white;
 	font-family: "Open Sans", Helvetica, Arial;
 	font-weight: 300;
 }
 
-#header .btn {
-	margin-bottom:10px;
-}
-
 #header .btn-default {
 	-webkit-box-shadow: inset 0px 0px 0px 3px rgba(255, 255, 255, 0.5);
 	background: transparent;
 	box-shadow: inset 0px 0px 0px 3px rgba(255, 255, 255, 0.5);
-	color: rgba(255, 255, 255, 0.5);
+	color: rgba(255, 255, 255, 0.75);
 	text-shadow: none;
 }
 

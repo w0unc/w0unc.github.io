@@ -1,206 +1,91 @@
-<!DOCTYPE HTML>
-
-<html lang="en">
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="assets/images/favicon.png">
-
-	<!-- Fonts -->
-	<link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/all.min.css">
-	<link rel="stylesheet" href="assets/css/w0unc.css">
-
-	<title>Amateur Radio Club at UNC Charlotte</title>
-</head>
-
-<body>
+---
+layout:		default
+title:		Repeater Information
+---
 
 
-	<!-- Navbar -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<div class="container">
-			<a class="navbar-brand d-none d-lg-block" href="index.html"><img alt="WØUNC" height="60" src="assets/images/logo.png"></a>
-			<a class="navbar-brand d-none d-md-block" href="index.html">Amateur Radio Club at UNC Charlotte</a>
-			<a class="navbar-brand d-md-none" href="index.html">WØUNC</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="index.html">Home</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Info
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="index.html#about">About</a>
-							<a class="dropdown-item" href="index.html#events">Events</a>
-							<a class="dropdown-item" href="index.html#faq">FAQ</a>
-							<a class="dropdown-item" href="mailto:club@w0unc.org">Contact</a>
-							<a class="dropdown-item" href="https://ninerengage.uncc.edu/organization/amateur-radio-club" target="_blank">NinerEngage</a>
-						</div>
-					</li>
-					<li class="nav-item">
-							<a class="nav-link" href="repeater.html">Repeater</a>
-					</li>
-					<li class="nav-item">
-							<a class="nav-link" href="projects.html">Projects</a>
-					</li>
-					<li class="nav-item">
-							<a class="nav-link" href="testing.html">Testing</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Code Plugs & IDs
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="ids.html">MDC1200 / FleetSync IDs</a>
-							<a class="dropdown-item" href="https://github.com/w0unc/UNC-Charlotte-ARC-Radio-Images" target="_blank">Code Plugs</a>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<!-- End Navbar -->
-
-
-	<!-- Header -->
-	<div class="jumbotron jumbotron-fluid text-center" id="header">
-		<div class="container py-lg-3">
-			<h1 class="display-4">Club Repeater Information</h1>
-		</div>
+<!-- Repeater -->
+<div class="jumbotron my-4 my-md-5 text-center">
+	<div class="container">
+		<h3>WØUNC</h3>
+		<ul class="list-unstyled">
+			<li class="lead">442.650MHz (+5MHz Offset) 88.5 PL In/Out</li>
+			<lI>Atkins Library, UNC Charlotte - 169ft AGL</lI>
+			<li>Mixed Analog/P25</li>
+			<li>P25 NAC: 293</li>
+		</ul>
 	</div>
-	<!-- End Header -->
+</div>
+<!-- End Repeater -->
 
 
-	<!-- Repeater -->
-	<div class="jumbotron my-3 my-lg-5 text-center">
-		<div class="container">
-			<h3>WØUNC</h3>
-			<h4>442.650MHz (+5MHz Offset) 88.5 PL In/Out</h4>
-			<h5>Atkins Library, UNC Charlotte - 169ft AGL</h5>
-			<ul class="list-unstyled">
-				<li>Mixed Analog/P25</li>
-				<li>P25 NAC: 293</li>
-			</ul>
-		</div>
-	</div>
-	<!-- End Repeater -->
-
-
-	<!-- Repeater Coverage -->
-	<div class="container pb-5 py-3 py-lg-5">
-		<div class="card-deck">
-			<div class="card">
-				<img alt="WØUNCMap" class="card-img-top" src="assets/images/W0UNC_442.650MHz_90w_75m.png">
+<!-- Repeater Coverage -->
+<div class="container my-4 my-5">
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="card my-3 shadow-sm">
 				<div class="card-body">
 					<h5 class="card-title">WØUNC Coverage Map</h5>
-					<p>75 mile diameter.</p>
+					<p class="lead">75 mile diameter.</p>
 					<ul class="list-unstyled">
 						<li>Location: Atkins Library, UNCC</li>
-						<li>Altitude: 169ft AGL</li>
+						<li>Altitude: 169ft AGL (890ft MSL)</li>
 						<li>Frequency: 442.650MHz</li>
 						<li>Power: 90w</li>
 					</ul>
-					<a href="assets/images/W0UNC_442.650MHz_90w_75m.png" class="btn btn-info" target="_blank">View</a>
+					<a href="{{ site.baseurl }}/assets/img/AtkinsLibrary442.650MHz90w75m.png" class="btn btn-info" target="_blank">View</a>
 				</div>
+				<img alt="WØUNC" class="card-img-top" src="{{ site.baseurl }}/assets/img/AtkinsLibrary442.650MHz90w75m.png">
 			</div>
-			<div class="card">
-				<img alt="WØUNCMap" class="card-img-top" src="assets/images/W0UNC_442.650MHz_90w_150m.png">
+		</div>
+		<div class="col-lg-6">
+			<div class="card my-3 shadow-sm">
 				<div class="card-body">
 					<h5 class="card-title">WØUNC Coverage Map</h5>
-					<p>150 mile diameter.</p>
+					<p class="lead">150 mile diameter.</p>
 					<ul class="list-unstyled">
 						<li>Location: Atkins Library, UNCC</li>
-						<li>Altitude: 169ft AGL</li>
+						<li>Altitude: 169ft AGL (890ft MSL)</li>
 						<li>Frequency: 442.650MHz</li>
 						<li>Power: 90w</li>
 					</ul>
-					<a href="assets/images/W0UNC_442.650MHz_90w_150m.png" class="btn btn-info" target="_blank">View</a>
+					<a href="{{ site.baseurl }}/assets/img/AtkinsLibrary442.650MHz90w150m.png" class="btn btn-info" target="_blank">View</a>
 				</div>
+				<img alt="WØUNC" class="card-img-top" src="{{ site.baseurl }}/assets/img/AtkinsLibrary442.650MHz90w150m.png">
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="card my-3 shadow-sm">
+				<div class="card-body">
+					<h5 class="card-title">WØUNC Hypothetical Map</h5>
+					<p class="lead">75 mile diameter.</p>
+					<ul class="list-unstyled">
+						<li>Location: Atkins Library, UNCC</li>
+						<li>Altitude: 169ft AGL (890ft MSL)</li>
+						<li>Frequency: 146.000MHz</li>
+						<li>Power: 90w</li>
+					</ul>
+					<a href="{{ site.baseurl }}/assets/img/AtkinsLibrary2m90w75m.png" class="btn btn-info" target="_blank">View</a>
+				</div>
+				<img alt="WØUNC" class="card-img-top" src="{{ site.baseurl }}/assets/img/AtkinsLibrary2m90w75m.png">
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="card my-3 shadow-sm">
+				<div class="card-body">
+					<h5 class="card-title">WØUNC Hypothetical Map</h5>
+					<p class="lead">150 mile diameter.</p>
+					<ul class="list-unstyled">
+						<li>Location: Atkins Library, UNCC</li>
+						<li>Altitude: 169ft AGL (890ft MSL)</li>
+						<li>Frequency: 146.000MHz</li>
+						<li>Power: 90w</li>
+					</ul>
+					<a href="{{ site.baseurl }}/assets/img/AtkinsLibrary2m90w150m.png" class="btn btn-info" target="_blank">View</a>
+				</div>
+				<img alt="WØUNC" class="card-img-top" src="{{ site.baseurl }}/assets/img/AtkinsLibrary2m90w150m.png">
 			</div>
 		</div>
 	</div>
-	<!-- End Repeater Coverage -->
-
-
-	<!-- Footer -->
-	<footer id="footer">
-		<div class="container py-lg-5">
-			<div class="row">
-				<div class="col-lg-3 col-sm-6 py-3 py-lg-0">
-					<h3>Contact</h3>
-					<ul class="list-unstyled mb-0">
-						<li><a href="mailto:club@w0unc.org">club@w0unc.org</a></li>
-						<li><b>Mailing Address:</b></li>
-						<li>Amateur Radio Club at UNC Charlotte</li>
-						<li>SGOC Complex</li>
-						<li>Student Union, Room 212</li>
-						<li>University of North Carolina at Charlotte</li>
-						<li>9201 University City Boulevard</li>
-						<li>Charlotte, NC 28223-0001</li>
-					</ul>
-				</div>
-				<div class="col-lg-3 col-sm-6 py-3 py-lg-0">
-					<h3>Links</h3>
-					<ul class="list-unstyled d-none d-sm-block">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="index.html#about">About</a></li>
-						<li><a href="index.html#events">Events</a></li>
-						<li><a href="index.html#faq">FAQ</a></li>
-						<li><a href="https://ninerengage.uncc.edu/organization/amateur-radio-club" target="_blank">NinerEngage</a></li>
-						<li><a href="repeater.html">Repeater</a></li>
-						<li><a href="projects.html">Projects</a></li>
-						<li><a href="testing.html">Testing</a></li>
-						<li><a href="ids.html">MDC1200 / FleetSync IDs</a></li>
-						<li><a href="https://github.com/w0unc/UNC-Charlotte-ARC-Radio-Images" target="_blank">Code Plugs</a></li>
-					</ul>
-					<div class="list-group d-sm-none">
-						<a href="index.html" class="list-group-item list-group-item-action list-group-item-dark">Home</a>
-						<a href="index.html#about" class="list-group-item list-group-item-action list-group-item-dark">About</a>
-						<a href="index.html#events" class="list-group-item list-group-item-action list-group-item-dark">Events</a>
-						<a href="index.html#faq" class="list-group-item list-group-item-action list-group-item-dark">FAQ</a>
-						<a href="https://ninerengage.uncc.edu/organization/amateur-radio-club" class="list-group-item list-group-item-action list-group-item-dark" target="_blank">NinerEngage</a>
-						<a href="repeater.html" class="list-group-item list-group-item-action list-group-item-dark">Repeater</a>
-						<a href="projects.html" class="list-group-item list-group-item-action list-group-item-dark">Projects</a>
-						<a href="ids.html" class="list-group-item list-group-item-action list-group-item-dark">MDC1200 / FleetSync IDs</a>
-						<a href="https://github.com/w0unc/UNC-Charlotte-ARC-Radio-Images" class="list-group-item list-group-item-action list-group-item-dark" target="_blank">Code Plugs</a>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 py-3 py-lg-0">
-					<h3>Follow Us</h3>
-					<div>
-						<a href="https://twitter.com/w0unc" target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
-						<a href="https://github.com/w0unc" target="_blank"><i class="fab fa-github fa-3x"></i></a>
-						<a href="https://facebook.com/w0unc" target="_blank"><i class="fab fa-facebook fa-3x"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container-fluid py-3 text-center" id="footer-copyright">
-			<div class="container">
-				<span>© 2019 Amateur Radio Club at UNC Charlotte</span>
-			</div>
-		</div>
-	</footer>
-	<!-- End Footer -->
-
-
-	<!-- JavaScript -->
-	<script src="assets/js/jquery-3.4.1.slim.min.js"></script>
-	<script src="assets/js/bootstrap.bundle.min.js"></script>
-	<!-- End JavaScript -->
-
-
-</body>
-</html>
+</div>
+<!-- End Repeater Coverage -->
