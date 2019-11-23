@@ -2,6 +2,7 @@
 layout:									'project' # The layout to use for the project page.
 title:									'Club Website' # The name of the project.
 status:									'Complete' # The status of the project. Should be one of 'Brainstorming', 'Designing', 'Building', 'Testing', 'Implementing', 'On-Hold', or 'Cancelled'.
+project-lead:						'KN4WXU'
 progress:								'100' # Progress percentage of the project.
 categories:							'projects' # The categories for the project. Projects should always be 'projects'.
 visible:								'Yes' # Hides or shows the project in feeds.
