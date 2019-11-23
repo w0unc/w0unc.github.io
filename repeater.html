@@ -1,6 +1,6 @@
 ---
-layout:		default
-title:		Repeater Information
+layout:		'default'
+title:		'Repeater Information'
 ---
 
 
@@ -19,73 +19,31 @@ title:		Repeater Information
 <!-- End Repeater -->
 
 
-<!-- Repeater Coverage -->
-<div class="container my-4 my-5">
+<!-- Repeater Coverage Maps -->
+<div class="container my-4 my-md-5 text-center">
+	<h3 class="pb-2">Repeater Coverage Maps</h3>
 	<div class="row">
-		<div class="col-lg-6">
-			<div class="card my-3 shadow-sm">
-				<div class="card-body">
-					<h5 class="card-title">WØUNC Coverage Map</h5>
-					<p class="lead">75 mile diameter.</p>
-					<ul class="list-unstyled">
-						<li>Location: Atkins Library, UNCC</li>
-						<li>Altitude: 169ft AGL (890ft MSL)</li>
-						<li>Frequency: 442.650MHz</li>
-						<li>Power: 90w</li>
-					</ul>
-					<a href="{{ site.baseurl }}/assets/img/AtkinsLibrary442.650MHz90w75m.png" class="btn btn-info" target="_blank">View</a>
+		{% for map in site.maps %}
+			{% if map.visible == 'Yes' %}
+				<div class="col-lg-6 mx-auto">
+					<div class="card my-3 shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title text-center">{{ map.title }}</h5>
+							<h6 class="card-subtitle text-center">{{ map.diameter }} diameter</h6>
+							<hr>
+							<ul class="list-unstyled">
+								<li>Location: {{ map.location }}</li>
+								<li>Altitude: {{ map.altitude }}</li>
+								<li>Frequency: {{ map.frequency }}</li>
+								<li>Power: {{ map.power }}</li>
+							</ul>
+							<a href="{{ site.baseurl }}/assets/img/{{ map.link }}" class="btn btn-info" target="_blank">View</a>
+						</div>
+						<img alt="WØUNC Coverage Map" class="card-img-top" src="{{ site.baseurl }}/assets/img/{{ map.link }}">
+					</div>
 				</div>
-				<img alt="WØUNC" class="card-img-top" src="{{ site.baseurl }}/assets/img/AtkinsLibrary442.650MHz90w75m.png">
-			</div>
-		</div>
-		<div class="col-lg-6">
-			<div class="card my-3 shadow-sm">
-				<div class="card-body">
-					<h5 class="card-title">WØUNC Coverage Map</h5>
-					<p class="lead">150 mile diameter.</p>
-					<ul class="list-unstyled">
-						<li>Location: Atkins Library, UNCC</li>
-						<li>Altitude: 169ft AGL (890ft MSL)</li>
-						<li>Frequency: 442.650MHz</li>
-						<li>Power: 90w</li>
-					</ul>
-					<a href="{{ site.baseurl }}/assets/img/AtkinsLibrary442.650MHz90w150m.png" class="btn btn-info" target="_blank">View</a>
-				</div>
-				<img alt="WØUNC" class="card-img-top" src="{{ site.baseurl }}/assets/img/AtkinsLibrary442.650MHz90w150m.png">
-			</div>
-		</div>
-		<div class="col-lg-6">
-			<div class="card my-3 shadow-sm">
-				<div class="card-body">
-					<h5 class="card-title">WØUNC Hypothetical Map</h5>
-					<p class="lead">75 mile diameter.</p>
-					<ul class="list-unstyled">
-						<li>Location: Atkins Library, UNCC</li>
-						<li>Altitude: 169ft AGL (890ft MSL)</li>
-						<li>Frequency: 146.000MHz</li>
-						<li>Power: 90w</li>
-					</ul>
-					<a href="{{ site.baseurl }}/assets/img/AtkinsLibrary2m90w75m.png" class="btn btn-info" target="_blank">View</a>
-				</div>
-				<img alt="WØUNC" class="card-img-top" src="{{ site.baseurl }}/assets/img/AtkinsLibrary2m90w75m.png">
-			</div>
-		</div>
-		<div class="col-lg-6">
-			<div class="card my-3 shadow-sm">
-				<div class="card-body">
-					<h5 class="card-title">WØUNC Hypothetical Map</h5>
-					<p class="lead">150 mile diameter.</p>
-					<ul class="list-unstyled">
-						<li>Location: Atkins Library, UNCC</li>
-						<li>Altitude: 169ft AGL (890ft MSL)</li>
-						<li>Frequency: 146.000MHz</li>
-						<li>Power: 90w</li>
-					</ul>
-					<a href="{{ site.baseurl }}/assets/img/AtkinsLibrary2m90w150m.png" class="btn btn-info" target="_blank">View</a>
-				</div>
-				<img alt="WØUNC" class="card-img-top" src="{{ site.baseurl }}/assets/img/AtkinsLibrary2m90w150m.png">
-			</div>
-		</div>
+			{% endif %}
+		{% endfor %}
 	</div>
 </div>
-<!-- End Repeater Coverage -->
+<!-- End Repeater Coverage Maps -->

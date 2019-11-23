@@ -1,6 +1,6 @@
 ---
-layout:		home
-title:		Home
+layout:		'home'
+title:		'Home'
 ---
 
 
@@ -47,26 +47,56 @@ title:		Home
 <div class="container my-4 my-md-5 text-center" id="events">
 	<h2 class="pb-2">Planned Events</h2>
 	<div class="row">
-		{% for event in site.categories.events reversed %}
-			{% if event.visible == 'Yes' %}
-				<div class="col-md-6 col-lg-3 my-3 mx-auto">
-					<div class="card shadow-sm">
-						<div class="card-body">
-							<h5 class="card-title">{{ event.title }}</h5>
-							<p class="card-text">{{ event.description }}</p>
-						</div>
-						<div class="card-footer">
-							<ul class="list-unstyled">
-								<li>{{ event.location }}</li>
-								<li>{{ event.day }}</li>
-								<li>{{ event.time }}</li>
+		{% assign curDate = site.time | date: '%s' %}
+		{% for event in site.events limit:4 %}
+			{% assign eventStartDate = event.date | date: '%s' %}	
+				{% if eventStartDate > curDate %}
+					<div class="col-md-6 col-lg-3 my-3 mx-auto">
+						<div class="card shadow-sm">
+							<div class="card-body">
+								<h5 class="card-title">{{ event.title }}</h5>
+								<p class="card-text">{{ event.excerpt }}</p>
+							</div>
+							<ul class="list-group list-group-flush">
+								{% if event.access == 'Club' %}
+									<li class="list-group-item">Club Only</li>
+								{% endif %}
+								{% if event.access == 'School' %}
+									<li class="list-group-item">School Event</li>
+								{% endif %}
+								{% if event.access == 'Public' %}
+									<li class="list-group-item">Open to Public</li>
+								{% endif %}
+								{% if event.transportation == 'Yes' %}
+									<li class="list-group-item">Transportation Provided</li>
+								{% endif %}
+								{% if event.transportation == 'No' %}
+									<li class="list-group-item">No Transportation</li>
+								{% endif %}
+								{% if event.rsvp == 'Yes' %}
+									<li class="list-group-item"><a href="mailto:{{ site.email }}">RSVP Required</a></li>
+								{% endif %}
+								{% if event.rsvp == 'No' %}
+									<li class="list-group-item">No RSVP</li>
+								{% endif %}
 							</ul>
-							<a href="{{ event.website }}" class="btn btn-info" target="_blank">More</a>
+							<div class="card-footer">
+								<ul class="list-unstyled">
+									<li>{{ event.location }}</li>
+									<li>{{ event.address }}</li>
+									<li>{{ event.date | date: "%-d %B %Y" }}</li>
+									<li>{{ event.time }}</li>
+								</ul>
+								{% if event.event-id != '' %}
+									<a href="https://ninerengage.uncc.edu/event/{{ event.event-id }}" class="btn btn-info" target="_blank">More</a>
+								{% else if event.link != '' %}
+									<a href="{{ event.link }}" class="btn btn-info" target="_blank">More</a>
+								{% endif %}
+							</div>
 						</div>
 					</div>
-				</div>
-			{% endif %}
-		{% endfor %}
+				{% endif %}
+			{% endfor %}
 	</div>
 </div>
 <!-- End Events Calendar -->
@@ -94,6 +124,12 @@ title:		Home
 			<h4>How can I get my license?</h4>
 			<p>
 				Getting your license is relatively straightforward and often times the easiest method is to memorize the test questions. Our favorite practice exam is located <a href="https://hamstudy.org" target="_blank">here</a>. For assistance with studying or recommendations, you can contact the club and we will be happy to assist!
+			</p>
+		</div>
+		<div class="col-sm-6 my-3">
+			<h4>How do I join this club?</h4>
+			<p>
+				This club is open to all UNC Charlotte students, alumni, faculty, and staff. In order to join, apply on <a href="{{ site.ninerengage }}" target="_blank">NinerEngage</a> or <a href="mailto:{{ site.email }}">email us</a>. You are not required to have a radio license to join. We may also have events that the general public may attend.
 			</p>
 		</div>
 	</div>

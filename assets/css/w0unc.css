@@ -1,12 +1,4 @@
 /*******************************/
-/*         TYPOGRAPHY          */
-/*******************************/
-
-
-
-
-
-/*******************************/
 /*           HEADER            */
 /*******************************/
 
@@ -51,8 +43,10 @@
 
 #footer {
 	background: #232323;
+
 	color: #cccccc;
 	font-size: 12px;
+	position: relative;
 }
 
 #footer #footer-copyright {

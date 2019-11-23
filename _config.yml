@@ -21,11 +21,29 @@
 title: WØUNC
 email: club@w0unc.org
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  The Amateur Radio Club of UNC Charlotte is a student interest group whose purposes are to provide
+  the local community with emergency communications, educate students, faculty, and staff in
+  becoming amateur radio operators, and to foster fellowship within the amateur radio community.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+facebook_username: w0unc
+github_username: w0unc
+twitter_username: w0unc
+ninerengage: https://ninerengage.uncc.edu/organization/amateur-radio-club
+code-plugs: https://github.com/w0unc/UNC-Charlotte-ARC-Radio-Images
+arrl-exams: http://www.arrl.org/find-an-amateur-radio-license-exam-session
+laurel-exams: https://www.laurelvec.com/?pg=exams
+copyright: ©2019 Amateur Radio Club at UNC Charlotte
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+    sort_by: order
+  events:
+    output: false
+  maps:
+    output: false
+    sort_by: order
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -46,15 +64,3 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-
-# Custom global variables.
-
-facebook_username: w0unc
-github_username: w0unc
-twitter_username: w0unc
-ninerengage: https://ninerengage.uncc.edu/organization/amateur-radio-club
-code-plugs: https://github.com/w0unc/UNC-Charlotte-ARC-Radio-Images
-arrl-exams: http://www.arrl.org/find-an-amateur-radio-license-exam-session
-laurel-exams: https://www.laurelvec.com/?pg=exams
-copyright: ©2019 Amateur Radio Club at UNC Charlotte
