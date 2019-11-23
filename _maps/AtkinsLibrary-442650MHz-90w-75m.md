@@ -7,5 +7,5 @@ frequency:		'442.650MHz' # The frequency of the repeater.
 power:				'90w' # The power output of the repeater.
 link:					'AtkinsLibrary2m90w75m.png' # The link to the map image file.
 visible:			'Yes' # Hides or shows the map in feeds.
-order:				1 # The order the map will be shown in feeds.
+order:				'1' # The order the map will be shown in feeds.
 ---

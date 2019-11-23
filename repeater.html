@@ -23,7 +23,7 @@ title:		'Repeater Information'
 <div class="container my-4 my-md-5 text-center">
 	<h3 class="pb-2">Repeater Coverage Maps</h3>
 	<div class="row">
-		{% for map in site.maps %}
+		{% for map in site.maps reversed %}
 			{% if map.visible == 'Yes' %}
 				<div class="col-lg-6 mx-auto">
 					<div class="card my-3 shadow-sm">
