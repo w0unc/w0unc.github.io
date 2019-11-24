@@ -10,12 +10,12 @@ title:		'Testing Sessions'
 	<p>
 		It is highly recommended that you get an FRN number before attending a testing session. It can be used in place of a Social Security Number and in some cases it will be the only number you will be allowed to use. Remember to write it down or store it someplace safe after you receive it.
 	</p>
-	<a class="btn btn-info" href="https://apps.fcc.gov/coresWeb/publicHome.do" target="_blank">Get FRN</a>
+	<a class="btn btn-primary" href="https://apps.fcc.gov/coresWeb/publicHome.do" target="_blank">Get FRN</a>
 </div>
 <!-- FCC Registration Number (FRN) -->
 
 
-<!-- Sessions Agenda -->
+<!-- Upcoming Sessions -->
 <div class="jumbotron jumbotron-fluid my-4 my-md-5 text-center">
 	<div class="container">
 		<h3 class="pb-2">Upcoming Sessions</h3>
@@ -23,7 +23,7 @@ title:		'Testing Sessions'
 			We are currently not offering our own testing sessions. A few of our members are undergoing VE training and we will begin scheduling our own sessions once they are done. We will include unaffiliated sessions if a sizable amount of our members are attending or transportation is provided.
 		</p>
 		<p class="alert alert-warning" role="alert">
-			Exams marked as 'Transportation Provided' will have the event time, <span class="font-weight-bold">not</span> the departure time. You are responsible for contacting us in order to get the details about departure time and location, or it will be provided in the RSVP reply email.
+			Exams marked as 'Transportation Provided' will have the event time listed, <span class="font-weight-bold">not</span> the departure time. You are responsible for contacting us in order to get the details about departure time and location, or it will be provided in the RSVP reply email.
 		</p>
 		<div class="row">
 			{% assign curDate = site.time | date: '%s' %}
@@ -63,10 +63,10 @@ title:		'Testing Sessions'
 								<ul class="list-unstyled">
 									<li>{{ event.location }}</li>
 									<li>{{ event.address }}</li>
-									<li>{{ event.day }}</li>
+									<li>{{ event.date | date: "%-d %B %Y" }}</li>
 									<li>{{ event.time }}</li>
 								</ul>
-								<a href="{{ event.link }}" class="btn btn-info">More</a>
+								<a href="{{ event.link }}" class="btn btn-primary">More</a>
 							</div>
 						</div>
 					</div>
@@ -75,10 +75,10 @@ title:		'Testing Sessions'
 		</div>
 	</div>
 </div>
-<!-- End Sessions Agenda -->
+<!-- End Upcoming Sessions -->
 
 
-<!-- External Testing Sessions -->
+<!-- ARRL & Laurel Testing Sessions -->
 <div class="container my-4 my-md-5 text-center">
 	<div class="row">
 		<div class="col-md-6 my-3">
@@ -86,15 +86,15 @@ title:		'Testing Sessions'
 			<p>
 				These are a list of ARRL testing sessions. We will most likely not be providing transportation to these events. Check out our events page for testing sessions we will be attending and providing transportation. The Amateur Radio Club at UNC Charlotte and ARRL are not affiliated.
 			</p>
-			<a href="{{ site.arrl-exams }}" class="btn btn-info" target="_blank">View</a>
+			<a href="{{ site.arrl-exams }}" class="btn btn-primary" target="_blank">View</a>
 		</div>
 		<div class="col-md-6 my-3">
 			<h3 class="pb-2">Laurel Testing Sessions</h3>
 			<p>
 				These are a list of Laurel testing sessions. We will most likely not be providing transportation to these events. Check out our events page for testing sessions we will be attending and providing transportation. The Amateur Radio Club at UNC Charlotte and Laurel are not affiliated.
 			</p>
-			<a href="{{ site.laurel-exams }}" class="btn btn-info" target="_blank">View</a>
+			<a href="{{ site.laurel-exams }}" class="btn btn-primary" target="_blank">View</a>
 		</div>
 	</div>
 </div>
-<!-- End External Testing Sessions -->
+<!-- ARRL & Laurel Testing Sessions -->

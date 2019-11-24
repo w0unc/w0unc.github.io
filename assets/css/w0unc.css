@@ -11,6 +11,7 @@
 }
 
 #header .btn-default {
+	-moz-box-shadow: inset 0px 0px 0px 3px rgba(255, 255, 255, 0.5);
 	-webkit-box-shadow: inset 0px 0px 0px 3px rgba(255, 255, 255, 0.5);
 	background: transparent;
 	box-shadow: inset 0px 0px 0px 3px rgba(255, 255, 255, 0.5);
@@ -36,6 +37,12 @@
 	color: #ffffff;
 }
 
+#header .btn-lg {
+	font-size: 14px;
+	font-weight: bold;
+	padding: 15px 65px;
+}
+
 
 /*******************************/
 /*           FOOTER            */
@@ -43,10 +50,8 @@
 
 #footer {
 	background: #232323;
-
 	color: #cccccc;
 	font-size: 12px;
-	position: relative;
 }
 
 #footer #footer-copyright {
@@ -55,78 +60,29 @@
 
 
 /*******************************/
-/*          Buttons            */
+/* BOOTSTRAP CARD COLUMNS FIX  */
 /*******************************/
 
-.btn {
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border: 0 none;
-	border-radius: 3px;
-	font-weight: bold;
-	padding: 10px 40px;
+@media (min-width: 576px) {
+	.card-columns {
+			column-count: 1;
+	}
 }
 
-.btn-default,
-.btn-primary,
-.btn-success,
-.btn-action
-.btn-info,
-.btn-warning,
-.btn-danger {
-	text-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+@media (min-width: 768px) {
+	.card-columns {
+			column-count: 2;
+	}
 }
 
-.btn-lg {
-	font-size: 14px;
-	font-weight: bold;
-	padding: 15px 65px;
+@media (min-width: 992px) {
+	.card-columns {
+			column-count: 3;
+	}
 }
 
-.btn-default {
-	-moz-box-shadow: inset 0px 0px 0px 3px rgba(50, 50, 50, 0.5);
-	-webkit-box-shadow: inset 0px 0px 0px 3px rgba(50, 50, 50, 0.5);
-	background: transparent;
-	box-shadow: inset 0px 0px 0px 3px rgba(50, 50, 50, 0.5);
-	color: rgba(50, 50, 50, 0.5);
-	text-shadow: none;
-}
-
-.btn-default:hover,
-.btn-default:focus {
-	-moz-box-shadow: inset 0px 0px 0px 3px rgba(50, 50, 50, 0.8);
-	-webkit-box-shadow: inset 0px 0px 0px 3px rgba(50, 50, 50, 0.8);
-	background: transparent;
-	box-shadow: inset 0px 0px 0px 3px rgba(50, 50, 50, 0.8);
-	color: rgba(50, 50, 50, 0.8);
-}
-
-.btn-default:active,
-.btn-default.active {
-	-moz-box-shadow: inset 0px 0px 0px 3px #333333;
-	-webkit-box-shadow: inset 0px 0px 0px 3px #333333;
-	background: transparent;
-	box-shadow: inset 0px 0px 0px 3px #333333;
-	color: #333333;
-}
-
-.btn-action,
-.btn-primary {
-	background-image: -webkit-linear-gradient(top, #FF9B22 0%, #FF8C00 100%);
-	background-image: linear-gradient(to bottom, #FF9B22 0%, #FF8C00 100%);
-	background-repeat: repeat-x;
-	border: 0 none;
-	color: #FFEFD7;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffFF9B22', endColorstr='#ffFF8C00', GradientType=0);
-	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-}
-
-.btn-action:hover,
-.btn-action:focus {
-	background: #FF9B22;
-	color: #ffffff;
-}
-
-.btn-action:active {
-	background: #FF8C00;
+@media (min-width: 1200px) {
+	.card-columns {
+			column-count: 3;
+	}
 }

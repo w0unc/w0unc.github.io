@@ -8,11 +8,11 @@ title:		'Club Projects'
 <div class="container my-4 my-md-5 text-center">
 	<p class="lead">Our works in progress and unattainable delusions of grandeur.</p>
 	<div class="card-columns">
-		{% for project in site.projects %}
+		{% for project in site.projects reversed %}
 			<div class="card my-3 shadow-sm">
 				<div class="card-body">
 					<h5 class="card-title">{{ project.title }}</h5>
-					<p>{{ project.excerpt }}</p>
+					<p class="card-text">{{ project.excerpt }}</p>
 					<div class="progress my-3" style="height: 20px">
 						{% if project.progress == '100' %}
 							<div class="progress-bar bg-success" role="progressbar" style="width: {{ project.progress }}%;" aria-valuenow="{{ project.progress }}" aria-valuemin="0" aria-valuemax="100">{{ project.progress }}%</div>
@@ -20,7 +20,7 @@ title:		'Club Projects'
 							<div class="progress-bar" role="progressbar" style="width: {{ project.progress }}%;" aria-valuenow="{{ project.progress }}" aria-valuemin="0" aria-valuemax="100">{{ project.progress }}%</div>
 						{% endif %}
 					</div>
-					<a href="{{ site.baseurl }}{{ project.url }}" class="btn btn-info">More</a>
+					<a href="{{ site.baseurl }}{{ project.url }}" class="btn btn-primary">More</a>
 				</div>
 			</div>
 		{% endfor %}

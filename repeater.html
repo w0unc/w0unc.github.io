@@ -10,7 +10,7 @@ title:		'Repeater Information'
 		<h3>WØUNC</h3>
 		<ul class="list-unstyled">
 			<li class="lead">442.650MHz (+5MHz Offset) 88.5 PL In/Out</li>
-			<lI>Atkins Library, UNC Charlotte - 169ft AGL</lI>
+			<li>Atkins Library, UNC Charlotte - 169ft AGL</li>
 			<li>Mixed Analog/P25</li>
 			<li>P25 NAC: 293</li>
 		</ul>
@@ -29,15 +29,15 @@ title:		'Repeater Information'
 					<div class="card my-3 shadow-sm">
 						<div class="card-body">
 							<h5 class="card-title text-center">{{ map.title }}</h5>
-							<h6 class="card-subtitle text-center">{{ map.diameter }} diameter</h6>
+							<h6 class="card-subtitle text-center">{{ map.diameter }} Miles Diameter</h6>
 							<hr>
 							<ul class="list-unstyled">
-								<li>Location: {{ map.location }}</li>
-								<li>Altitude: {{ map.altitude }}</li>
-								<li>Frequency: {{ map.frequency }}</li>
-								<li>Power: {{ map.power }}</li>
+								<li><span class="font-weight-bold">Location:</span> {{ map.location }}</li>
+								<li><span class="font-weight-bold">Altitude:</span> {{ map.altitude }}</li>
+								<li><span class="font-weight-bold">Frequency:</span> {{ map.frequency }}</li>
+								<li><span class="font-weight-bold">Power:</span> {{ map.power }}</li>
 							</ul>
-							<a href="{{ site.baseurl }}/assets/img/{{ map.link }}" class="btn btn-info" target="_blank">View</a>
+							<a href="{{ site.baseurl }}/assets/img/{{ map.link }}" class="btn btn-primary" target="_blank">View</a>
 						</div>
 						<img alt="WØUNC Coverage Map" class="card-img-top" src="{{ site.baseurl }}/assets/img/{{ map.link }}">
 					</div>

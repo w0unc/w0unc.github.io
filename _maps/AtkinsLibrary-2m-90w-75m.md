@@ -1,6 +1,6 @@
 ---
 title:				'W0UNC Hypothetical Map' # The title of the map.
-diameter:			'75 miles' # The diameter of the map in miles.
+diameter:			'75' # The diameter of the map in miles.
 location:			'Atkins Library, UNCC' # The location of the antenna.
 altitude:			'169ft AGL (890ft MSL)' # The height of the antenna.
 frequency:		'146.000MHz' # The frequency of the repeater.
