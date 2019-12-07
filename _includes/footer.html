@@ -1,3 +1,6 @@
+---
+---
+
 <footer id="footer">
 	<div class="container mt-4 mt-lg-5">
 		<div class="row">
@@ -63,6 +66,41 @@
 <!-- JavaScript -->
 <script src="{{ site.baseurl }}/assets/js/jquery-3.4.1.slim.min.js"></script>
 <script src="{{ site.baseurl }}/assets/js/bootstrap.bundle.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/leaflet.js"></script>
+<script>
+	// AtkinsLibrary442650MHz90w
+	var myMap = L.map('AtkinsLibrary442650MHz90w').setView([35.3057221291742, -80.732651428046], 8);
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		maxZoom: 18,
+		id: 'mapbox/streets-v11',
+		accessToken: 'pk.eyJ1IjoiYm1lYXJuaGFyZHQiLCJhIjoiY2szdXdkc2gxMGhsMTNsbnpqbnExbjV2eCJ9.QkqfZqiylsmtYcZCZnA5JQ'
+	}).addTo(myMap);
+	var imageUrl = '{{ site.baseurl }}/assets/img/AtkinsLibrary442650MHz90wCov.png',
+	imageBounds = [[38.0036995509476, -84.0386726928662], [32.6077447074008, -77.4266301632258]];
+	L.imageOverlay(imageUrl, imageBounds).addTo(myMap);
+	var icon = L.icon({
+    iconUrl: '{{ site.baseurl }}/assets/img/marker-icon.png',
+    iconSize: [25, 41],
+    iconAnchor: [13, 41],
+    shadowUrl: '{{ site.baseurl }}/assets/img/marker-shadow.png',
+	});
+	L.marker([35.3057221291742, -80.732651428046], { icon: icon }).addTo(myMap);
+</script>
+<script>
+	// AtkinsLibrary2m90w
+	var myMap = L.map('AtkinsLibrary2m90w').setView([35.3057221291742, -80.732651428046], 8);
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		maxZoom: 18,
+		id: 'mapbox/streets-v11',
+		accessToken: 'pk.eyJ1IjoiYm1lYXJuaGFyZHQiLCJhIjoiY2szdXdkc2gxMGhsMTNsbnpqbnExbjV2eCJ9.QkqfZqiylsmtYcZCZnA5JQ'
+	}).addTo(myMap);
+	var imageUrl = '{{ site.baseurl }}/assets/img/AtkinsLibrary2m90wCov.png',
+	imageBounds = [[38.0036995509476, -84.0386726928662], [32.6077447074008, -77.4266301632258]];
+	L.imageOverlay(imageUrl, imageBounds).addTo(myMap);
+	L.marker([35.3057221291742, -80.732651428046], { icon: icon }).addTo(myMap);
+</script>
 <!-- End JavaScript -->
 
 

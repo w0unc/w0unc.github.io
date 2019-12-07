@@ -29,17 +29,18 @@ title:		'Repeater Information'
 					<div class="card my-3 shadow-sm">
 						<div class="card-body">
 							<h5 class="card-title text-center">{{ map.title }}</h5>
-							<h6 class="card-subtitle text-center">{{ map.diameter }} Miles Diameter</h6>
-							<hr>
 							<ul class="list-unstyled">
 								<li><span class="font-weight-bold">Location:</span> {{ map.location }}</li>
 								<li><span class="font-weight-bold">Altitude:</span> {{ map.altitude }}</li>
 								<li><span class="font-weight-bold">Frequency:</span> {{ map.frequency }}</li>
 								<li><span class="font-weight-bold">Power:</span> {{ map.power }}</li>
 							</ul>
-							<a href="{{ site.baseurl }}/assets/img/{{ map.link }}" class="btn btn-primary" target="_blank">View</a>
+							<div class="btn-group" role="group" aria-label="Basic example">
+								<a href="{{ site.baseurl }}/assets/img/{{ map.link75 }}" class="btn btn-primary" role="button" aria-pressed="true">75ø</a>
+								<a href="{{ site.baseurl }}/assets/img/{{ map.link150 }}" class="btn btn-primary" role="button" aria-pressed="true">150ø</a>
+							</div>
 						</div>
-						<img alt="WØUNC Coverage Map" class="card-img-top" src="{{ site.baseurl }}/assets/img/{{ map.link }}">
+						<div id="{{ map.name }}" style="min-height: 500px; width: 100%;"></div>
 					</div>
 				</div>
 			{% endif %}
