@@ -1,5 +1,5 @@
 ---
-title:				'W0UNC Coverage Map' # The title of the map.
+title:				'WØUNC Coverage Map' # The title of the map.
 name:					'AtkinsLibrary442650MHz90w' # Map library friendly name.
 location:			'Atkins Library, UNCC' # The location of the antenna.
 altitude:			'169ft AGL (890ft MSL)' # The height of the antenna.

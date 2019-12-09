@@ -11,5 +11,5 @@ order:									'9' # The order the project will be shown in feeds.
 
 
 The purpose of this website is to create an online presence for the Amateur Radio Club at UNC Charlotte.
-We need a central location to provide information to the public as well as other members.
-The website should have a consistent theme and layout and should be relatively modular.
+We need a central location to present information to the public as well as other members.
+The website should have a consistent theme and layout and should be modular in design.

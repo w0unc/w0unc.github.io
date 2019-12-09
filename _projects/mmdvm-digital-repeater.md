@@ -12,5 +12,5 @@ order:									'2' # The order the project will be shown in feeds.
 
 An experiment in multi-mode digital repeaters.
 This project involves interfacing an MMDVM controller into a desktop repeater.
-This repeater will operate primarily on DMR and will be linked on-demand to the BrandMeister Network.
-It is also planned to feature a patch into the main WØUNC machine.
+This repeater will run primarily on DMR and will link on-demand to the BrandMeister Network.
+There are plans to feature a patch into the main WØUNC machine.

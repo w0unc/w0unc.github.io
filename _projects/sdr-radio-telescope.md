@@ -11,5 +11,5 @@ order:									'3' # The order the project will be shown in feeds.
 
 
 Amateur Radio meets Optical Science.
-We are constructing an Software Defined Radio (SDR)-based radio telescope.
+We are constructing a Software Defined Radio (SDR)-based radio telescope.
 This telescope will be measuring the hydrogen-line, and creating images based on those measurements.

@@ -10,6 +10,6 @@ order:									'1' # The order the project will be shown in feeds.
 ---
 
 
-What is HSMM? 
+What is HSMM?
 High-Speed Multimedia (HSMM) is a project involving the use of modified wireless networking equipment to create a high-bandwidth digital network capable of carrying a variety of network traffic over IP.
-It is separate from the wider internet, but can carry similar services.
+It is separate from the wider internet but can carry similar services.

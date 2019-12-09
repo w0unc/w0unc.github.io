@@ -8,11 +8,11 @@ title:		'Testing Sessions'
 <div class="container my-4 my-md-5 text-center">
 	<h3 class="pb-2">FCC Registration Number (FRN)</h3>
 	<p>
-		It is highly recommended that you get an FRN number before attending a testing session. It can be used in place of a Social Security Number and in some cases it will be the only number you will be allowed to use. Remember to write it down or store it someplace safe after you receive it.
+		It is highly recommended that you get an FRN number before attending a testing session. It can take the place of a Social Security Number and in some cases, it will be the only number you can use. Remember to write it down or store it someplace safe after you receive it.
 	</p>
 	<a class="btn btn-primary" href="https://apps.fcc.gov/coresWeb/publicHome.do" target="_blank">Get FRN</a>
 </div>
-<!-- FCC Registration Number (FRN) -->
+<!-- End FCC Registration Number (FRN) -->
 
 
 <!-- Upcoming Sessions -->
@@ -20,16 +20,17 @@ title:		'Testing Sessions'
 	<div class="container">
 		<h3 class="pb-2">Upcoming Sessions</h3>
 		<p class="alert alert-info" role="alert">
-			We are currently not offering our own testing sessions. A few of our members are undergoing VE training and we will begin scheduling our own sessions once they are done. We will include unaffiliated sessions if a sizable amount of our members are attending or transportation is provided.
+			We are currently not offering our own testing sessions. A few of our members are undergoing VE training and we will begin scheduling our own sessions once they are ready. We will include unaffiliated sessions if a sizable amount of our members are attending or if we will offer transportation.
 		</p>
 		<p class="alert alert-warning" role="alert">
-			Exams marked as 'Transportation Provided' will have the event time listed, <span class="font-weight-bold">not</span> the departure time. You are responsible for contacting us in order to get the details about departure time and location, or it will be provided in the RSVP reply email.
+			Exams marked as 'Transportation Provided' will have the event time listed, <span class="font-weight-bold">not</span> the departure time. You handle contacting us to get the details about departure time and location, or it will be provided in the RSVP reply email.
 		</p>
 		<div class="row">
+			{% assign i = 0 %}
 			{% assign curDate = site.time | date: '%s' %}
 			{% for event in site.events %}
 				{% assign eventStartDate = event.date | date: '%s' %}
-				{% if eventStartDate > curDate and event.categories contains 'tests' %}
+				{% if eventStartDate > curDate and event.categories contains 'tests' and i < 4 %}
 					<div class="col-md-6 col-lg-4 mx-auto">
 						<div class="card my-3 shadow-sm">
 							<div class="card-body">
@@ -70,6 +71,7 @@ title:		'Testing Sessions'
 							</div>
 						</div>
 					</div>
+					{% assign i = i | plus: 1 %}
 				{% endif %}
 			{% endfor %}
 		</div>
@@ -84,14 +86,14 @@ title:		'Testing Sessions'
 		<div class="col-md-6 my-3">
 			<h3 class="pb-2">ARRL Testing Sessions</h3>
 			<p>
-				These are a list of ARRL testing sessions. We will most likely not be providing transportation to these events. Check out our events page for testing sessions we will be attending and providing transportation. The Amateur Radio Club at UNC Charlotte and ARRL are not affiliated.
+				These are a list of ARRL testing sessions. We will not be attending most of these. Check out our upcoming sessions for testing events we will be attending and supplying transportation. The Amateur Radio Club at UNC Charlotte and ARRL are not affiliated.
 			</p>
 			<a href="{{ site.arrl-exams }}" class="btn btn-primary" target="_blank">View</a>
 		</div>
 		<div class="col-md-6 my-3">
 			<h3 class="pb-2">Laurel Testing Sessions</h3>
 			<p>
-				These are a list of Laurel testing sessions. We will most likely not be providing transportation to these events. Check out our events page for testing sessions we will be attending and providing transportation. The Amateur Radio Club at UNC Charlotte and Laurel are not affiliated.
+				These are a list of Laurel testing sessions. We will not be attending most of these. Check out our upcoming sessions for testing events we will be attending and supplying transportation. The Amateur Radio Club at UNC Charlotte and Laurel are not affiliated.
 			</p>
 			<a href="{{ site.laurel-exams }}" class="btn btn-primary" target="_blank">View</a>
 		</div>

@@ -1,5 +1,5 @@
 ---
-title:				'W0UNC Hypothetical Map' # The title of the map.
+title:				'WØUNC Hypothetical Map' # The title of the map.
 name:					'AtkinsLibrary2m90w' # Map library friendly name.
 location:			'Atkins Library, UNCC' # The location of the antenna.
 altitude:			'169ft AGL (890ft MSL)' # The height of the antenna.
