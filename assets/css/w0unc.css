@@ -7,7 +7,12 @@
 	background-size: cover;
 	color: white;
 	font-family: "Open Sans", Helvetica, Arial;
-	font-weight: 300;
+	font-weight: 400;
+	text-shadow: 2px 2px  #000000;
+}
+
+.header-background {
+	background: rgba(0, 0, 0, 0.25);
 }
 
 #header .btn-default {

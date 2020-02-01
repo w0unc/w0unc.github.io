@@ -8,7 +8,7 @@ title:		'Home'
 <div class="container my-4 my-md-5 text-center" id="about">
 	<h2 class="pb-2">About Us</h2>
 	<p>
-		The Amateur Radio Club of UNC Charlotte is a student interest group whose purposes are to provide the local community with emergency communications, educate students, faculty, and staff in becoming amateur radio operators, and to foster fellowship within the amateur radio community. This is registered student organization on the campus of UNC Charlotte, and it is a fledgling group.
+		The Amateur Radio Club of UNC Charlotte is a student interest group whose purposes are to educate students, faculty, and staff in becoming licensed amateur radio operators, provide the local community with emergency communications, and to foster fellowship within the amateur radio community. This is registered student organization on the campus of UNC Charlotte.
 	</p>
 </div>
 <!-- End About Us -->
@@ -30,14 +30,14 @@ title:		'Home'
 				<h4><span class="fas fa-bolt fa-2x"></span></h4>
 				<h4>Meetings</h4>
 				<p>
-					We meet monthly at a predesignated time and place. Check our <a href="{{ site.ninerengage }}" target="_blank">NinerEngage</a> page for meeting announcements. Any undergraduate, graduate, alumni, or faculty may attend the meetings. No RSVP is required.
+					We meet monthly at a predesignated time and place. Check below or on our <a href="{{ site.ninerengage }}" target="_blank">NinerEngage</a> page for meeting announcements. Any undergraduate, graduate, alumni, or faculty/staff may attend the meetings. No RSVP is required.
 				</p>
 			</div>
 			<div class="col-md-4 my-3">
 				<h4><span class="fas fa-comments fa-2x"></span></h4>
 				<h4>Contact</h4>
 				<p>
-					The easiest way to contact us is though the repeater, you can also contact us by emailing <a href="mailto:{{ site.email }}">club@w0unc.org</a>. More contact options can be found once you have logged into our NinerEngage page.
+					The easiest way to contact us is though the repeater. You can also contact us by emailing <a href="mailto:{{ site.email }}">club@w0unc.org</a>. More contact options can be found once you have logged into our NinerEngage page.
 				</p>
 			</div>
 		</div>
@@ -86,7 +86,7 @@ title:		'Home'
 							</ul>
 							<div class="card-footer">
 								<ul class="list-unstyled">
-									<li>{{ event.location }}</li>
+									<li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{ event.location }}</li>
 									<li>{{ event.address }}</li>
 									<li>{{ event.date | date: "%-d %B %Y" }}</li>
 									<li>{{ event.time }}</li>
