@@ -27,14 +27,9 @@ description: >- # this means to ignore newlines until "baseurl:"
   community. This is registered student organization on the campus of UNC Charlotte.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-facebook_username: w0unc
 github_username: w0unc
-twitter_username: w0unc
 ninerengage: https://ninerengage.uncc.edu/organization/amateur-radio-club
 code-plugs: https://github.com/w0unc/UNC-Charlotte-ARC-Radio-Images
-arrl-exams: http://www.arrl.org/find-an-amateur-radio-license-exam-session
-laurel-exams: https://www.laurelvec.com/?pg=exams
-copyright: ©2019 Amateur Radio Club at UNC Charlotte
 collections:
   projects:
     output: true
