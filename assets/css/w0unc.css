@@ -3,7 +3,7 @@
 /*******************************/
 
 #header {
-	background: #000000 url(../img/header.jpg) no-repeat scroll 0% 50%;
+	background: #000000 url(../img/header.jpg) no-repeat scroll center center;
 	background-size: cover;
 	color: white;
 	font-family: "Open Sans", Helvetica, Arial;
@@ -61,6 +61,16 @@
 
 #footer #footer-copyright {
 	background: #191919;
+}
+
+
+/*******************************/
+/*   RULES TABLE OF CONTENTS   */
+/*******************************/
+
+#rules-toc > li {
+	font-size: 18px;
+	font-weight: bold;
 }
 
 
