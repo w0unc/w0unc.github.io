@@ -16,48 +16,22 @@ title:		'FAQ'
 	<div class="row">
 		<div class="col-sm-12 col-lg-7 my-3 mx-auto" id="members">
 			<div class="accordion" id="accordionExample">
-				<div class="card">
-					<div class="card-header" id="headingOneOne">
-						<h2 class="mb-0">
-							<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOneOne" aria-expanded="true" aria-controls="collapseOneOne">
-								1. What is Amateur Radio?
-							</button>
-						</h2>
-					</div>
-					<div id="collapseOneOne" class="collapse" aria-labelledby="headingOneOne" data-parent="#accordionExample">
-						<div class="card-body">
-							Amateur Radio is a hobby enjoyed across the nation and the world. One of the primary purposes of Amateur Radio is emergency preparedness—if a natural disaster occurs, often the only available form of communication is via radio. Amateur Radio Operators aid in this by supplying necessary communications as a public service.
+				{% for faq in site.data.faq-club %}
+					<div class="card">
+						<div class="card-header" id="heading{{ faq.id }}">
+							<h2 class="mb-0">
+								<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{ faq.id }}" aria-expanded="true" aria-controls="collapse{{ faq.id }}">
+									{{ faq.question }}
+								</button>
+							</h2>
+						</div>
+						<div id="collapse{{ faq.id }}" class="collapse" aria-labelledby="heading{{ faq.id }}" data-parent="#accordionExample">
+							<div class="card-body">
+								{{ faq.answer | replace: "site.email", site.email | replace: "site.ninerengage", site.ninerengage }}
+							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-header" id="headingOneTwo">
-					<h2 class="mb-0">
-						<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOneTwo" aria-expanded="true" aria-controls="collapseOneTwo">
-							2. How do I get involved?
-						</button>
-					</h2>
-				</div>
-				<div id="collapseOneTwo" class="collapse" aria-labelledby="headingOneTwo" data-parent="#accordionExample">
-					<div class="card-body">
-						The easiest way to get involved with our club is to come to a meeting! If you cannot make our regular meetings, you can also send an email to <a href="mailto:{{ site.email }}">{{ site.email }}</a> or contact us though our repeater.
-					</div>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-header" id="headingOneThree">
-					<h2 class="mb-0">
-						<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOneThree" aria-expanded="true" aria-controls="collapseOneThree">
-							3. How do I join this club?
-						</button>
-					</h2>
-				</div>
-				<div id="collapseOneThree" class="collapse" aria-labelledby="headingOneThree" data-parent="#accordionExample">
-					<div class="card-body">
-						This club is open to all UNC Charlotte students, alumni, faculty, and staff. In order to join, apply on <a href="{{ site.ninerengage }}" target="_blank">NinerEngage</a> or <a href="mailto:{{ site.email }}">email us</a>. You are not required to have a radio license to join. We may also have events that the general public may attend.
-					</div>
-				</div>
+				{% endfor %}
 			</div>
 		</div>
 	</div>
@@ -77,172 +51,22 @@ title:		'FAQ'
 	<div class="row">
 		<div class="col-sm-12 col-lg-7 my-3 mx-auto" id="members">
 			<div class="accordion" id="accordionExample">
-				<div class="card">
-					<div class="card-header" id="headingOne">
-						<h2 class="mb-0">
-							<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-								1. What is an Amateur Radio license?
-							</button>
-						</h2>
-					</div>
-					<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-						<div class="card-body">
-							An Amateur Radio license is a license granted by the Federal Communications Commission and allows the holder to operate on a predefined range of frequencies with some restrictions.
+				{% for faq in site.data.faq-licensing %}
+					<div class="card">
+						<div class="card-header" id="heading{{ faq.id }}">
+							<h2 class="mb-0">
+								<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{ faq.id }}" aria-expanded="true" aria-controls="collapse{{ faq.id }}">
+									{{ faq.question }}
+								</button>
+							</h2>
+						</div>
+						<div id="collapse{{ faq.id }}" class="collapse" aria-labelledby="heading{{ faq.id }}" data-parent="#accordionExample">
+							<div class="card-body">
+								{{ faq.answer }}
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="card">
-					<div class="card-header" id="headingTwo">
-						<h2 class="mb-0">
-							<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-								2. How do I get an Amateur Radio license?
-							</button>
-						</h2>
-					</div>
-					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-						<div class="card-body">
-							To get an Amateur Radio license, you must take and pass a multiple choice exam.
-						</div>
-					</div>
-				</div>
-				<div class="card">
-					<div class="card-header" id="headingThree">
-						<h2 class="mb-0">
-							<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-								3. What exactly is the exam?
-							</button>
-						</h2>
-					</div>
-					<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-						<div class="card-body">
-							<p>The exam is a 4-question multiple choice exam. The exams must be taken in order from Technician to General to Amateur Extra. You cannot skip exams. The exam is slightly different for each class of license:</p>
-							<table class="table table-sm table-striped table-bordered table-hover mx-auto">
-								<thead class="thead-dark">
-									<tr>
-										<th>License Class</th>
-										<th>Required Score</th>
-										<th>New Test Pool</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Technician</td>
-										<td>26/35</td>
-										<td>30 June 2022</td>
-									</tr>
-									<tr>
-										<td>General</td>
-										<td>26/35</td>
-										<td>30 June 2023</td>
-									</tr>
-									<tr>
-										<td>Amateur Extra</td>
-										<td>37/50</td>
-										<td>30 June 2020</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-				<div class="card">
-					<div class="card-header" id="headingEleven">
-						<h2 class="mb-0">
-							<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
-								4. How can I study for the exam?
-							</button>
-						</h2>
-					</div>
-					<div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordionExample">
-						<div class="card-body">
-							We recommend <a href="https://hamstudy.org" target="_blank">this</a> website to study for the exam. In addition, ARRL has a textbook for each class of license.
-						</div>
-					</div>
-				</div>
-				<div class="card">
-					<div class="card-header" id="headingFour">
-						<h2 class="mb-0">
-							<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-								5. What should I bring to an exam?
-							</button>
-						</h2>
-					</div>
-					<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-						<div class="card-body">
-							You should bring a #2 pencil, your ID, a copy of your previous Amateur Radio license if you have one, a basic calculator, and enough money to cover the fee if any.
-						</div>
-					</div>
-				</div>
-				<div class="card">
-					<div class="card-header" id="headingFive">
-						<h2 class="mb-0">
-							<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-								6. Can I attempt the exam more than once?
-							</button>
-						</h2>
-					</div>
-					<div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-						<div class="card-body">
-							Yes. Most testing groups will allow you to attempt the exam 2-3 times at a minimum.
-						</div>
-					</div>
-				</div>
-				<div class="card">
-					<div class="card-header" id="headingSix">
-						<h2 class="mb-0">
-							<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-								7. Can I take more than one class of license exam on the same day?
-							</button>
-						</h2>
-					</div>
-					<div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
-						<div class="card-body">
-							Yes. Once you pass one exam, you can attempt the next class of license exam on the same testing day. It is possible to go from Unlicensed to Amateur Extra in one sitting.
-						</div>
-					</div>
-				</div>
-				<div class="card">
-					<div class="card-header" id="headingSeven">
-						<h2 class="mb-0">
-							<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-								8. What classes of license are there?
-							</button>
-						</h2>
-					</div>
-					<div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
-						<div class="card-body">
-							There are currently 5 different classes of license. Novice, Technician, General, Advanced, and Amateur Extra. Novice and Advanced are retired and can no longer be obtained.
-						</div>
-					</div>
-				</div>
-				<div class="card">
-					<div class="card-header" id="headingEight">
-						<h2 class="mb-0">
-							<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-								9. What is the difference in each class of license?
-							</button>
-						</h2>
-					</div>
-					<div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
-						<div class="card-body">
-							Different classes of license define what frequencies, power limits, and modes a holder may use.
-						</div>
-					</div>
-				</div>
-				<div class="card">
-					<div class="card-header" id="headingNine">
-						<h2 class="mb-0">
-							<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-								10. What frequencies does each license class have access to?
-							</button>
-						</h2>
-					</div>
-					<div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
-						<div class="card-body">
-							We recommend <a href="http://www.arrl.org/files/file/Regulatory/Band%20Chart/Band%20Chart%20-%2011X17%20Color.pdf" target="_blank">this</a> chart for referencing frequency allocations for each license class.
-						</div>
-					</div>
-				</div>
+				{% endfor %}
 			</div>
 		</div>
 	</div>
