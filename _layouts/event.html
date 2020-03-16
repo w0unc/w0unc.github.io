@@ -1,0 +1,101 @@
+<!-- Head -->
+{% include head.html %}
+<!-- End Head-->
+
+
+<!-- Navbar -->
+{% include navbar.html %}
+<!-- End Navbar -->
+
+
+<!-- Header -->
+<div class="jumbotron jumbotron-fluid mb-0 text-center" id="header">
+	<div class="container py-lg-3">
+		<h1 class="display-4">{{ page.title }}</h1>
+	</div>
+</div>
+<!-- End Header -->
+
+
+<!-- Breadcrumbs -->
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="{{ site.baseurl }}/">Home</a></li>
+					<li class="breadcrumb-item"><a href="{{ site.baseurl }}/events">Events</a></li>
+					<li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+				</ol>
+			</nav>
+		</div>
+	</div>
+</div>
+<!-- Breadcrumbs -->
+
+
+<!-- Content -->
+<div class="container my-4 my-md-5">
+	{% if page.status == 'Cancelled' %}
+		<div class="row">
+			<div class="col">
+				<p class="alert alert-danger" role="alert">CANCELLED - This event has been cancelled or we decided not to attend it. If the event itself was not cancelled, you may still attend the event yourself.</p>
+			</div>
+		</div>
+	{% endif %}
+	{% if page.status == 'Planned' %}
+		<div class="row">
+			<div class="col">
+				<p class="alert alert-warning" role="alert">PLANNED - We intend to host/attend this event but at this time it has not been confirmed. Details including housing and transportation are likely to change as we get closer to the day of the event.</p>
+			</div>
+		</div>
+	{% endif %}
+	<div class="card-group">
+		<div class="col-lg-5 my-3">
+			<div class="card sm-shadow">
+				<div class="card-body">
+					<h3 class="card-title text-center">Description</h3>
+					<p>{{ page.content }}</p>
+					{% if page.event-id != '' %}
+						<a href="https://ninerengage.uncc.edu/event/{{ page.event-id }}" target="_blank">https://ninerengage.uncc.edu/event/{{ page.event-id }}</a>
+					{% else if page.link != '' %}
+						<a href="{{ page.link }}" target="_blank">{{ page.link }}</a>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 my-3">
+			<div class="card sm-shadow">
+				<div class="card-body">
+					<h3 class="card-title text-center">Event</h3>
+				</div>
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item"><span class="font-weight-bold">Location: </span>{{ page.location }}</li>
+					<li class="list-group-item"><span class="font-weight-bold">Street: </span>{{ page.street }}</li>
+					<li class="list-group-item"><span class="font-weight-bold">Address: </span>{{ page.address }}</li>
+					<li class="list-group-item"><span class="font-weight-bold">Date: </span>{{ page.date | date: "%-d %B %Y" }}</li>
+					<li class="list-group-item"><span class="font-weight-bold">Time: </span>{{ page.time }}</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-lg-3 my-3">
+			<div class="card sm-shadow">
+				<div class="card-body">
+					<h3 class="card-title text-center">Information</h3>
+				</div>
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item"><span class="font-weight-bold">Access: </span>{{ page.access }}</li>
+					<li class="list-group-item"><span class="font-weight-bold">RSVP: </span>{{ page.rsvp }}</li>
+					<li class="list-group-item"><span class="font-weight-bold">Transportation: </span>{{ page.transportation }}</li>
+					<li class="list-group-item"><span class="font-weight-bold">Status: </span>{{ page.status }}</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Content -->
+
+
+<!-- Footer -->
+{% include footer.html %}
+<!-- End Footer -->

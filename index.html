@@ -6,37 +6,35 @@ title:		'Home'
 
 <!-- About Us -->
 <div class="container my-4 my-md-5 text-center" id="about">
-	<h2 class="pb-2">About Us</h2>
-	<p>The Amateur Radio Club of UNC Charlotte is a student interest group whose purposes are to educate students, faculty, and staff in becoming licensed amateur radio operators, to foster fellowship among amateur radio enthusiasts, and to provide the local community with emergency communications. This is a registered student organization on the campus of UNC Charlotte.</p>
+	<div class="row">
+		<div class="col my-3">
+			<h2 class="pb-2">About Us</h2>
+			<p>The Amateur Radio Club of UNC Charlotte is a student interest group whose purposes are to educate students, faculty, and staff in becoming licensed amateur radio operators, to foster fellowship among amateur radio enthusiasts, and to provide the local community with emergency communications. This is a registered student organization on the campus of UNC Charlotte.</p>
+		</div>
+	</div>
 </div>
 <!-- End About Us -->
 
 
 <!-- Information -->
-<div class="jumbotron jumbotron-fluid my-4 my-md-5 text-center">
+<div class="jumbotron jumbotron-fluid my-4 my-md-5 text-center" id="info">
 	<div class="container">
 		<h2 class="pb-2">Information</h2>
 		<div class="row">
 			<div class="col-md-4 my-3">
 				<h4><span class="fas fa-microphone fa-2x"></span></h4>
 				<h4>Repeater</h4>
-				<p>
-					We have a repeater on the roof of the Atkins Library operating on frequency 442.650MHz (+5MHz) PL 88.5 In/Out. We stress that you must be an FCC Licensed Operator (or hold a comparable authorization) to access our repeater. <a href="{{ site.baseurl }}/repeater">More Info</a>
-				</p>
+				<p>We have a repeater on the roof of the Atkins Library operating on frequency 442.650MHz (+5MHz) PL 88.5 In/Out. We stress that you must be an FCC Licensed Operator (or hold a comparable authorization) to access our repeater. <a href="{{ site.baseurl }}/repeater">More Info</a></p>
 			</div>
 			<div class="col-md-4 my-3">
 				<h4><span class="fas fa-bolt fa-2x"></span></h4>
 				<h4>Meetings</h4>
-				<p>
-					We meet monthly at a predesignated time and place. Check below or on our <a href="{{ site.ninerengage }}" target="_blank">NinerEngage</a> page for meeting announcements. Any undergraduate, graduate, alumni, or faculty/staff may attend the meetings. No RSVP is required.
-				</p>
+				<p>We meet monthly at a predesignated time and place. Check below or on our <a href="{{ site.ninerengage }}" target="_blank">NinerEngage</a> page for meeting announcements. Any undergraduate, graduate, alumni, or faculty/staff may attend the meetings. No RSVP is required.</p>
 			</div>
 			<div class="col-md-4 my-3">
 				<h4><span class="fas fa-comments fa-2x"></span></h4>
 				<h4>Contact</h4>
-				<p>
-					The easiest way to contact us is though the repeater. You can also contact us by emailing <a href="mailto:{{ site.email }}">{{ site.email }}</a>. More contact options can be found once you have logged into our NinerEngage page.
-				</p>
+				<p>The easiest way to contact us is though the repeater. You can also contact us by emailing <a href="mailto:{{ site.email }}">{{ site.email }}</a>. More contact options can be found once you have logged into our NinerEngage page.</p>
 			</div>
 		</div>
 	</div>
@@ -50,56 +48,43 @@ title:		'Home'
 	<div class="row">
 		{% assign i = 0 %}
 		{% assign curDate = site.time | date: '%s' %}
-		{% for event in site.events %}
-			{% assign eventStartDate = event.date | date: '%s' %}
-				{% if eventStartDate > curDate and i < 4 %}
-					<div class="col-md-6 col-lg-3 my-3 mx-auto">
-						<div class="card shadow-sm">
-							<div class="card-body">
-								<h5 class="card-title">{{ event.title }}</h5>
-								<p class="card-text">{{ event.excerpt }}</p>
-							</div>
-							<ul class="list-group list-group-flush">
-								{% if event.access == 'Club' %}
-									<li class="list-group-item">Club Only</li>
-								{% endif %}
-								{% if event.access == 'School' %}
-									<li class="list-group-item">School Event</li>
-								{% endif %}
-								{% if event.access == 'Public' %}
-									<li class="list-group-item">Open to Public</li>
-								{% endif %}
-								{% if event.transportation == 'Yes' %}
-									<li class="list-group-item">Transportation Provided</li>
-								{% endif %}
-								{% if event.transportation == 'No' %}
-									<li class="list-group-item">No Transportation</li>
-								{% endif %}
-								{% if event.rsvp == 'Yes' %}
-									<li class="list-group-item"><a href="mailto:{{ site.email }}">RSVP Required</a></li>
-								{% endif %}
-								{% if event.rsvp == 'No' %}
-									<li class="list-group-item">No RSVP</li>
-								{% endif %}
+		{% for post in site.posts reversed %}
+			{% assign eventStartDate = post.date | date: '%s' %}
+			{% if eventStartDate > curDate and i < 4 %}
+				<div class="col-md-6 col-lg-3 my-3 mx-auto">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">{{ post.title }}</h5>
+							<p class="card-text">{{ post.excerpt }}</p>
+						</div>
+						<div class="card-footer">
+							<ul class="list-unstyled">
+								<li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{ post.location }}</li>
+								<li>{{ post.street }}</li>
+								<li>{{ post.address }}</li>
+								<li>{{ post.date | date: "%-d %B %Y" }}</li>
+								<li>{{ post.time }}</li>
 							</ul>
-							<div class="card-footer">
-								<ul class="list-unstyled">
-									<li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{ event.location }}</li>
-									<li>{{ event.address }}</li>
-									<li>{{ event.date | date: "%-d %B %Y" }}</li>
-									<li>{{ event.time }}</li>
-								</ul>
-								{% if event.event-id != '' %}
-									<a href="https://ninerengage.uncc.edu/event/{{ event.event-id }}" class="btn btn-primary" target="_blank">More</a>
-								{% else if event.link != '' %}
-									<a href="{{ event.link }}" class="btn btn-primary" target="_blank">More</a>
-								{% endif %}
-							</div>
+							{% if post.status == 'Attending' %}
+								<a href="{{ post.url }}" class="btn btn-primary">More</a>
+							{% endif %}
+							{% if post.status == 'Planned' %}
+								<a href="{{ post.url }}" class="btn btn-info">Planned</a>
+							{% endif %}
+							{% if post.status == 'Cancelled' %}
+								<a href="{{ post.url }}" class="btn btn-danger">CANCELLED</a>
+							{% endif %}
 						</div>
 					</div>
-					{% assign i = i | plus: 1 %}
-				{% endif %}
-			{% endfor %}
+				</div>
+				{% assign i = i | plus: 1 %}
+			{% endif %}
+		{% endfor %}
+	</div>
+	<div class="row">
+		<div class="col my-3">
+			<a href="{{ site.baseurl }}/events" class="btn btn-primary">More Events</a>
+		</div>
 	</div>
 </div>
 <!-- End Planned Events -->
@@ -108,7 +93,11 @@ title:		'Home'
 <!-- Tagline -->
 <div class="jumbotron my-4 my-md-5">
 	<div class="container">
-		<h4 class="lead font-italic">When all else fails... Amateur Radio</h4>
+		<div class="row">
+			<div class="col">
+				<h4 class="lead font-italic">When all else fails... Amateur Radio</h4>
+			</div>
+		</div>
 	</div>
 </div>
 <!-- End Tagline -->

@@ -6,68 +6,55 @@ title:		'Testing Sessions'
 
 <!-- FCC Registration Number (FRN) -->
 <div class="container my-4 my-md-5 text-center">
-	<h3 class="pb-2">FCC Registration Number (FRN)</h3>
-	<p>
-		It is highly recommended that you get an FRN number before attending a testing session. It can take the place of a Social Security Number and in some cases, it will be the only number you can use. Remember to write it down or store it someplace safe after you receive it. You will need to bring it with you to the testing session.
-	</p>
-	<a class="btn btn-primary" href="https://apps.fcc.gov/coresWeb/publicHome.do" target="_blank">Get FRN</a>
+	<div class="row">
+		<div class="col my-3">
+			<h3 class="pb-2">FCC Registration Number (FRN)</h3>
+			<p>It is highly recommended that you get an FRN number before attending a testing session. It can take the place of a Social Security Number and in some cases, it will be the only number you can use. Remember to write it down or store it someplace safe after you receive it. You will need to bring it with you to testing sessions.</p>
+			<a class="btn btn-primary" href="https://apps.fcc.gov/coresWeb/publicHome.do" target="_blank">Get FRN</a>
+		</div>
+	</div>
 </div>
 <!-- End FCC Registration Number (FRN) -->
 
 
 <!-- Upcoming Sessions -->
 <div class="jumbotron jumbotron-fluid my-4 my-md-5 text-center">
-	<div class="container">
-		<h3 class="pb-2">Upcoming Sessions</h3>
-		<p class="alert alert-info" role="alert">
-			We are currently not offering our own testing sessions. A few of our members are undergoing VE training and we will begin scheduling our own sessions once they are ready. We will include unaffiliated sessions if a sizable amount of our members are attending or if we will offer transportation.
-		</p>
-		<p class="alert alert-warning" role="alert">
-			Exams marked as 'Transportation Provided' will have the event time listed, <span class="font-weight-bold">not</span> the departure time. You handle contacting us to get the details about departure time and location, or it will be provided in the RSVP reply email.
-		</p>
+	<div class="container" id="events">
+		<div class="row">
+			<div class="col my-3">
+				<h3 class="pb-2">Upcoming Sessions</h3>
+				<p class="alert alert-info" role="alert">We are currently not offering our own testing sessions. A few of our members are undergoing VE training and we will begin scheduling our own sessions once they are ready. We will include unaffiliated sessions if a sizable amount of our members are attending or if we will offer transportation.</p>
+				<p class="alert alert-warning" role="alert">Exams marked as 'Transportation Provided' will have the event time listed, <span class="font-weight-bold">not</span> the departure time. You handle contacting us to get the details about departure time and location, or it will be provided in the RSVP reply email.</p>
+			</div>
+		</div>
 		<div class="row">
 			{% assign i = 0 %}
 			{% assign curDate = site.time | date: '%s' %}
-			{% for event in site.events %}
-				{% assign eventStartDate = event.date | date: '%s' %}
-				{% if eventStartDate > curDate and event.categories contains 'tests' and i < 4 %}
-					<div class="col-md-6 col-lg-4 mx-auto">
-						<div class="card my-3 shadow-sm">
+			{% for post in site.posts reversed %}
+				{% assign eventStartDate = post.date | date: '%s' %}
+				{% if eventStartDate > curDate and i < 4 and post.categories contains "tests" %}
+					<div class="col-md-6 col-lg-3 my-3 mx-auto">
+						<div class="card shadow-sm">
 							<div class="card-body">
-								<h5 class="card-title">{{ event.title }}</h5>
-								<p class="card-text">{{ event.excerpt }}</p>
+								<h5 class="card-title">{{ post.title }}</h5>
+								<p class="card-text">{{ post.excerpt }}</p>
 							</div>
-							<ul class="list-group list-group-flush">
-								{% if event.access == 'Club' %}
-									<li class="list-group-item">Club Only</li>
-								{% endif %}
-								{% if event.access == 'School' %}
-									<li class="list-group-item">School Event</li>
-								{% endif %}
-								{% if event.access == 'Public' %}
-									<li class="list-group-item">Open to Public</li>
-								{% endif %}
-								{% if event.transportation == 'Yes' %}
-									<li class="list-group-item">Transportation Provided</li>
-								{% endif %}
-								{% if event.transportation == 'No' %}
-									<li class="list-group-item">No Transportation</li>
-								{% endif %}
-								{% if event.rsvp == 'Yes' %}
-									<li class="list-group-item"><a href="mailto:club@w0unc.org">RSVP Required</a></li>
-								{% endif %}
-								{% if event.rsvp == 'No' %}
-									<li class="list-group-item">No RSVP</li>
-								{% endif %}
-							</ul>
 							<div class="card-footer">
 								<ul class="list-unstyled">
-									<li>{{ event.location }}</li>
-									<li>{{ event.address }}</li>
-									<li>{{ event.date | date: "%-d %B %Y" }}</li>
-									<li>{{ event.time }}</li>
+									<li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{ post.location }}</li>
+									<li>{{ post.address }}</li>
+									<li>{{ post.date | date: "%-d %B %Y" }}</li>
+									<li>{{ post.time }}</li>
 								</ul>
-								<a href="{{ event.link }}" class="btn btn-primary">More</a>
+								{% if post.status == 'Attending' %}
+									<a href="{{ post.url }}" class="btn btn-primary">More</a>
+								{% endif %}
+								{% if post.status == 'Planned' %}
+									<a href="{{ post.url }}" class="btn btn-info">Planned</a>
+								{% endif %}
+								{% if post.status == 'Cancelled' %}
+									<a href="{{ post.url }}" class="btn btn-danger">CANCELLED</a>
+								{% endif %}
 							</div>
 						</div>
 					</div>
@@ -85,16 +72,12 @@ title:		'Testing Sessions'
 	<div class="row">
 		<div class="col-md-6 my-3">
 			<h3 class="pb-2">ARRL Testing Sessions</h3>
-			<p>
-				These are a list of ARRL testing sessions. We will not be attending most of these. Check out our upcoming sessions for testing events we will be attending and supplying transportation. The Amateur Radio Club at UNC Charlotte and ARRL are not affiliated. The ARRL Exam is currently costs $15.00.
-			</p>
+			<p>These are a list of ARRL testing sessions. We will not be attending most of these. Check out our upcoming sessions for testing events we will be attending and supplying transportation. The Amateur Radio Club at UNC Charlotte and ARRL are not affiliated. The ARRL Exam is currently costs $15.00.</p>
 			<a href="http://www.arrl.org/find-an-amateur-radio-license-exam-session" class="btn btn-primary" target="_blank">View</a>
 		</div>
 		<div class="col-md-6 my-3">
 			<h3 class="pb-2">Laurel Testing Sessions</h3>
-			<p>
-				These are a list of Laurel testing sessions. We will not be attending most of these. Check out our upcoming sessions for testing events we will be attending and supplying transportation. The Amateur Radio Club at UNC Charlotte and Laurel are not affiliated. The Laurel VEC Exam is currently free.
-			</p>
+			<p>These are a list of Laurel testing sessions. We will not be attending most of these. Check out our upcoming sessions for testing events we will be attending and supplying transportation. The Amateur Radio Club at UNC Charlotte and Laurel are not affiliated. The Laurel VEC Exam is currently free for everyone.</p>
 			<a href="https://www.laurelvec.com/?pg=exams" class="btn btn-primary" target="_blank">View</a>
 		</div>
 	</div>

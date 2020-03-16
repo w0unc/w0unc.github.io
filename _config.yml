@@ -31,13 +31,12 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: w0unc
 ninerengage: https://ninerengage.uncc.edu/organization/amateur-radio-club
 code-plugs: https://github.com/w0unc/UNC-Charlotte-ARC-Radio-Images
+future: true
 collections:
   projects:
     output: true
     permalink: /projects/:path/
     sort_by: order
-  events:
-    output: false
   maps:
     output: false
     sort_by: order

@@ -1,0 +1,43 @@
+---
+layout:		'default'
+title:		'Events'
+---
+
+<!-- Events -->
+<div class="container my-4 my-md-5 text-center" id="events">
+	<div class="row">
+		{% assign curDate = site.time | date: '%s' %}
+		{% for post in site.posts reversed %}
+			{% assign eventStartDate = post.date | date: '%s' %}
+			{% if eventStartDate > curDate %}
+				<div class="col-md-6 col-lg-3 my-3 mx-auto">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">{{ post.title }}</h5>
+							<p class="card-text">{{ post.excerpt }}</p>
+						</div>
+						<div class="card-footer">
+							<ul class="list-unstyled">
+								<li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{ post.location }}</li>
+								<li>{{ post.street }}</li>
+								<li>{{ post.address }}</li>
+								<li>{{ post.date | date: "%-d %B %Y" }}</li>
+								<li>{{ post.time }}</li>
+							</ul>
+							{% if post.status == 'Attending' %}
+								<a href="{{ post.url }}" class="btn btn-primary">More</a>
+							{% endif %}
+							{% if post.status == 'Planned' %}
+								<a href="{{ post.url }}" class="btn btn-warning">Planned</a>
+							{% endif %}
+							{% if post.status == 'Cancelled' %}
+								<a href="{{ post.url }}" class="btn btn-danger">CANCELLED</a>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+</div>
+<!-- End Events -->
