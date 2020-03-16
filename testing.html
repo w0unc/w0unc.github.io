@@ -19,48 +19,45 @@ title:		'Testing Sessions'
 
 <!-- Upcoming Sessions -->
 <div class="jumbotron jumbotron-fluid my-4 my-md-5 text-center">
-	<div class="container" id="events">
+	<div class="container my-4 my-md-5 text-center" id="events">
+		<h2 class="pb-2">Planned Sessions</h2>
 		<div class="row">
 			<div class="col my-3">
-				<h3 class="pb-2">Upcoming Sessions</h3>
-				<p class="alert alert-info" role="alert">We are currently not offering our own testing sessions. A few of our members are undergoing VE training and we will begin scheduling our own sessions once they are ready. We will include unaffiliated sessions if a sizable amount of our members are attending or if we will offer transportation.</p>
-				<p class="alert alert-warning" role="alert">Exams marked as 'Transportation Provided' will have the event time listed, <span class="font-weight-bold">not</span> the departure time. You handle contacting us to get the details about departure time and location, or it will be provided in the RSVP reply email.</p>
+				<div class="card-deck">
+					{% assign i = 0 %}
+					{% assign curDate = site.time | date: '%s' %}
+					{% for post in site.posts reversed %}
+						{% assign eventStartDate = post.date | date: '%s' %}
+						{% if eventStartDate > curDate and i < 4 and post.categories contains "tests" %}
+							<div class="card my-3 mx-auto shadow-sm">
+								<div class="card-body">
+									<h5 class="card-title">{{ post.title }}</h5>
+									<p class="card-text">{{ post.excerpt }}</p>
+								</div>
+								<div class="card-footer">
+									<ul class="list-unstyled">
+										<li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{ post.location }}</li>
+										<li>{{ post.street }}</li>
+										<li>{{ post.address }}</li>
+										<li>{{ post.date | date: "%-d %B %Y" }}</li>
+										<li>{{ post.time }}</li>
+									</ul>
+									{% if post.status == 'Attending' %}
+										<a href="{{ post.url }}" class="btn btn-primary">More</a>
+									{% endif %}
+									{% if post.status == 'Planned' %}
+										<a href="{{ post.url }}" class="btn btn-info">Planned</a>
+									{% endif %}
+									{% if post.status == 'Cancelled' %}
+										<a href="{{ post.url }}" class="btn btn-danger">CANCELLED</a>
+									{% endif %}
+								</div>
+							</div>
+							{% assign i = i | plus: 1 %}
+						{% endif %}
+					{% endfor %}
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			{% assign i = 0 %}
-			{% assign curDate = site.time | date: '%s' %}
-			{% for post in site.posts reversed %}
-				{% assign eventStartDate = post.date | date: '%s' %}
-				{% if eventStartDate > curDate and i < 4 and post.categories contains "tests" %}
-					<div class="col-md-6 col-lg-3 my-3 mx-auto">
-						<div class="card shadow-sm">
-							<div class="card-body">
-								<h5 class="card-title">{{ post.title }}</h5>
-								<p class="card-text">{{ post.excerpt }}</p>
-							</div>
-							<div class="card-footer">
-								<ul class="list-unstyled">
-									<li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{ post.location }}</li>
-									<li>{{ post.address }}</li>
-									<li>{{ post.date | date: "%-d %B %Y" }}</li>
-									<li>{{ post.time }}</li>
-								</ul>
-								{% if post.status == 'Attending' %}
-									<a href="{{ post.url }}" class="btn btn-primary">More</a>
-								{% endif %}
-								{% if post.status == 'Planned' %}
-									<a href="{{ post.url }}" class="btn btn-info">Planned</a>
-								{% endif %}
-								{% if post.status == 'Cancelled' %}
-									<a href="{{ post.url }}" class="btn btn-danger">CANCELLED</a>
-								{% endif %}
-							</div>
-						</div>
-					</div>
-					{% assign i = i | plus: 1 %}
-				{% endif %}
-			{% endfor %}
 		</div>
 	</div>
 </div>

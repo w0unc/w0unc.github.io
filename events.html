@@ -5,7 +5,6 @@ title:		'Events'
 
 <!-- Events -->
 <div class="container my-4 my-md-5 text-center" id="events">
-	<h2 class="pb-2">Planned Events</h2>
 	<div class="row">
 		<div class="col my-3">
 			<div class="card-deck">
@@ -13,7 +12,7 @@ title:		'Events'
 				{% for post in site.posts reversed %}
 					{% assign eventStartDate = post.date | date: '%s' %}
 					{% if eventStartDate > curDate %}
-						<div class="card my-3 shadow-sm" style="min-width: calc(25% - 30px); max-width: calc(25% - 30px)">
+						<div class="card my-3 mx-auto shadow-sm">
 							<div class="card-body">
 								<h5 class="card-title">{{ post.title }}</h5>
 								<p class="card-text">{{ post.excerpt }}</p>
