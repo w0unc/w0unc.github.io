@@ -5,15 +5,19 @@ title:		'Repeater Information'
 
 
 <!-- Repeater -->
-<div class="jumbotron my-4 my-md-5 text-center">
-	<div class="container">
-		<h3>WØUNC</h3>
-		<ul class="list-unstyled">
-			<li class="lead">442.650MHz (+5MHz Offset) 88.5 PL In/Out</li>
-			<li>Atkins Library, UNC Charlotte - 169ft AGL</li>
-			<li>Mixed Analog / P25</li>
-			<li>P25 NAC: 293</li>
-		</ul>
+<div class="jumbotron my-4 my-md-5">
+	<div class="container text-center">
+		<div class="row">
+			<div class="col">
+				<h3 class="pb-2">WØUNC</h3>
+				<ul class="list-unstyled">
+					<li>442.650MHz (+5MHz Offset) 88.5 PL In/Out</li>
+					<li>Atkins Library, UNC Charlotte - 169ft AGL</li>
+					<li>Mixed Analog / P25</li>
+					<li>P25 NAC: 293</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 </div>
 <!-- End Repeater -->
@@ -25,10 +29,10 @@ title:		'Repeater Information'
 	<div class="row">
 		{% for map in site.maps reversed %}
 			{% if map.visible == 'Yes' %}
-				<div class="col-lg-6 mx-auto">
-					<div class="card my-3 shadow-sm">
+				<div class="col-lg-6 my-3 mx-auto">
+					<div class="card shadow-sm">
 						<div class="card-body">
-							<h5 class="card-title text-center">{{ map.title }}</h5>
+							<h5 class="card-title">{{ map.title }}</h5>
 							<ul class="list-unstyled">
 								<li><span class="font-weight-bold">Location:</span> {{ map.location }}</li>
 								<li><span class="font-weight-bold">Altitude:</span> {{ map.altitude }}</li>
