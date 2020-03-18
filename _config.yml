@@ -17,7 +17,6 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-
 title: WØUNC
 email: club@w0unc.org
 description: >- # this means to ignore newlines until "baseurl:"
@@ -25,7 +24,6 @@ description: >- # this means to ignore newlines until "baseurl:"
   students, faculty, and staff in becoming licensed amateur radio operators, to foster fellowship
   among amateur radio enthusiasts, and to provide the local community with emergency communications.
   This is a registered student organization on the campus of UNC Charlotte.
-
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: w0unc
@@ -40,6 +38,10 @@ collections:
   maps:
     output: false
     sort_by: order
+
+# Build settings
+plugins:
+  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
