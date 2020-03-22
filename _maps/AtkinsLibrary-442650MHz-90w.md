@@ -1,7 +1,7 @@
 ---
-title:				'WØUNC Coverage Map' # The title of the map.
+title:				'WØUNC UHF Coverage Map' # The title of the map.
 name:					'AtkinsLibrary442650MHz90w' # Map library friendly name.
-location:			'Atkins Library, UNCC' # The location of the antenna.
+location:			'Atkins Library, UNC Charlotte' # The location of the antenna.
 altitude:			'169ft AGL (890ft MSL)' # The height of the antenna.
 frequency:		'442.650MHz' # The frequency of the repeater.
 power:				'90w' # The power output of the repeater.

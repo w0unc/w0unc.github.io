@@ -11,13 +11,13 @@ categories:					[events, tests] # The categories for the event. Meetings should 
 access:							'Public' # Who will be able to join us for the event. Should be a value of 'Club', 'School', or 'Public'.
 rsvp:								'No' # Provides a note if RSVP via email is required.
 transportation:			'Yes' # Provides a note if transportation will be provided.
-status:								'Attending' # Provides a note if the event has been cancelled or is planned. Should be a value of 'Attending', 'Planned', or 'Cancelled'.
+status:							'Planned' # Provides a note if the event has been cancelled or is planned. Should be a value of 'Attending', 'Planned', or 'Cancelled'.
 visible:						'Yes' # Hides or shows the event in feeds.
 excerpt_separator:	<!--more-->
 ---
 
 
-We will be attending this Laurel VEC testing session. Please review the details before testing day.
+We are planing to attend this Laurel VEC testing session. Please review the details before testing day.
 
 <!--more-->
 
