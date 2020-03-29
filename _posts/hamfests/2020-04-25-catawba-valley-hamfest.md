@@ -10,11 +10,17 @@ link:									'http://www.cvhamfest.com/' # An external link to the event if it 
 categories:						[events, hamfests] # The categories for the event. Meetings should always be 'events meetings'.
 access:								'Public' # Who will be able to join us for the event. Should be a value of 'Club', 'School', or 'Public'.
 rsvp:									'No' # Provides a note if RSVP via email is required.
-transportation:				'No' # Provides a note if transportation will be provided.
-status:								'Planned' # Provides a note if the event has been cancelled or is planned. Should be a value of 'Attending', 'Planned', or 'Cancelled'.
+transportation:				'Yes' # Provides a note if transportation will be provided.
+status:								'Cancelled' # Provides a note if the event has been cancelled or is planned. Should be a value of 'Attending', 'Planned', or 'Cancelled'.
 visible:							'Yes' # Hides or shows the event in feeds.
 excerpt_separator:		<!--more-->
 ---
 
 
-The Amateur Radio Club is planning to attend the Catawba Valley Hamfest in Morganton, NC.
+The 2020 Catawba Valley Hamfest has been cancelled due to the COVID-19 outbreak.
+
+<!--more-->
+
+~~The Amateur Radio Club is planning to attend the Catawba Valley Hamfest in Morganton, NC.~~
+
+~~Details regarding transportation will be available closer to the event.~~

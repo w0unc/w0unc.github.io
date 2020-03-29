@@ -11,16 +11,18 @@ categories:					[events, tests] # The categories for the event. Meetings should 
 access:							'Public' # Who will be able to join us for the event. Should be a value of 'Club', 'School', or 'Public'.
 rsvp:								'No' # Provides a note if RSVP via email is required.
 transportation:			'Yes' # Provides a note if transportation will be provided.
-status:							'Planned' # Provides a note if the event has been cancelled or is planned. Should be a value of 'Attending', 'Planned', or 'Cancelled'.
+status:							'Cancelled' # Provides a note if the event has been cancelled or is planned. Should be a value of 'Attending', 'Planned', or 'Cancelled'.
 visible:						'Yes' # Hides or shows the event in feeds.
 excerpt_separator:	<!--more-->
 ---
 
 
-We are planing to attend this Laurel VEC testing session. Please review the details before testing day.
+This testing session has been cancelled due to the COVID-19 outbreak.
 
 <!--more-->
 
-We will have limited transportation available for the event. Anyone who wishes to drive their own vehicle can do so.
+~~We are planning to attend this Laurel VEC testing session. Please review the details before testing day.~~
 
-Please arrive at least 15 minutes before the start of the exam. You should bring a #2 pencil, your ID, a copy of your previous Amateur Radio license if you have one, and a basic calculator.
+~~We will have limited transportation available for the event. Anyone who wishes to drive their own vehicle can do so.~~
+
+~~Please arrive at least 15 minutes before the start of the exam. You should bring a #2 pencil, your ID, a copy of your previous Amateur Radio license if you have one, and a basic calculator.~~
