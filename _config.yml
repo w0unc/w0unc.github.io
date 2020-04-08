@@ -29,6 +29,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: w0unc
 ninerengage: https://ninerengage.uncc.edu/organization/amateur-radio-club
 code-plugs: https://github.com/w0unc/UNC-Charlotte-ARC-Radio-Images
+arrl-band-chart: http://www.arrl.org/files/file/Regulatory/Band%20Chart/Band%20Chart%208_5%20X%2011%20Color.pdf
 future: true
 collections:
   projects:

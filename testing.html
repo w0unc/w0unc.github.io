@@ -21,40 +21,52 @@ title:		'License Testing'
 <div class="jumbotron jumbotron-fluid my-4 my-md-5">
 	<div class="container text-center" id="events">
 		<h2 class="pb-2">Planned Sessions</h2>
-		<div class="card-deck">
-			{% assign i = 0 %}
-			{% assign curDate = site.time | date: '%s' %}
-			{% for post in site.posts reversed %}
-				{% assign eventStartDate = post.date | date: '%s' %}
-				{% if eventStartDate > curDate and i < 4 and post.categories contains "tests" %}
-					<div class="card my-3 mx-auto shadow-sm">
-						<div class="card-body">
-							<h5 class="card-title">{{ post.title }}</h5>
-							<p class="card-text">{{ post.excerpt }}</p>
+		{% assign count = 0 %}
+		{% assign curDate = site.time | date: '%s' %}
+		{% for post in site.categories.tests %}
+			{% assign eventStartDate = post.date | date: '%s' %}
+			{% if eventStartDate > curDate %}
+				{% assign count = count | plus: 1 %}
+			{% endif %}
+		{% endfor %}
+		{% if count > 0 %}
+			<div class="card-deck">
+				{% assign i = 0 %}
+				{% assign curDate = site.time | date: '%s' %}
+				{% for post in site.posts reversed %}
+					{% assign eventStartDate = post.date | date: '%s' %}
+					{% if eventStartDate > curDate and i < 4 and post.categories contains "tests" %}
+						<div class="card my-3 mx-auto shadow-sm">
+							<div class="card-body">
+								<h5 class="card-title">{{ post.title }}</h5>
+								<p class="card-text">{{ post.excerpt }}</p>
+							</div>
+							<div class="card-footer">
+								<ul class="list-unstyled">
+									<li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{ post.location }}</li>
+									<li>{{ post.street }}</li>
+									<li>{{ post.address }}</li>
+									<li>{{ post.date | date: "%-d %B %Y" }}</li>
+									<li>{{ post.time }}</li>
+								</ul>
+								{% if post.status == 'Attending' %}
+									<a href="{{ post.url }}" class="btn btn-primary">Info</a>
+								{% endif %}
+								{% if post.status == 'Planned' %}
+									<a href="{{ post.url }}" class="btn btn-info">Planned</a>
+								{% endif %}
+								{% if post.status == 'Cancelled' %}
+									<a href="{{ post.url }}" class="btn btn-danger">CANCELLED</a>
+								{% endif %}
+							</div>
 						</div>
-						<div class="card-footer">
-							<ul class="list-unstyled">
-								<li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{ post.location }}</li>
-								<li>{{ post.street }}</li>
-								<li>{{ post.address }}</li>
-								<li>{{ post.date | date: "%-d %B %Y" }}</li>
-								<li>{{ post.time }}</li>
-							</ul>
-							{% if post.status == 'Attending' %}
-								<a href="{{ post.url }}" class="btn btn-primary">Info</a>
-							{% endif %}
-							{% if post.status == 'Planned' %}
-								<a href="{{ post.url }}" class="btn btn-info">Planned</a>
-							{% endif %}
-							{% if post.status == 'Cancelled' %}
-								<a href="{{ post.url }}" class="btn btn-danger">CANCELLED</a>
-							{% endif %}
-						</div>
-					</div>
-					{% assign i = i | plus: 1 %}
-				{% endif %}
-			{% endfor %}
-		</div>
+						{% assign i = i | plus: 1 %}
+					{% endif %}
+				{% endfor %}
+			</div>
+		{% else %}
+			<p>There are currently no testing sessions planned.</p>
+		{% endif %}
 	</div>
 </div>
 <!-- End Upcoming Sessions -->

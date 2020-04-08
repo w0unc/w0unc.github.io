@@ -11,7 +11,7 @@ categories:						[events, linuxfests] # The categories for the event. Meetings s
 access:								'Public' # Who will be able to join us for the event. Should be a value of 'Club', 'School', or 'Public'.
 rsvp:									'No' # Provides a note if RSVP via email is required.
 transportation:				'No' # Provides a note if transportation will be provided.
-status:								'Attending' # Provides a note if the event has been cancelled or is planned. Should be a value of 'Attending', 'Planned', or 'Cancelled'.
+status:								'Cancelled' # Provides a note if the event has been cancelled or is planned. Should be a value of 'Attending', 'Planned', or 'Cancelled'.
 visible:							'Yes' # Hides or shows the event in feeds.
 excerpt_separator:		<!--more-->
 ---

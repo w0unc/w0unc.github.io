@@ -69,7 +69,7 @@ layout: default
 						</div>
 						<div id="collapse{{ faq.id }}" class="collapse" aria-labelledby="heading{{ faq.id }}" data-parent="#accordionExample">
 							<div class="card-body">
-								{{ faq.answer }}
+								{{ faq.answer | replace: "site.arrl-band-chart", site.arrl-band-chart }}
 							</div>
 						</div>
 					</div>
