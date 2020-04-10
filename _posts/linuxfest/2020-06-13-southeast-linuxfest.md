@@ -17,4 +17,8 @@ excerpt_separator:		<!--more-->
 ---
 
 
-The Amateur Radio Club will be attending the SouthEast LinuxFest in Charlotte, NC.
+The 2020 SouthEast LinuxFest has been cancelled due to the COVID-19 outbreak.
+
+<!--more-->
+
+~~The Amateur Radio Club will be attending the SouthEast LinuxFest in Charlotte, NC.~~
