@@ -19,9 +19,9 @@ title:		'Club Projects'
 	<h2 class="pb-2">In-Progress</h2>
 	<hr>
 	<div class="card-deck project">
-		{% for project in site.projects reversed %}
+		{% for project in site.projects %}
 			{% if project.progress < 100 %}
-				<div class="card mb-4 shadow-sm">
+				<div class="card mb-4 mx-auto shadow-sm">
 					<div class="card-body">
 						<h5 class="card-title">{{ project.title }}</h5>
 						<p class="card-text">{{ project.excerpt }}</p>
@@ -49,9 +49,9 @@ title:		'Club Projects'
 	<h2 class="pb-2">Complete</h2>
 	<hr>
 	<div class="card-deck project">
-		{% for project in site.projects reversed %}
+		{% for project in site.projects %}
 			{% if project.progress == 100 %}
-				<div class="card mb-4 shadow-sm">
+				<div class="card mb-4 mx-auto shadow-sm">
 					<div class="card-body">
 						<h5 class="card-title">{{ project.title }}</h5>
 						<p class="card-text">{{ project.excerpt }}</p>
