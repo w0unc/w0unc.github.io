@@ -4,33 +4,30 @@ title:		'Repeater Information'
 ---
 
 
-<!-- Repeater -->
-<div class="jumbotron my-4 my-md-5">
-	<div class="container text-center">
-		<div class="row">
-			<div class="col">
-				<ul class="list-unstyled">
-					<li><b>WØUNC:</b> 442.650MHz (+5MHz Offset) 88.5 PL In/Out</li>
-					<li><b>Location:</b> Atkins Library, UNC Charlotte</li>
-					<li><b>Modes:</b> Analog, P25</li>
-					<li><b>P25 NAC:</b> 293</li>
-					<li><b>EchoLink Call Sign:</b> W0UNC-L</li>
-					<li><b>EchoLink Number:</b> 497953</li>
-				</ul>
-			</div>
-		</div>
+<!-- Repeater Information -->
+<div class="jumbotron mb-4 mb-md-5">
+	<div class="container">
+		<dl class="row">
+			<dt class="col-sm-6 text-sm-right">WØUNC</dt><dd class="col-sm-6">442.650MHz (+5MHz Offset) 88.5 PL In/Out</dd>
+			<dt class="col-sm-6 text-sm-right">Location</dt><dd class="col-sm-6">Atkins Library, UNC Charlotte</dd>
+			<dt class="col-sm-6 text-sm-right">Modes</dt><dd class="col-sm-6">Analog, P25</dd>
+			<dt class="col-sm-6 text-sm-right">P25 NAC</dt><dd class="col-sm-6">293</dd>
+			<dt class="col-sm-6 text-sm-right">EchoLink Call Sign</dt><dd class="col-sm-6">W0UNC-L</dd>
+			<dt class="col-sm-6 text-sm-right">EchoLink Number</dt><dd class="col-sm-6">497953</dd>
+		</dl>
 	</div>
 </div>
-<!-- End Repeater -->
+<!-- End Repeater Information -->
 
 
 <!-- Repeater Coverage Maps -->
-<div class="container my-4 my-md-5 text-center">
+<div class="container mb-4 mb-md-5 text-center">
 	<h3 class="pb-2">Repeater Coverage Maps</h3>
+	<hr>
 	<div class="row">
 		{% for map in site.maps reversed %}
 			{% if map.visible == 'Yes' %}
-				<div class="col-lg-6 my-3 mx-auto">
+				<div class="col-lg-6 mb-4 mx-auto">
 					<div class="card shadow-sm">
 						<div class="card-body">
 							<h5 class="card-title">{{ map.title }}</h5>
@@ -40,9 +37,9 @@ title:		'Repeater Information'
 								<li><span class="font-weight-bold">Frequency:</span> {{ map.frequency }}</li>
 								<li><span class="font-weight-bold">Power:</span> {{ map.power }}</li>
 							</ul>
-							<div class="btn-group" role="group" aria-label="Basic example">
-								<a href="{{ site.baseurl }}/assets/img/{{ map.link75 }}" class="btn btn-primary" role="button" aria-pressed="true" target="_blank">75 Mile ⌀</a>
-								<a href="{{ site.baseurl }}/assets/img/{{ map.link150 }}" class="btn btn-primary" role="button" aria-pressed="true" target="_blank">150 Mile ⌀</a>
+							<div class="btn-group" role="group" aria-label="Map Files">
+								<a href="{{ site.baseurl }}/assets/img/maps/coverage/{{ map.link75 }}" class="btn btn-primary" role="button" aria-pressed="true" target="_blank">75 Mile ⌀</a>
+								<a href="{{ site.baseurl }}/assets/img/maps/coverage/{{ map.link150 }}" class="btn btn-primary" role="button" aria-pressed="true" target="_blank">150 Mile ⌀</a>
 							</div>
 						</div>
 						<div id="{{ map.name }}" style="min-height: 500px; width: 100%;"></div>

@@ -3,22 +3,17 @@ title: FAQ
 layout: default
 ---
 
+
 <!-- Club FAQ -->
-<div class="jumbotron my-4 my-md-5" id="faq-club">
+<div class="jumbotron mb-4 mb-md-5" id="faq-club">
 	<div class="container text-center">
-		<div class="row">
-			<div class="col">
-				<h2>Club FAQ</h2>
-			</div>
-		</div>
+		<h2>Club FAQ</h2>
 	</div>
 </div>
-
-
-<div class="container my-4 my-md-5">
+<div class="container mb-4 mb-md-5">
 	<div class="row">
-		<div class="col-sm-12 col-lg-7 my-3 mx-auto">
-			<div class="accordion" id="accordionExample">
+		<div class="col-sm-12 col-lg-7 mx-auto">
+			<div class="accordion" id="ClubFAQ">
 				{% for faq in site.data.faq-club %}
 					<div class="card shadow-sm">
 						<div class="card-header" id="heading{{ faq.id }}">
@@ -28,7 +23,7 @@ layout: default
 								</button>
 							</h2>
 						</div>
-						<div id="collapse{{ faq.id }}" class="collapse" aria-labelledby="heading{{ faq.id }}" data-parent="#accordionExample">
+						<div id="collapse{{ faq.id }}" class="collapse" aria-labelledby="heading{{ faq.id }}" data-parent="#ClubFAQ">
 							<div class="card-body">
 								{{ faq.answer | replace: "site.email", site.email | replace: "site.ninerengage", site.ninerengage }}
 							</div>
@@ -43,21 +38,15 @@ layout: default
 
 
 <!-- Licensing FAQ -->
-<div class="jumbotron my-4 my-md-5" id="faq-licensing">
+<div class="jumbotron mb-4 mb-md-5" id="faq-licensing">
 	<div class="container text-center">
-		<div class="row">
-			<div class="col">
-				<h2>Licensing FAQ</h2>
-			</div>
-		</div>
+		<h2>Licensing FAQ</h2>
 	</div>
 </div>
-
-
-<div class="container my-4 my-md-5">
+<div class="container mb-4 mb-md-5">
 	<div class="row">
-		<div class="col-sm-12 col-lg-7 my-3 mx-auto">
-			<div class="accordion" id="accordionExample">
+		<div class="col-sm-12 col-lg-7 mx-auto">
+			<div class="accordion" id="LicensingFAQ">
 				{% for faq in site.data.faq-licensing %}
 					<div class="card shadow-sm">
 						<div class="card-header" id="heading{{ faq.id }}">
@@ -67,7 +56,7 @@ layout: default
 								</button>
 							</h2>
 						</div>
-						<div id="collapse{{ faq.id }}" class="collapse" aria-labelledby="heading{{ faq.id }}" data-parent="#accordionExample">
+						<div id="collapse{{ faq.id }}" class="collapse" aria-labelledby="heading{{ faq.id }}" data-parent="#LicensingFAQ">
 							<div class="card-body">
 								{{ faq.answer | replace: "site.arrl-band-chart", site.arrl-band-chart }}
 							</div>

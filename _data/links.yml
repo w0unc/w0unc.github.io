@@ -1,0 +1,143 @@
+- title:    WØUNC Links
+  links:
+  - link:
+    name:   GitHub
+    url:    https://github.com/w0unc
+  - link:
+    name:   NinerEngage
+    url:    site.ninerengage
+  - link:
+    name:   QRZ
+    url:    https://qrz.com/lookup/w0unc
+  - link:
+    name:   RepeaterBook
+    url:    https://repeaterbook.com/repeaters/details.php?state_id=37&ID=318
+
+- title:    Local Clubs
+  links:
+  - link:
+    name:   W4BFB - Mecklenburg ARC
+    url:    https://w4bfb.org
+  - link:
+    name:   W4CQ - Charlotte ARC
+    url:    https://w4cq.org
+  - link:
+    name:   K4WC - Carbarrus ARC
+    url:    http://cabarrusars.org
+  - link:
+    name:   N4UH - Rowan ARC
+    url:    https://rowanars.org
+
+- title:    Local Events
+  links:
+  - link:
+    name:   Charlotte Hamfest
+    url:    https://charlottehamfest.org
+  - link:
+    name:   Shelby Hamfest
+    url:    http://shelbyhamfest.org
+  - link:
+    name:   Rock Hill Hamfest
+    url:    https://ycars.org/?page_id=67
+  - link:
+    name:   SouthEast LinuxFest
+    url:    https://southeastlinuxfest.org
+
+- title:    Local Emergency
+  links:
+  - links:
+    name:   ARES & RACES
+    url:    https://mecklenburgares.org
+
+- title:     Band Information
+  links:
+  - link:
+    name:   US Amateur Radio Band Chart
+    url:    site.arrl-band-chart
+  - link:
+    name:   US Amateur Radio Band Plan
+    url:    https://arrl.org/band-plan
+  - link:
+    name:   US Frequency Allocations
+    url:    https://ntia.doc.gov/files/ntia/publications/january_2016_spectrum_wall_chart.pdf
+  - link:
+    name:   Solar Data
+    url:    https://hamqsl.com/solar.html
+
+- title:    Contesting
+  links:
+  - link:
+    name:   CQ DX Zones
+    url:    https://icomamerica.com/en/amateur/amateurtools/2013_ITU_CQ_WorldMaps.pdf
+  - link:
+    name:   ARRL Contest Calendar
+    url:    https://arrl.org/contest-calendar
+  - link:
+    name:   WA7BNM Contest Calendar
+    url:    https://contestcalendar.com/index.html
+
+- title:    Testing Groups
+  links:
+  - links:
+    name:   ARRL
+    url:    https://arrl.org/find-an-amateur-radio-license-exam-session
+  - links:
+    name:   Laurel VEC
+    url:    https://laurelvec.com/?pg=exams
+
+- title:    Tools
+  links:
+  - links:
+    name:   Time.is
+    url:    https://time.is
+
+- title:    Web SDRs
+  links:
+  - link:
+    name:   WebSDR.org
+    url:    http://websdr.org
+  - link:
+    name:   SDR.hu
+    url:    https://sdr.hu
+
+- title:    Amateur Radio Subreddits
+  links:
+  - link:
+    name:   Amateur Radio
+    url:    https://reddit.com/r/amateurradio
+  - link:
+    name:   Amateur Radio Developers
+    url:    https://reddit.com/r/hamdevs
+  - link:
+    name:   Amateur Radio Satellites
+    url:    https://reddit.com/r/amateursatellites
+  - link:
+    name:   Ham Radio
+    url:    https://www.reddit.com/r/HamRadio
+  - link:
+    name:   Morse
+    url:    https://reddit.com/r/morse
+  - link:
+    name:   Shortwave
+    url:    https://reddit.com/r/shortwave
+
+- title:    Digital & Linked Modes
+  links:
+  - link:
+    name:   EchoLink
+    url:    http://echolink.org
+  - link:
+    name:   D-STAR
+    url:    http://dstarinfo.com
+  - link:
+    name:   P25
+    url:    http://project25.org
+
+- title:    Federal Communications Commission
+  links:
+  - link:
+    name:   License Search
+    url:    https://wireless2.fcc.gov/UlsApp/UlsSearch/searchLicense.jsp
+  - link:
+    name:   CORES
+    url:    https://apps.fcc.gov/cores/userLogin.do

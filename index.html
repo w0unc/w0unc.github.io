@@ -3,34 +3,31 @@ title: Home
 layout: home
 ---
 
+
 <!-- About Us -->
-<div class="container my-4 my-md-5 text-center" id="about">
-	<div class="row">
-		<div class="col my-3">
-			<h2 class="pb-2">About Us</h2>
-			<p>The Amateur Radio Club of UNC Charlotte is a student interest group whose purposes are to educate students, faculty, and staff in becoming licensed amateur radio operators, to foster fellowship among amateur radio enthusiasts, and to provide the local community with emergency communications. This is a registered student organization on the campus of UNC Charlotte.</p>
-		</div>
-	</div>
+<div class="container mb-4 mb-md-5 text-center" id="about">
+	<h2 class="pb-2">About Us</h2>
+	<p>The Amateur Radio Club of UNC Charlotte is a student interest group whose purposes are to educate students, faculty, and staff in becoming licensed amateur radio operators, to foster fellowship among amateur radio enthusiasts, and to provide the local community with emergency communications. This is a registered student organization on the campus of UNC Charlotte.</p>
 </div>
 <!-- End About Us -->
 
 
 <!-- Information -->
-<div class="jumbotron jumbotron-fluid my-4 my-md-5" id="info">
+<div class="jumbotron jumbotron-fluid mb-4 mb-md-5" id="info">
 	<div class="container text-center">
 		<h2 class="pb-2">Information</h2>
 		<div class="row">
-			<div class="col-md-4 my-3">
+			<div class="col-md-4 mb-4">
 				<h4><span class="fas fa-microphone fa-2x"></span></h4>
 				<h4>Repeater</h4>
 				<p>We have a repeater on the roof of the Atkins Library operating on frequency 442.650MHz (+5MHz) PL 88.5 In/Out. We stress that you must be an FCC Licensed Operator (or hold a comparable authorization) to access our repeater. <a href="{{ site.baseurl }}/repeater">More Info</a></p>
 			</div>
-			<div class="col-md-4 my-3">
+			<div class="col-md-4 mb-4">
 				<h4><span class="fas fa-bolt fa-2x"></span></h4>
 				<h4>Meetings</h4>
 				<p>We meet monthly at a predesignated time and place. Check below or on our <a href="{{ site.ninerengage }}" target="_blank">NinerEngage</a> page for meeting announcements. Any undergraduate, graduate, alumni, or faculty/staff may attend the meetings. No RSVP is required.</p>
 			</div>
-			<div class="col-md-4 my-3">
+			<div class="col-md-4 mb-4">
 				<h4><span class="fas fa-comments fa-2x"></span></h4>
 				<h4>Contact</h4>
 				<p>The easiest way to contact us is though the repeater. You can also contact us by emailing <a href="mailto:{{ site.email }}">{{ site.email }}</a>. More contact options can be found once you have logged into our NinerEngage page.</p>
@@ -42,15 +39,16 @@ layout: home
 
 
 <!-- Planned Events -->
-<div class="container my-4 my-md-5 text-center" id="events">
+<div class="container mb-4 mb-md-5 text-center" id="events">
 	<h2 class="pb-2">Planned Events</h2>
+	<hr>
 	<div class="card-deck">
 		{% assign i = 0 %}
 		{% assign curDate = site.time | date: '%s' %}
 		{% for post in site.posts reversed %}
 			{% assign eventStartDate = post.date | date: '%s' %}
 			{% if eventStartDate > curDate and i < 4 %}
-				<div class="card my-3 mx-auto shadow-sm">
+				<div class="card mb-4 mx-auto shadow-sm">
 					<div class="card-body">
 						<h5 class="card-title">{{ post.title }}</h5>
 						<p class="card-text">{{ post.excerpt }}</p>
@@ -78,23 +76,16 @@ layout: home
 			{% endif %}
 		{% endfor %}
 	</div>
-	<div class="row">
-		<div class="col my-3">
-			<a href="{{ site.baseurl }}/events" class="btn btn-primary">More Events</a>
-		</div>
-	</div>
+	<hr>
+	<a href="{{ site.baseurl }}/events" class="btn btn-primary">More Events</a>
 </div>
 <!-- End Planned Events -->
 
 
 <!-- Tagline -->
-<div class="jumbotron my-4 my-md-5">
+<div class="jumbotron mb-4 mb-md-5">
 	<div class="container">
-		<div class="row">
-			<div class="col">
-				<h4 class="lead font-italic">When all else fails... Amateur Radio</h4>
-			</div>
-		</div>
+		<h4 class="lead font-italic">When all else fails... Amateur Radio</h4>
 	</div>
 </div>
 <!-- End Tagline -->

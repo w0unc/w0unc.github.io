@@ -1,0 +1,75 @@
+<!-- Head -->
+{% include head.html %}
+<!-- End Head-->
+
+
+<!-- Navbar -->
+{% include navbar.html %}
+<!-- End Navbar -->
+
+
+<!-- Header -->
+<div class="jumbotron jumbotron-fluid mb-0 text-center" id="header">
+	<div class="header-background">
+		<div class="container py-lg-3">
+			<h1 class="display-4">{{ page.title }}</h1>
+		</div>
+	</div>
+</div>
+<!-- End Header -->
+
+
+<!-- Breadcrumbs -->
+<div class="container mb-4 mb-md-5">
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="{{ site.baseurl }}/">Home</a></li>
+			<li class="breadcrumb-item"><a href="{{ site.baseurl }}/wiki">Wiki</a></li>
+			<li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+		</ol>
+	</nav>
+</div>
+<!-- Breadcrumbs -->
+
+
+<!-- Club Wikis -->
+<div class="container mb-4 mb-md-5">
+	<div class="row">
+		<div class="col-lg-9 mb-4">
+			<div class="card shadow-sm">
+				<div class="card-body">
+					<h3 class="card-title">{{ page.title }}</h3>
+					<hr>
+					<p class="card-text">{{ page.content }}</p>
+					<hr>
+					<p class="card-text">Categories: {{ page.categories }}</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-3 mb-4">
+			<div class="card shadow-sm">
+				{% if page.image != '' %}
+					<img class="card-img-top" src="{{ site.baseurl }}/assets/img/wiki/{{ page.image }}">
+				{% endif %}
+				<ul class="list-group list-group-flush">
+					<div class="card-header">
+						Editors
+					</div>
+					{% for editor in page.editors %}
+						<li class="list-group-item">{{ editor }}</li>
+					{% endfor %}
+					<div class="card-header">
+						Last Edit Date
+					</div>
+					<li class="list-group-item">{{ page.last-edit-date }}</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Club Wikis -->
+
+
+<!-- Footer -->
+{% include footer.html %}
+<!-- End Footer -->

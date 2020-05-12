@@ -59,18 +59,8 @@
 	font-size: 12px;
 }
 
-#footer #footer-copyright {
+#footer #copyright {
 	background: #191919;
-}
-
-
-/*******************************/
-/*   RULES TABLE OF CONTENTS   */
-/*******************************/
-
-#rules-toc > li {
-	font-size: 18px;
-	font-weight: bold;
 }
 
 
@@ -132,5 +122,34 @@
 	.card-deck .card {
 			max-width: calc(25% - 30px);
 			min-width: calc(25% - 30px);
+	}
+}
+
+
+@media (min-width: 576px) {
+	.project .card {
+			max-width: calc(50% - 30px);
+			min-width: calc(50% - 30px);
+	}
+}
+
+@media (min-width: 768px) {
+	.project .card {
+			max-width: calc(50% - 30px);
+			min-width: calc(50% - 30px);
+	}
+}
+
+@media (min-width: 992px) {
+	.project .card {
+			max-width: calc(33% - 30px);
+			min-width: calc(33% - 30px);
+	}
+}
+
+@media (min-width: 1200px) {
+	.project .card {
+			max-width: calc(33% - 30px);
+			min-width: calc(33% - 30px);
 	}
 }

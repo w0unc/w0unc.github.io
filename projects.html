@@ -4,30 +4,71 @@ title:		'Club Projects'
 ---
 
 
-<!-- Club Projects -->
-<div class="container my-4 my-md-5 text-center">
-	<div class="row">
-		<div class="col">
-			<p class="lead">Our works in progress and unattainable delusions of grandeur.</p>
-		</div>
-	</div>
-	<div class="card-columns">
+<!-- Justin's Infamous Words -->
+<div class="container mb-4 mb-md-5">
+	<blockquote class="blockquote text-center">
+		<p class="mb-0">Our works in progress and unattainable delusions of grandeur.</p>
+		<footer class="blockquote-footer">W4HEK Justin</footer>
+	</blockquote>
+</div>
+<!-- End Justin's Infamous Words -->
+
+
+<!-- Club Projects In-Progress -->
+<div class="container mb-4 mb-md-5 text-center">
+	<h2 class="pb-2">In-Progress</h2>
+	<hr>
+	<div class="card-deck project">
 		{% for project in site.projects reversed %}
-			<div class="card my-3 shadow-sm">
-				<div class="card-body">
-					<h5 class="card-title">{{ project.title }}</h5>
-					<p class="card-text">{{ project.excerpt }}</p>
-					<div class="progress my-3" style="height: 20px">
-						{% if project.progress == '100' %}
-							<div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
-						{% else %}
-							<div class="progress-bar" role="progressbar" style="width: {{ project.progress }}%;" aria-valuenow="{{ project.progress }}" aria-valuemin="0" aria-valuemax="100">{{ project.progress }}%</div>
-						{% endif %}
+			{% if project.progress < 100 %}
+				<div class="card mb-4 shadow-sm">
+					<div class="card-body">
+						<h5 class="card-title">{{ project.title }}</h5>
+						<p class="card-text">{{ project.excerpt }}</p>
 					</div>
-					<a href="{{ site.baseurl }}{{ project.url }}" class="btn btn-primary">Info</a>
+					<div class="card-footer">
+						<div class="progress my-3" style="height: 20px">
+							{% if project.progress == 100 %}
+								<div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+							{% else %}
+								<div class="progress-bar" role="progressbar" style="width: {{ project.progress }}%;" aria-valuenow="{{ project.progress }}" aria-valuemin="0" aria-valuemax="100">{{ project.progress }}%</div>
+							{% endif %}
+						</div>
+						<a href="{{ site.baseurl }}{{ project.url }}" class="btn btn-primary">More</a>
+					</div>
 				</div>
-			</div>
+			{% endif %}
 		{% endfor %}
 	</div>
 </div>
-<!-- End Club Projects -->
+<!-- End Club Projects In-Progress -->
+
+
+<!-- Club Projects Complete -->
+<div class="container mb-4 mb-md-5 text-center">
+	<h2 class="pb-2">Complete</h2>
+	<hr>
+	<div class="card-deck project">
+		{% for project in site.projects reversed %}
+			{% if project.progress == 100 %}
+				<div class="card mb-4 shadow-sm">
+					<div class="card-body">
+						<h5 class="card-title">{{ project.title }}</h5>
+						<p class="card-text">{{ project.excerpt }}</p>
+					</div>
+					<div class="card-footer">
+						<div class="progress my-3" style="height: 20px">
+							{% if project.progress == 100 %}
+								<div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+							{% else %}
+								<div class="progress-bar" role="progressbar" style="width: {{ project.progress }}%;" aria-valuenow="{{ project.progress }}" aria-valuemin="0" aria-valuemax="100">{{ project.progress }}%</div>
+							{% endif %}
+						</div>
+						<a href="{{ site.baseurl }}{{ project.url }}" class="btn btn-primary">More</a>
+					</div>
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+</div>
+<!-- End Club Projects Complete -->

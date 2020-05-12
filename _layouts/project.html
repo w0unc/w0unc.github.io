@@ -10,15 +10,17 @@
 
 <!-- Header -->
 <div class="jumbotron jumbotron-fluid mb-0 text-center" id="header">
-	<div class="container py-lg-3">
-		<h1 class="display-4">{{ page.title }}</h1>
+	<div class="header-background">
+		<div class="container py-lg-3">
+			<h1 class="display-4">{{ page.title }}</h1>
+		</div>
 	</div>
 </div>
 <!-- End Header -->
 
 
 <!-- Breadcrumbs -->
-<div class="container">
+<div class="container mb-4 mb-md-5">
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item"><a href="{{ site.baseurl }}/">Home</a></li>
@@ -31,9 +33,9 @@
 
 
 <!-- Content -->
-<div class="container my-4 my-md-5">
+<div class="container mb-4 mb-md-5">
 	<div class="card-group">
-		<div class="col-lg-8 my-3">
+		<div class="col-lg-8 mb-4">
 			<div class="card sm-shadow">
 				<div class="card-body">
 					<h3 class="card-title text-center">Description</h3>
@@ -41,10 +43,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-4 my-3">
+		<div class="col-lg-4 mb-4">
 			<div class="card sm-shadow">
-				<div class="card-body">
-					<h3 class="card-title text-center">Information</h3>
+				<div class="card-header">
+					Information
 				</div>
 				<ul class="list-group list-group-flush">
 					<li class="list-group-item"><span class="font-weight-bold">Status: </span>{{ page.status }}</li>

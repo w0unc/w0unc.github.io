@@ -5,22 +5,19 @@ title:		'License Testing'
 
 
 <!-- FCC Registration Number (FRN) -->
-<div class="container my-4 my-md-5 text-center">
-	<div class="row">
-		<div class="col my-3">
-			<h3 class="pb-2">FCC Registration Number (FRN)</h3>
-			<p>It is highly recommended that you get a FCC Registration Number (FRN) before attending a testing session. It can take the place of a Social Security Number and in some cases, it will be the only number you can use. Remember to write it down or store it someplace safe after you receive it. You will need to bring it with you to testing sessions.</p>
-			<a class="btn btn-primary" href="https://apps.fcc.gov/coresWeb/publicHome.do" target="_blank">Get FRN</a>
-		</div>
-	</div>
+<div class="container mb-4 mb-md-5 text-center">
+	<h3>FCC Registration Number (FRN)</h3>
+	<p>It is highly recommended that you get a FCC Registration Number (FRN) before attending a testing session. It can take the place of a Social Security Number and in some cases, it will be the only number you can use. Remember to write it down or store it someplace safe after you receive it. You will need to bring it with you to testing sessions.</p>
+	<a class="btn btn-primary" href="https://apps.fcc.gov/coresWeb/publicHome.do" target="_blank">Get FRN</a>
 </div>
 <!-- End FCC Registration Number (FRN) -->
 
 
-<!-- Upcoming Sessions -->
-<div class="jumbotron jumbotron-fluid my-4 my-md-5">
-	<div class="container text-center" id="events">
-		<h2 class="pb-2">Planned Sessions</h2>
+<!-- Planned Sessions -->
+<div class="jumbotron jumbotron-fluid mb-4 mb-md-5">
+	<div class="container text-center">
+		<h2>Planned Sessions</h2>
+		<hr>
 		{% assign count = 0 %}
 		{% assign curDate = site.time | date: '%s' %}
 		{% for post in site.categories.tests %}
@@ -36,7 +33,7 @@ title:		'License Testing'
 				{% for post in site.posts reversed %}
 					{% assign eventStartDate = post.date | date: '%s' %}
 					{% if eventStartDate > curDate and i < 4 and post.categories contains "tests" %}
-						<div class="card my-3 mx-auto shadow-sm">
+						<div class="card mb-4 mx-auto shadow-sm">
 							<div class="card-body">
 								<h5 class="card-title">{{ post.title }}</h5>
 								<p class="card-text">{{ post.excerpt }}</p>
@@ -69,20 +66,20 @@ title:		'License Testing'
 		{% endif %}
 	</div>
 </div>
-<!-- End Upcoming Sessions -->
+<!-- End Planned Sessions -->
 
 
 <!-- ARRL & Laurel Testing Sessions -->
-<div class="container my-4 my-md-5 text-center">
+<div class="container mb-4 mb-md-5 text-center">
 	<div class="row">
-		<div class="col-md-6 my-3">
-			<h3 class="pb-2">ARRL Testing Sessions</h3>
-			<p>These are a list of ARRL testing sessions. We will not be attending most of these. Check out our upcoming sessions for testing events we will be attending and supplying transportation. The Amateur Radio Club at UNC Charlotte and ARRL are not affiliated. The ARRL Exam currently costs $15.00.</p>
+		<div class="col-md-6 mb-4">
+			<h3>ARRL Testing Sessions</h3>
+			<p>These are a list of ARRL testing sessions. We will not be attending most of these. Check out our upcoming sessions for testing events we will be attending and providing transportation. The Amateur Radio Club at UNC Charlotte and ARRL are not affiliated. The ARRL Exam currently costs $15.00.</p>
 			<a href="http://www.arrl.org/find-an-amateur-radio-license-exam-session" class="btn btn-primary" target="_blank">View</a>
 		</div>
-		<div class="col-md-6 my-3">
-			<h3 class="pb-2">Laurel Testing Sessions</h3>
-			<p>These are a list of Laurel testing sessions. We will not be attending most of these. Check out our upcoming sessions for testing events we will be attending and supplying transportation. The Amateur Radio Club at UNC Charlotte and Laurel are not affiliated. The Laurel Exam is currently free.</p>
+		<div class="col-md-6 mb-4">
+			<h3>Laurel Testing Sessions</h3>
+			<p>These are a list of Laurel testing sessions. We will not be attending most of these. Check out our upcoming sessions for testing events we will be attending and providing transportation. The Amateur Radio Club at UNC Charlotte and Laurel are not affiliated. The Laurel Exam is currently free.</p>
 			<a href="https://www.laurelvec.com/?pg=exams" class="btn btn-primary" target="_blank">View</a>
 		</div>
 	</div>

@@ -1,0 +1,37 @@
+---
+title: Wiki
+layout: default
+---
+
+
+<!-- Wiki -->
+<div class="container mb-4 mb-md-5">
+	<div class="row">
+		<div class="col-lg-9 mb-4">
+			<div class="card shadow-sm">
+				<div class="card-body">
+					<h3 class="card-title">WØUNC Wiki</h3>
+					<p class="card-text">Welcome to the WØUNC wiki.</p>
+					<p class="card-text">Here we will compile information we want to share about different topics and ideas.</p>
+					<hr>
+					<h4 class="card-title">How to Edit this Wiki</h4>
+					<p class="card-text">This wiki (and the website in general) is hosted on GitHub Pages. In order to make changes to this wiki, you can submit a pull request from the <a href="https://github.com/w0unc/w0unc.github.io" target="_blank">GitHub page</a>. All pull requests will be reviewed before being merged into the master branch.</p>
+					<p class="card-text">The files for the wikis are contained in the '_wikis' folder. They are a <a href="https://markdownguide.org/" target="_blank">markdown</a> file for easy formatting.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-3 mb-4">
+			<div class="card shadow-sm">
+				<div class="card-header">
+					Wikis
+				</div>
+				<div class="list-group list-group-flush">
+					{% for wiki in site.wikis %}
+						<a class="list-group-item list-group-item-action" href="{{ wiki.url }}">{{ wiki.title }}</a>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Wiki -->

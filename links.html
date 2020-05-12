@@ -5,120 +5,20 @@ title:		'Links'
 
 
 <!-- Links -->
-<div class="container my-4 my-md-5 text-center">
-	<div class="card-columns">
-		<div class="card my-3 shadow-sm">
-			<div class="card-body">
-				<h5 class="card-title">WØUNC Links</h5>
-				<ul class="list-unstyled">
-					<li><a href="https://www.github.com/w0unc" target="_blank">GitHub</a></li>
-					<li><a href="{{ site.ninerengage }}" target="_blank">NinerEngage</a></li>
-					<li><a href="https://www.qrz.com/lookup/w0unc" target="_blank">QRZ</a></li>
-					<li><a href="https://repeaterbook.com/repeaters/details.php?state_id=37&ID=318" target="_blank">RepeaterBook</a></li>
-				</ul>
+<div class="container mb-4 mb-md-5 text-center">
+	<div  class="card-columns">
+		{% for group in site.data.links %}
+			<div class="card mb-4 shadow-sm">
+				<div class="card-body">
+					<h5 class="card-title">{{ group.title }}</h5>
+					<ul class="list-unstyled">
+						{% for link in group.links %}
+							<li><a href="{{ link.url | replace: 'site.ninerengage', site.ninerengage | replace: 'site.arrl-band-chart', site.arrl-band-chart }}" target="_blank">{{ link.name }}</a></li>
+						{% endfor %}
+					</ul>
+				</div>
 			</div>
-		</div>
-		<div class="card my-3 shadow-sm">
-			<div class="card-body">
-				<h5 class="card-title">Band Information</h5>
-				<ul class="list-unstyled">
-					<li><a href="{{ site.arrl-band-chart }}" target="_blank">US Amateur Radio Bands Chart</a></li>
-					<li><a href="http://www.arrl.org/band-plan" target="_blank">US Amateur Radio Band Chart</a></li>
-					<li><a href="https://www.ntia.doc.gov/files/ntia/publications/january_2016_spectrum_wall_chart.pdf" target="_blank">US Frequency Allocations</a></li>
-					<li><a href="https://www.hamqsl.com/solar.html" target="_blank">Solar Data</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="card my-3 shadow-sm">
-			<div class="card-body">
-				<h5 class="card-title">Contesting</h5>
-				<ul class="list-unstyled">
-					<li><a href="https://www.icomamerica.com/en/amateur/amateurtools/2013_ITU_CQ_WorldMaps.pdf" target="_blank">CQ DX Zones</a></li>
-					<li><a href="http://www.arrl.org/contest-calendar" target="_blank">ARRL Contest Calendar</a></li>
-					<li><a href="https://www.contestcalendar.com/index.html" target="_blank">WA7BNM Contest Calendar</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="card my-3 shadow-sm">
-			<div class="card-body">
-				<h5 class="card-title">Local Clubs</h5>
-				<ul class="list-unstyled">
-					<li><a href="https://w4bfb.org/" target="_blank">W4BFB - Mecklenburg ARC</a></li>
-					<li><a href="https://www.w4cq.org/" target="_blank">W4CQ - Charlotte ARC</a></li>
-					<li><a href="http://www.cabarrusars.org/" target="_blank">K4WC - Carbarrus ARC</a></li>
-					<li><a href="https://www.rowanars.org/" target="_blank">N4UH - Rowan ARC</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="card my-3 shadow-sm">
-			<div class="card-body">
-				<h5 class="card-title">Local Events</h5>
-				<ul class="list-unstyled">
-					<li><a href="https://charlottehamfest.org/" target="_blank">Charlotte Hamfest</a></li>
-					<li><a href="http://shelbyhamfest.org/" target="_blank">Shelby Hamfest</a></li>
-					<li><a href="https://www.ycars.org/?page_id=67" target="_blank">Rock Hill Hamfest</a></li>
-					<li><a href="https://southeastlinuxfest.org/" target="_blank">SouthEast LinuxFest</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="card my-3 shadow-sm">
-			<div class="card-body">
-				<h5 class="card-title">Local Emergency</h5>
-				<ul class="list-unstyled">
-					<li><a href="https://www.mecklenburgares.org/" target="_blank">ARES & RACES</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="card my-3 shadow-sm">
-			<div class="card-body">
-				<h5 class="card-title">Testing Groups</h5>
-				<ul class="list-unstyled">
-					<li><a href="http://www.arrl.org/find-an-amateur-radio-license-exam-session" target="_blank">ARRL</a></li>
-					<li><a href="https://www.laurelvec.com/?pg=exams" target="_blank">Laurel VEC</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="card my-3 shadow-sm">
-			<div class="card-body">
-				<h5 class="card-title">Web SDRs</h5>
-				<ul class="list-unstyled">
-					<li><a href="http://websdr.org/" target="_blank">WebSDR.org</a></li>
-					<li><a href="https://sdr.hu/" target="_blank">SDR.hu</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="card my-3 shadow-sm">
-			<div class="card-body">
-				<h5 class="card-title">Amateur Radio Subreddits</h5>
-				<ul class="list-unstyled">
-					<li><a href="https://www.reddit.com/r/amateursatellites/" target="_blank">Amateur Radio</a></li>
-					<li><a href="https://www.reddit.com/r/hamdevs/" target="_blank">Amateur Radio Developers</a></li>
-					<li><a href="https://www.reddit.com/r/amateurradio/" target="_blank">Amateur Radio Satellites</a></li>
-					<li><a href="https://www.reddit.com/r/HamRadio/" target="_blank">Ham Radio</a></li>
-					<li><a href="https://www.reddit.com/r/morse/" target="_blank">Morse</a></li>
-					<li><a href="https://www.reddit.com/r/shortwave/" target="_blank">Shortwave</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="card my-3 shadow-sm">
-			<div class="card-body">
-				<h5 class="card-title">Digital & Linked Modes</h5>
-				<ul class="list-unstyled">
-					<li><a href="http://echolink.org/" target="_blank">EchoLink</a></li>
-					<li><a href="http://www.dstarinfo.com/" target="_blank">D-STAR</a></li>
-					<li><a href="http://www.project25.org/index.php" target="_blank">P25</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="card my-3 shadow-sm">
-			<div class="card-body">
-				<h5 class="card-title">Federal Communications Commission</h5>
-				<ul class="list-unstyled">
-					<li><a href="https://wireless2.fcc.gov/UlsApp/UlsSearch/searchLicense.jsp" target="_blank">License Search</a></li>
-					<li><a href="https://apps.fcc.gov/cores/userLogin.do" target="_blank">CORES</a></li>
-				</ul>
-			</div>
-		</div>
+		{% endfor %}
 	</div>
 </div>
 <!-- End Links -->

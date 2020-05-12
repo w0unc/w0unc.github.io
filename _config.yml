@@ -28,13 +28,17 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: w0unc
 ninerengage: https://ninerengage.uncc.edu/organization/amateur-radio-club
-code-plugs: https://github.com/w0unc/UNC-Charlotte-ARC-Radio-Images
-arrl-band-chart: http://www.arrl.org/files/file/Regulatory/Band%20Chart/Band%20Chart%208_5%20X%2011%20Color.pdf
+code-plugs: https://github.com/w0unc/w0unc-codeplugs
+arrl-band-chart: https://arrl.org/files/file/Regulatory/Band%20Chart/Band%20Chart%208_5%20X%2011%20Color.pdf
 future: true
 collections:
   projects:
     output: true
     permalink: /projects/:path/
+    sort_by: progress
+  wikis:
+    output: true
+    permalink: /wikis/:path/
     sort_by: order
   maps:
     output: false

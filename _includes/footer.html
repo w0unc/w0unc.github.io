@@ -1,5 +1,6 @@
+<!-- Footer -->
 <footer id="footer">
-	<div class="container mt-4 mt-lg-5">
+	<div class="container">
 		<div class="row">
 			<div class="col-sm-6 col-lg-3 my-3 my-lg-5">
 				<h3>Contact</h3>
@@ -28,8 +29,9 @@
 					<li><a href="{{ site.baseurl }}/projects">Projects</a></li>
 					<li><a href="{{ site.baseurl }}/testing">Testing</a></li>
 					<li><a href="{{ site.baseurl }}/links">Links</a></li>
+					<li><a href="{{ site.baseurl }}/wiki">Wiki</a></li>
 				</ul>
-				<div class="list-group d-sm-none">
+				<div class="list-group list-group-flush d-sm-none">
 					<a href="{{ site.baseurl }}/" class="list-group-item list-group-item-action list-group-item-dark">Home</a>
 					<a href="{{ site.baseurl }}/index#about" class="list-group-item list-group-item-action list-group-item-dark">About</a>
 					<a href="{{ site.baseurl }}/index#info" class="list-group-item list-group-item-action list-group-item-dark">Info</a>
@@ -40,6 +42,7 @@
 					<a href="{{ site.baseurl }}/projects" class="list-group-item list-group-item-action list-group-item-dark">Projects</a>
 					<a href="{{ site.baseurl }}/testing" class="list-group-item list-group-item-action list-group-item-dark">Testing</a>
 					<a href="{{ site.baseurl }}/links" class="list-group-item list-group-item-action list-group-item-dark">Links</a>
+					<a href="{{ site.baseurl }}/wiki" class="list-group-item list-group-item-action list-group-item-dark">Wiki</a>
 				</div>
 			</div>
 			<div class="col-sm-6 col-lg-3 my-3 my-lg-5">
@@ -52,16 +55,17 @@
 			</div>
 		</div>
 	</div>
-	<div class="container-fluid py-3 text-center" id="footer-copyright">
+	<div class="container-fluid py-3 text-center" id="copyright">
 		<div class="container">
 			<span>©{{ site.time | date: '%Y' }} Amateur Radio Club at UNC Charlotte</span>
 		</div>
 	</div>
 </footer>
+<!-- End Footer -->
 
 
 <!-- JavaScript -->
-<script src="{{ site.baseurl }}/assets/js/jquery-3.4.1.slim.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/jquery-3.5.1.slim.min.js"></script>
 <script src="{{ site.baseurl }}/assets/js/bootstrap.bundle.min.js"></script>
 <script src="{{ site.baseurl }}/assets/js/leaflet.js"></script>
 <script src="{{ site.baseurl }}/assets/js/Control.FullScreen.js"></script>
@@ -74,21 +78,21 @@
 		id: 'mapbox/streets-v11',
 		accessToken: 'pk.eyJ1IjoiYm1lYXJuaGFyZHQiLCJhIjoiY2szeHJoZnp2MTA1MDNydDhpd2V0bDZsbCJ9.jCO6mtMBmYWg3hmzWoOsgQ'
 	}).addTo(myMap);
-	var imageUrl = '{{ site.baseurl }}/assets/img/AtkinsLibrary442650MHz90wCov.png',
+	var imageUrl = '{{ site.baseurl }}/assets/img/maps/coverage/AtkinsLibrary442650MHz90wCov.png',
 	imageBounds = [[38.0036995509476, -84.0386726928662], [32.6077447074008, -77.4266301632258]];
 	L.imageOverlay(imageUrl, imageBounds).addTo(myMap);
 	var icon = L.icon({
-    iconUrl: '{{ site.baseurl }}/assets/img/marker-icon.png',
+    iconUrl: '{{ site.baseurl }}/assets/img/maps/marker-icon.png',
     iconSize: [25, 41],
     iconAnchor: [13, 41],
-    shadowUrl: '{{ site.baseurl }}/assets/img/marker-shadow.png',
+    shadowUrl: '{{ site.baseurl }}/assets/img/maps/marker-shadow.png',
 	});
 	L.marker([35.3057221291742, -80.732651428046], { icon: icon }).addTo(myMap);
 	L.control.fullscreen({
 		position: 'topleft',
 		title: 'Fullscreen',
 		titleCancel: 'Exit Fullscreen',
-		content: '<img src="{{ site.baseurl }}/assets/img/icon-fullscreen.png">',
+		content: '<img src="{{ site.baseurl }}/assets/img/maps/icon-fullscreen.png">',
 		forceSeparateButton: true,
 		forcePseudoFullscreen: false,
 		fullscreenElement: false,
@@ -103,7 +107,7 @@
 		id: 'mapbox/streets-v11',
 		accessToken: 'pk.eyJ1IjoiYm1lYXJuaGFyZHQiLCJhIjoiY2szeHJoZnp2MTA1MDNydDhpd2V0bDZsbCJ9.jCO6mtMBmYWg3hmzWoOsgQ'
 	}).addTo(myMap);
-	var imageUrl = '{{ site.baseurl }}/assets/img/AtkinsLibrary2m90wCov.png',
+	var imageUrl = '{{ site.baseurl }}/assets/img/maps/coverage/AtkinsLibrary2m90wCov.png',
 	imageBounds = [[38.0036995509476, -84.0386726928662], [32.6077447074008, -77.4266301632258]];
 	L.imageOverlay(imageUrl, imageBounds).addTo(myMap);
 	L.marker([35.3057221291742, -80.732651428046], { icon: icon }).addTo(myMap);
@@ -111,7 +115,7 @@
 		position: 'topleft',
 		title: 'Fullscreen',
 		titleCancel: 'Exit Fullscreen',
-		content: '<img src="{{ site.baseurl }}/assets/img/icon-fullscreen.png">',
+		content: '<img src="{{ site.baseurl }}/assets/img/maps/icon-fullscreen.png">',
 		forceSeparateButton: true,
 		forcePseudoFullscreen: false,
 		fullscreenElement: false,
