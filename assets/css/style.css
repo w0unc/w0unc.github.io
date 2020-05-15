@@ -98,58 +98,87 @@
 /*******************************/
 
 @media (min-width: 576px) {
-	.card-deck .card {
-			max-width: calc(50% - 30px);
-			min-width: calc(50% - 30px);
+	.card-deck-2 .card {
+			max-width: calc(100% - 30px);
+			min-width: calc(100% - 30px);
 	}
 }
 
 @media (min-width: 768px) {
-	.card-deck .card {
+	.card-deck-2 .card {
+			max-width: calc(100% - 30px);
+			min-width: calc(100% - 30px);
+	}
+}
+
+@media (min-width: 992px) {
+	.card-deck-2 .card {
 			max-width: calc(50% - 30px);
 			min-width: calc(50% - 30px);
 	}
 }
 
-@media (min-width: 992px) {
-	.card-deck .card {
-			max-width: calc(25% - 30px);
-			min-width: calc(25% - 30px);
-	}
-}
-
 @media (min-width: 1200px) {
-	.card-deck .card {
-			max-width: calc(25% - 30px);
-			min-width: calc(25% - 30px);
+	.card-deck-2 .card {
+			max-width: calc(50% - 30px);
+			min-width: calc(50% - 30px);
 	}
 }
 
 
 @media (min-width: 576px) {
-	.project .card {
+	.card-deck-3 .card {
 			max-width: calc(50% - 30px);
 			min-width: calc(50% - 30px);
 	}
 }
 
 @media (min-width: 768px) {
-	.project .card {
+	.card-deck-3 .card {
 			max-width: calc(50% - 30px);
 			min-width: calc(50% - 30px);
 	}
 }
 
 @media (min-width: 992px) {
-	.project .card {
+	.card-deck-3 .card {
 			max-width: calc(33% - 30px);
 			min-width: calc(33% - 30px);
 	}
 }
 
 @media (min-width: 1200px) {
-	.project .card {
+	.card-deck-3 .card {
 			max-width: calc(33% - 30px);
 			min-width: calc(33% - 30px);
+	}
+}
+
+
+@media (min-width: 576px) {
+	.card-deck-4 .card {
+			max-width: calc(100% - 30px);
+			min-width: calc(100% - 30px);
+	}
+}
+
+@media (min-width: 768px) {
+	.card-deck-4 .card {
+			max-width: calc(50% - 30px);
+			min-width: calc(50% - 30px);
+	}
+}
+
+@media (min-width: 992px) {
+	.card-deck-4 .card {
+			max-width: calc(25% - 30px);
+			min-width: calc(25% - 30px);
+	}
+}
+
+@media (min-width: 1200px) {
+	.card-deck-4 .card {
+			max-width: calc(25% - 30px);
+			min-width: calc(25% - 30px);
 	}
 }

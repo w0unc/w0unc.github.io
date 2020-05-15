@@ -50,8 +50,12 @@
 					<li class="list-group-item"><span class="font-weight-bold">Location: </span>{{ page.location }}</li>
 					<li class="list-group-item"><span class="font-weight-bold">Street: </span>{{ page.street }}</li>
 					<li class="list-group-item"><span class="font-weight-bold">Address: </span>{{ page.address }}</li>
-					<li class="list-group-item"><span class="font-weight-bold">Date: </span>{{ page.date | date: "%-d %B %Y" }}</li>
-					<li class="list-group-item"><span class="font-weight-bold">Time: </span>{{ page.time }}</li>
+					{% if page.start-date == page.end-date %}
+						<li class="list-group-item"><span class="font-weight-bold">Date: </span>{{ page.date | date: "%-d %B %Y" }}</li>
+					{% else %}
+						<li class="list-group-item"><span class="font-weight-bold">Date: </span>{{ page.start-date | date: "%-d" }}-{{ page.end-date | date: "%-d %B %Y" }}</span></li>
+					{% endif %}
+					<li class="list-group-item"><span class="font-weight-bold">Time: </span>{{ page.time | join: ', ' }}</li>
 				</ul>
 			</div>
 		</div>
@@ -74,10 +78,18 @@
 					Information
 				</div>
 				<ul class="list-group list-group-flush">
-					<li class="list-group-item"><span class="font-weight-bold">Access: </span>{{ page.access }}</li>
-					<li class="list-group-item"><span class="font-weight-bold">RSVP: </span>{{ page.rsvp }}</li>
-					<li class="list-group-item"><span class="font-weight-bold">Transportation: </span>{{ page.transportation }}</li>
 					<li class="list-group-item"><span class="font-weight-bold">Status: </span>{{ page.status }}</li>
+					<li class="list-group-item"><span class="font-weight-bold">Access: </span>{{ page.access }}</li>
+					{% if page.rsvp == true %}
+						<li class="list-group-item"><span class="font-weight-bold">RSVP: </span>Yes</li>
+					{% else %}
+						<li class="list-group-item"><span class="font-weight-bold">RSVP: </span>No</li>
+					{% endif %}
+					{% if page.transportation == true %}
+						<li class="list-group-item"><span class="font-weight-bold">Transportation: </span>Yes</li>
+					{% else %}
+						<li class="list-group-item"><span class="font-weight-bold">Transportation: </span>No</li>
+					{% endif %}
 				</ul>
 			</div>
 		</div>

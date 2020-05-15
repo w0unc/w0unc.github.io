@@ -4,39 +4,136 @@ layout: default
 ---
 
 
-<!-- Events -->
-<div class="container mb-4 mb-md-5 text-center" id="events">
-	<div class="card-deck">
+<!-- Wrapper -->
+<div class="container" style="min-height: 50vh">
+
+
+<!-- Future Events -->
+<div class="row mb-4 mb-md-5 text-center">
+	<div class="col">
+		<h2 class="pb-2">Future Events</h2>
+		<hr>
+		{% assign count = 0 %}
 		{% assign curDate = site.time | date: '%s' %}
-		{% for post in site.posts reversed %}
-			{% assign eventStartDate = post.date | date: '%s' %}
-			{% if eventStartDate > curDate %}
-				<div class="card mb-4 mx-auto shadow-sm">
-					<div class="card-body">
-						<h5 class="card-title">{{ post.title }}</h5>
-						<p class="card-text">{{ post.excerpt }}</p>
-					</div>
-					<div class="card-footer">
-						<ul class="list-unstyled">
-							<li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{ post.location }}</li>
-							<li>{{ post.street }}</li>
-							<li>{{ post.address }}</li>
-							<li>{{ post.date | date: "%-d %B %Y" }}</li>
-							<li>{{ post.time }}</li>
-						</ul>
-						{% if post.status == 'Attending' %}
-							<a href="{{ post.url }}" class="btn btn-primary">Info</a>
-						{% endif %}
-						{% if post.status == 'Planned' %}
-							<a href="{{ post.url }}" class="btn btn-info">Planned</a>
-						{% endif %}
-						{% if post.status == 'Cancelled' %}
-							<a href="{{ post.url }}" class="btn btn-danger">CANCELLED</a>
-						{% endif %}
-					</div>
-				</div>
+		{% for event in site.events %}
+			{% assign eventStartDate = event.date | date: '%s' %}
+			{% if eventStartDate > curDate and event.visible == 'Yes' and event.status != 'Cancelled' %}
+				{% assign count = count | plus: 1 %}
 			{% endif %}
 		{% endfor %}
+		{% if count > 0 %}
+			<div class="card-deck card-deck-2">
+				{% for event in site.events %}
+					{% assign eventStartDate = event.date | date: '%s' %}
+					{% if eventStartDate > curDate and event.visible == 'Yes' and event.status != 'Cancelled' %}
+						<div class="card mb-3">
+							<div class="row no-gutters">
+								<div class="col-md-2" style="font-family: 'Open Sans';">
+									<span style="font-size: 50px;">{{ event.date | date: "%-d" }}</span><br>
+									<span style="font-size: 25px;">{{ event.date | date: "%b" }}</span><br>
+									{{ event.date | date: "%Y" }}
+								</div>
+								<div class="col-md-5">
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item">{{ event.location }}</li>
+										<li class="list-group-item">{{ event.street }}</li>
+										<li class="list-group-item">{{ event.address }}</li>
+										<li class="list-group-item">{{ event.date | date: "%-d %B %Y" }}</li>
+										<li class="list-group-item">{{ event.time }}</li>
+									</ul>
+								</div>
+								<div class="col-md-5">
+									<div class="card-body">
+										<h5 class="card-title">{{ event.title }}</h5>
+										<p class="card-text">{{ event.excerpt }}</p>
+										{% if event.status == 'Attending' %}
+											<a href="{{ event.url }}" class="btn btn-primary">Info</a>
+										{% endif %}
+										{% if event.status == 'Planned' %}
+											<a href="{{ event.url }}" class="btn btn-info">Planned</a>
+										{% endif %}
+										{% if event.status == 'Cancelled' %}
+											<a href="{{ event.url }}" class="btn btn-danger">CANCELLED</a>
+										{% endif %}
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+		{% else %}
+			<p>There are currently no future events.</p>
+		{% endif %}
 	</div>
 </div>
-<!-- End Events -->
+<!-- End Future Events -->
+
+
+<!-- Cancelled Events -->
+<div class="row mb-4 mb-md-5 text-center">
+	<div class="col">
+		<h2 class="pb-2">Cancelled Events</h2>
+		<hr>
+		{% assign count = 0 %}
+		{% assign curDate = site.time | date: '%s' %}
+		{% for event in site.events %}
+			{% assign eventStartDate = event.date | date: '%s' %}
+			{% if eventStartDate > curDate and event.status == 'Cancelled' %}
+				{% assign count = count | plus: 1 %}
+			{% endif %}
+		{% endfor %}
+		{% if count > 0 %}
+			<div class="card-deck card-deck-2">
+				{% for event in site.events %}
+					{% assign eventStartDate = event.date | date: '%s' %}
+					{% if eventStartDate > curDate and event.status == 'Cancelled' %}
+						<div class="card mb-3 mx-auto">
+							<div class="row no-gutters">
+								<div class="col-md-2" style="font-family: 'Open Sans';">
+									<span style="font-size: 50px;">{{ event.date | date: "%-d" }}</span><br>
+									<span style="font-size: 25px;">{{ event.date | date: "%b" }}</span><br>
+									{{ event.date | date: "%Y" }}
+								</div>
+								<div class="col-md-5">
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item">{{ event.location }}</li>
+										<li class="list-group-item">{{ event.street }}</li>
+										<li class="list-group-item">{{ event.address }}</li>
+										{% if event.start-date == event.end-date %}
+											<li class="list-group-item">{{ event.date | date: "%-d %B %Y" }}</li>
+										{% else %}
+										<li class="list-group-item">{{ event.start-date | date: "%-d" }}-{{ event.end-date | date: "%-d %B %Y" }}</li>
+										{% endif %}
+									</ul>
+								</div>
+								<div class="col-md-5">
+									<div class="card-body">
+										<h5 class="card-title">{{ event.title }}</h5>
+										<p class="card-text">{{ event.excerpt }}</p>
+										{% if event.status == 'Attending' %}
+											<a href="{{ event.url }}" class="btn btn-primary">Info</a>
+										{% endif %}
+										{% if event.status == 'Planned' %}
+											<a href="{{ event.url }}" class="btn btn-info">Planned</a>
+										{% endif %}
+										{% if event.status == 'Cancelled' %}
+											<a href="{{ event.url }}" class="btn btn-danger">CANCELLED</a>
+										{% endif %}
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+		{% else %}
+			<p>There are currently no cancelled events.</p>
+		{% endif %}
+	</div>
+</div>
+<!-- End Cancelled Events -->
+
+
+<!-- End Wrapper -->
+</div>

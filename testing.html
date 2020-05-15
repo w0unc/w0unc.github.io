@@ -20,40 +20,41 @@ title:		'License Testing'
 		<hr>
 		{% assign count = 0 %}
 		{% assign curDate = site.time | date: '%s' %}
-		{% for post in site.categories.tests %}
-			{% assign eventStartDate = post.date | date: '%s' %}
-			{% if eventStartDate > curDate %}
-				{% assign count = count | plus: 1 %}
+		{% for event in site.events %}
+			{% if event.tags contains "tests" %}
+				{% assign eventStartDate = event.date | date: '%s' %}
+				{% if eventStartDate > curDate %}
+					{% assign count = count | plus: 1 %}
+				{% endif %}
 			{% endif %}
 		{% endfor %}
 		{% if count > 0 %}
-			<div class="card-deck">
+			<div class="card-deck card-deck-4">
 				{% assign i = 0 %}
 				{% assign curDate = site.time | date: '%s' %}
-				{% for post in site.posts reversed %}
-					{% assign eventStartDate = post.date | date: '%s' %}
-					{% if eventStartDate > curDate and i < 4 and post.categories contains "tests" %}
+				{% for event in site.events reversed %}
+					{% assign eventStartDate = event.date | date: '%s' %}
+					{% if eventStartDate > curDate and i < 4 and event.tags contains "tests" %}
 						<div class="card mb-4 mx-auto shadow-sm">
 							<div class="card-body">
-								<h5 class="card-title">{{ post.title }}</h5>
-								<p class="card-text">{{ post.excerpt }}</p>
+								<h5 class="card-title">{{ event.title }}</h5>
+								<p class="card-text">{{ event.excerpt }}</p>
 							</div>
 							<div class="card-footer">
 								<ul class="list-unstyled">
-									<li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{ post.location }}</li>
-									<li>{{ post.street }}</li>
-									<li>{{ post.address }}</li>
-									<li>{{ post.date | date: "%-d %B %Y" }}</li>
-									<li>{{ post.time }}</li>
+									<li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{ event.location }}</li>
+									<li>{{ event.street }}</li>
+									<li>{{ event.address }}</li>
+									<li>{{ event.date | date: "%-d %B %Y" }}</li>
 								</ul>
-								{% if post.status == 'Attending' %}
-									<a href="{{ post.url }}" class="btn btn-primary">Info</a>
+								{% if event.status == 'Attending' %}
+									<a href="{{ event.url }}" class="btn btn-primary">Info</a>
 								{% endif %}
-								{% if post.status == 'Planned' %}
-									<a href="{{ post.url }}" class="btn btn-info">Planned</a>
+								{% if event.status == 'Planned' %}
+									<a href="{{ event.url }}" class="btn btn-info">Planned</a>
 								{% endif %}
-								{% if post.status == 'Cancelled' %}
-									<a href="{{ post.url }}" class="btn btn-danger">CANCELLED</a>
+								{% if event.status == 'Cancelled' %}
+									<a href="{{ event.url }}" class="btn btn-danger">CANCELLED</a>
 								{% endif %}
 							</div>
 						</div>
