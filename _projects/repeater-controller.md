@@ -1,12 +1,11 @@
 ---
-layout:									'project' # The layout to use for the project page.
+layout:									'project' # The layout to use for the project page. This should never be changed.
 title:									'Repeater Controller'
-status:									'Designing' # The status of the project. Should be one of 'Brainstorming', 'Designing', 'Building', 'Testing', 'Implementing', 'On-Hold', or 'Cancelled'.
+status:									'Designing' # The status of the project. Values: 'Brainstorming', 'Designing', 'Building', 'Testing', 'Implementing', 'On-Hold', or 'Cancelled'.
 project-lead:						'W4HEK Justin' # The person who led the project.
 progress:								10 # Progress percentage of the project.
-categories:							[projects] # The categories for the project. Projects should always be 'projects'.
-visible:								'Yes' # Hides or shows the project in feeds.
-order:									'5' # The order the project will be shown in feeds.
+categories:							[] # The categories for the project.
+published:							true # Hides or shows the project in feeds.
 ---
 
 

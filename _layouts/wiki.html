@@ -61,7 +61,7 @@
 					<div class="card-header">
 						Last Edit Date
 					</div>
-					<li class="list-group-item">{{ page.last-edit-date }}</li>
+					<li class="list-group-item">{{ page.last-edit-date | date: "%-d %B %Y" }}, {{ page.last-edit-time }}</li>
 				</ul>
 			</div>
 		</div>

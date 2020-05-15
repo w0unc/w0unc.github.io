@@ -24,29 +24,29 @@ title:		'Repeater Information'
 <div class="container mb-4 mb-md-5 text-center">
 	<h3 class="pb-2">Repeater Coverage Maps</h3>
 	<hr>
-	<div class="row">
-		{% for map in site.maps reversed %}
-			{% if map.visible == 'Yes' %}
-				<div class="col-lg-6 mb-4 mx-auto">
-					<div class="card shadow-sm">
-						<div class="card-body">
-							<h5 class="card-title">{{ map.title }}</h5>
-							<ul class="list-unstyled">
-								<li><span class="font-weight-bold">Location:</span> {{ map.location }}</li>
-								<li><span class="font-weight-bold">Altitude:</span> {{ map.altitude }}</li>
-								<li><span class="font-weight-bold">Frequency:</span> {{ map.frequency }}</li>
-								<li><span class="font-weight-bold">Power:</span> {{ map.power }}</li>
-							</ul>
-							<div class="btn-group" role="group" aria-label="Map Files">
-								<a href="{{ site.baseurl }}/assets/img/maps/coverage/{{ map.link75 }}" class="btn btn-primary" role="button" aria-pressed="true" target="_blank">75 Mile ⌀</a>
-								<a href="{{ site.baseurl }}/assets/img/maps/coverage/{{ map.link150 }}" class="btn btn-primary" role="button" aria-pressed="true" target="_blank">150 Mile ⌀</a>
-							</div>
+	{% if site.maps.size > 0 %}
+		<div class="card-deck card-deck-2">
+			{% for map in site.maps reversed %}
+				<div class="card mb-4 mx-auto shadow-sm">
+					<div class="card-body">
+						<h5 class="card-title">{{ map.title }}</h5>
+						<ul class="list-unstyled">
+							<li><span class="font-weight-bold">Location:</span> {{ map.landmark }}</li>
+							<li><span class="font-weight-bold">Altitude:</span> {{ map.agl }}ft AGL ({{ map.msl }}ft MSL)</li>
+							<li><span class="font-weight-bold">Frequency:</span> {{ map.frequency }}MHz</li>
+							<li><span class="font-weight-bold">Power:</span> {{ map.power }}w</li>
+						</ul>
+						<div class="btn-group" role="group" aria-label="Map Files">
+							<a href="{{ site.baseurl }}/assets/img/maps/coverage/{{ map.link75 }}" class="btn btn-primary" role="button" aria-pressed="true" target="_blank">75 Mile ⌀</a>
+							<a href="{{ site.baseurl }}/assets/img/maps/coverage/{{ map.link150 }}" class="btn btn-primary" role="button" aria-pressed="true" target="_blank">150 Mile ⌀</a>
 						</div>
-						<div id="{{ map.name }}" style="min-height: 500px; width: 100%;"></div>
 					</div>
+					<div id="{{ map.name }}" style="min-height: 500px; width: 100%;"></div>
 				</div>
-			{% endif %}
-		{% endfor %}
-	</div>
+			{% endfor %}
+		</div>
+	{% else %}
+		<p>There are currently no maps to display.</p>
+	{% endif %}
 </div>
 <!-- End Repeater Coverage Maps -->

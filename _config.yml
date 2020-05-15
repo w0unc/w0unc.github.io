@@ -27,6 +27,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   This is a registered student organization on the campus of UNC Charlotte.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+TZ: America/New_York
 github_username: w0unc
 
 code-plugs: https://github.com/w0unc/w0unc-codeplugs
@@ -35,27 +36,24 @@ ninerengage: https://ninerengage.uncc.edu/organization/amateur-radio-club
 arrl-band-chart: https://arrl.org/files/file/Regulatory/Band%20Chart/Band%20Chart%208_5%20X%2011%20Color.pdf
 
 future: true
+excerpt_separator: <!--more-->
 
 collections:
   events:
     output: true
     permalink: /events/:path/
-    sort_by: date
   projects:
     output: true
     permalink: /projects/:path/
   wikis:
     output: true
     permalink: /wiki/:categories/:path/
-    sort_by: order
   maps:
     output: false
-    sort_by: order
 
 # Build settings
 plugins:
   - jekyll-feed
-  # - jekyll-category-pages
 
 # Exclude from processing.
 # The following items will not be processed, by default.

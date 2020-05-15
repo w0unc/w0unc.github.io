@@ -64,8 +64,8 @@
 				<div class="card-body">
 					<h3 class="card-title text-center">Description</h3>
 					<p>{{ page.content }}</p>
-					{% if page.event-id != '' %}
-						<a href="https://ninerengage.uncc.edu/event/{{ page.event-id }}" target="_blank">https://ninerengage.uncc.edu/event/{{ page.event-id }}</a>
+					{% if page.ninerengage-id != '' %}
+						<a href="https://ninerengage.uncc.edu/event/{{ page.event-id }}" target="_blank">https://ninerengage.uncc.edu/event/{{ page.ninerengage-id }}</a>
 					{% else if page.link != '' %}
 						<a href="{{ page.link }}" target="_blank">{{ page.link }}</a>
 					{% endif %}
@@ -80,12 +80,12 @@
 				<ul class="list-group list-group-flush">
 					<li class="list-group-item"><span class="font-weight-bold">Status: </span>{{ page.status }}</li>
 					<li class="list-group-item"><span class="font-weight-bold">Access: </span>{{ page.access }}</li>
-					{% if page.rsvp == true %}
+					{% if page.rsvp %}
 						<li class="list-group-item"><span class="font-weight-bold">RSVP: </span>Yes</li>
 					{% else %}
 						<li class="list-group-item"><span class="font-weight-bold">RSVP: </span>No</li>
 					{% endif %}
-					{% if page.transportation == true %}
+					{% if page.transportation %}
 						<li class="list-group-item"><span class="font-weight-bold">Transportation: </span>Yes</li>
 					{% else %}
 						<li class="list-group-item"><span class="font-weight-bold">Transportation: </span>No</li>
