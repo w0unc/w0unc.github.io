@@ -40,19 +40,6 @@
 				<div class="card-body">
 					<h1 class="card-title">{{ page.title }}</h1>
 					<hr>
-					{% if page.toc %}
-						<p>
-							<a class="btn btn-primary" data-toggle="collapse" href="#TableOfContents" role="button" aria-expanded="false" aria-controls="TableOfContents">
-								Table of Contents
-							</a>
-						</p>
-						<div class="collapse" id="TableOfContents">
-							<div class="card card-body">
-								{{ page.content | toc_only }}
-							</div>
-						</div>
-						<hr>
-					{% endif %}
 					<p class="card-text">{{ page.content }}</p>
 					<hr>
 					<p class="card-text">Categories: {{ page.categories | join: ', ' }}</p>

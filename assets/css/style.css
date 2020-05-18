@@ -182,18 +182,3 @@ footer > .copyright {
 			min-width: calc(25% - 30px);
 	}
 }
-
-
-/*******************************/
-/*       JEKYLL TOC FIX        */
-/*******************************/
-
-.section-nav {
-	list-style-type: decimal;
-	margin: 0;
-	padding: 0 0 0 10px;
-}
-
-.section-nav-sublist {
-	padding-left: 10px;
-}

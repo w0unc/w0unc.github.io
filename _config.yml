@@ -57,15 +57,9 @@ collections:
     output: false
 
 
-# Table of Contents
-toc:
-  sublist_class: section-nav-sublist
-
-
 # Build settings
 plugins:
   - jekyll-feed
-  - jekyll-toc
 
 
 # Exclude from processing.
