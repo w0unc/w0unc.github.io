@@ -1,0 +1,22 @@
+<table class="table table-sm table-striped table-bordered table-hover mx-auto">
+	<thead class="thead-dark">
+		<tr>
+			<th>Name</th>
+			<th>Month</th>
+			<th>Type</th>
+			<th>Travel Time</th>
+			<th>External Link</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for event in site.data.events-list %}
+			<tr>
+				<td>{{ event.Name }}</td>
+				<td>{{ event.Month }}</td>
+				<td>{{ event.Type }}</td>
+				<td>{{ event.TravelTime }}</td>
+				<td><a href="{{ event.ExternalLink }}" target="_blank">Link</a></td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>

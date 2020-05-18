@@ -9,20 +9,20 @@
 
 
 <!-- Header -->
-<div class="jumbotron jumbotron-fluid mb-0 text-center" id="header">
-	<div class="header-background">
+<header class="jumbotron jumbotron-fluid mb-0 text-center">
+	<div class="background">
 		<div class="container py-lg-3">
-			<h1 class="display-4">{{ page.title }}</h1>
+			<h1 class="display-4">Wiki</h1>
 		</div>
 	</div>
-</div>
+</header>
 <!-- End Header -->
 
 
 <!-- Breadcrumbs -->
 <div class="container mb-4 mb-md-5">
 	<nav aria-label="breadcrumb">
-		<ol class="breadcrumb">
+		<ol class="breadcrumb rounded-0">
 			<li class="breadcrumb-item"><a href="{{ site.baseurl }}/">Home</a></li>
 			<li class="breadcrumb-item"><a href="{{ site.baseurl }}/wiki">Wiki</a></li>
 			<li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
@@ -38,11 +38,24 @@
 		<div class="col-lg-9 mb-4">
 			<div class="card shadow-sm">
 				<div class="card-body">
-					<h3 class="card-title">{{ page.title }}</h3>
+					<h1 class="card-title">{{ page.title }}</h1>
 					<hr>
+					{% if page.toc %}
+						<p>
+							<a class="btn btn-primary" data-toggle="collapse" href="#TableOfContents" role="button" aria-expanded="false" aria-controls="TableOfContents">
+								Table of Contents
+							</a>
+						</p>
+						<div class="collapse" id="TableOfContents">
+							<div class="card card-body">
+								{% toc %}
+							</div>
+						</div>
+						<hr>
+					{% endif %}
 					<p class="card-text">{{ page.content }}</p>
 					<hr>
-					<p class="card-text">Categories: {{ page.categories }}</p>
+					<p class="card-text">Categories: {{ page.categories | join: ', ' }}</p>
 				</div>
 			</div>
 		</div>
@@ -62,6 +75,7 @@
 						Last Edit Date
 					</div>
 					<li class="list-group-item">{{ page.last-edit-date | date: "%-d %B %Y" }}, {{ page.last-edit-time }}</li>
+					<a href="{{ site.repo }}/edit/master/{{ page.path }}" class="btn btn-secondary rounded-0">Edit</a>
 				</ul>
 			</div>
 		</div>

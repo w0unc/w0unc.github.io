@@ -1,0 +1,18 @@
+<table class="table table-sm table-striped table-bordered table-hover mx-auto">
+	<thead class="thead-dark">
+		<tr>
+			<th>License Class</th>
+			<th>Required Score</th>
+			<th>Expires</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for exam in site.data.exams-list %}
+			<tr>
+				<td>{{ exam.LicenseClass }}</td>
+				<td>{{ exam.RequiredScore }}</td>
+				<td>{{ exam.Expires }}</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>

@@ -2,20 +2,20 @@
 /*           HEADER            */
 /*******************************/
 
-#header {
+header {
 	background: #000000 url(../img/header.jpg) no-repeat scroll center center;
 	background-size: cover;
 	color: white;
-	font-family: "Open Sans", Helvetica, Arial;
+	font-family: "Open Sans", sans-serif;
 	font-weight: 400;
-	text-shadow: 2px 2px  #000000;
+	text-shadow: 2px 2px #000000;
 }
 
-.header-background {
-	background: rgba(0, 0, 0, 0.3);
+header > .background {
+	background: rgba(0, 0, 0, 0.4);
 }
 
-#header .btn-default {
+header > .btn-default {
 	-moz-box-shadow: inset 0px 0px 0px 3px rgba(255, 255, 255, 0.5);
 	-webkit-box-shadow: inset 0px 0px 0px 3px rgba(255, 255, 255, 0.5);
 	background: transparent;
@@ -24,8 +24,8 @@
 	text-shadow: none;
 }
 
-#header .btn-default:hover,
-#header .btn-default:focus {
+header > .btn-default:hover,
+header > .btn-default:focus {
 	-moz-box-shadow: inset 0px 0px 0px 3px rgba(255, 255, 255, 0.8);
 	-webkit-box-shadow: inset 0px 0px 0px 3px rgba(255, 255, 255, 0.8);
 	background: transparent;
@@ -33,8 +33,8 @@
 	color: rgba(255, 255, 255, 0.8);
 }
 
-#header .btn-default:active,
-#header .btn-default.active {
+header > .btn-default:active,
+header > .btn-default.active {
 	-moz-box-shadow: inset 0px 0px 0px 3px #ffffff;
 	-webkit-box-shadow: inset 0px 0px 0px 3px #ffffff;
 	background: transparent;
@@ -42,7 +42,7 @@
 	color: #ffffff;
 }
 
-#header .btn-lg {
+header > .btn-lg {
 	font-size: 14px;
 	font-weight: bold;
 	padding: 15px 65px;
@@ -53,13 +53,13 @@
 /*           FOOTER            */
 /*******************************/
 
-#footer {
+footer {
 	background: #232323;
 	color: #cccccc;
 	font-size: 12px;
 }
 
-#footer #copyright {
+footer > .copyright {
 	background: #191919;
 }
 
@@ -181,4 +181,19 @@
 			max-width: calc(25% - 30px);
 			min-width: calc(25% - 30px);
 	}
+}
+
+
+/*******************************/
+/*       JEKYLL TOC FIX        */
+/*******************************/
+
+.section-nav {
+	list-style-type: decimal;
+	margin: 0;
+	padding: 0 0 0 10px;
+}
+
+.section-nav-sublist {
+	padding-left: 10px;
 }
