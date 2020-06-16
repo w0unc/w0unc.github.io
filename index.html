@@ -6,7 +6,7 @@ layout: home
 
 <!-- About Us -->
 <div class="container mb-4 mb-md-5 text-center" id="about">
-	<h2 class="pb-2">About Us</h2>
+	<h2>About Us</h2>
 	<p>The Amateur Radio Club of UNC Charlotte is a student interest group whose purposes are to educate students, faculty, and staff in becoming licensed amateur radio operators, to foster fellowship among amateur radio enthusiasts, and to provide the local community with emergency communications. This is a registered student organization on the campus of UNC Charlotte.</p>
 </div>
 <!-- End About Us -->
@@ -20,7 +20,7 @@ layout: home
 			<div class="col-md-4 mb-4">
 				<h4><span class="fas fa-microphone fa-2x"></span></h4>
 				<h4>Repeater</h4>
-				<p>We have a repeater on the roof of the Atkins Library operating on frequency 442.650MHz (+5MHz) PL 88.5 In/Out. We stress that you must be an FCC Licensed Operator (or hold a comparable authorization) to access our repeater. <a href="{{ site.baseurl }}/repeater">More Info</a></p>
+				<p>We have a repeater on the roof of the Atkins Library operating on frequency 442.650MHz (+5MHz) PL 88.5 In/Out. We stress that you must be an FCC Licensed Operator (or hold a comparable authorization) to access our <a href="{{ site.baseurl }}/repeater">repeater</a>.</p>
 			</div>
 			<div class="col-md-4 mb-4">
 				<h4><span class="fas fa-bolt fa-2x"></span></h4>
@@ -42,7 +42,7 @@ layout: home
 <div class="container">
 	<div class="row mb-4 mb-md-5 text-center">
 		<div class="col">
-			<h2 class="pb-2">Future Events</h2>
+			<h2>Future Events</h2>
 			<hr>
 			{% assign count = 0 %}
 			{% assign curDate = site.time | date: '%s' %}
@@ -57,7 +57,7 @@ layout: home
 					{% for event in site.events %}
 						{% assign eventStartDate = event.date | date: '%s' %}
 						{% if eventStartDate > curDate %}
-							<div class="card mb-3 mx-auto shadow-sm">
+							<div class="card mb-4 mx-auto shadow-sm">
 								<div class="row no-gutters">
 									<div class="col-md-2" style="font-family: 'Open Sans';">
 										<span style="font-size: 50px;">{{ event.date | date: "%-d" }}</span><br>

@@ -1,65 +1,51 @@
-- id:         2-1
-  question:   1. What is an Amateur Radio license?
-  answer:     An Amateur Radio license is a license granted by the Federal Communications Commission and allows the holder to operate on a predefined range of frequencies with some restrictions.
+- id:         '2-1'
+  question:   '1. What is an Amateur Radio license?'
+  answer:     'An Amateur Radio license is a license granted by the Federal Communications Commission and allows the holder to operate on a predefined range of frequencies with some restrictions.'
 
-- id:         2-2
-  question:   2. How do I get an Amateur Radio license?
-  answer:     To get an Amateur Radio license, you must take and pass a multiple choice exam.
+- id:         '2-2'
+  question:   '2. How do I get an Amateur Radio license?'
+  answer:     'To get an Amateur Radio license, you must take and pass a multiple-choice exam.'
 
-- id:         2-3
-  question:   3. What exactly is the exam?
-  answer:     The exam is a 4-question multiple choice exam. The exams must be taken in order from Technician to General to Amateur Extra. You cannot skip exams. The exam is slightly different for each class of license.
-              <table class="table table-sm table-striped table-bordered table-hover mx-auto">
-                <thead class="thead-dark">
-                  <tr>
-                    <th>License Class</th>
-                    <th>Required Score</th>
-                    <th>New Test Pool</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Technician</td>
-                    <td>26/35</td>
-                    <td>30 June 2022</td>
-                  </tr>
-                  <tr>
-                    <td>General</td>
-                    <td>26/35</td>
-                    <td>30 June 2023</td>
-                  </tr>
-                  <tr>
-                    <td>Amateur Extra</td>
-                    <td>37/50</td>
-                    <td>30 June 2020</td>
-                  </tr>
-                </tbody>
-              </table>
+- id:         '2-3'
+  question:   '3. What exactly is the exam?'
+  answer:     'The exam is a 4-answer multiple-choice exam. The exams must be taken in order from Technician to General to Amateur Extra. You cannot skip exams. The exam is slightly different for each class of license. A list of classes of exam, the required scores, and the expiration date for each exam (when the questions for the exam are refreshed) can be found <a href="site.baseurl/wiki/exams">here</a>.'
 
-- id:         2-4
-  question:   4. How can I study for the exam?
-  answer:     We recommend <a href="https://hamstudy.org" target="_blank">this</a> website to study for the exam. In addition, ARRL has a textbook for each class of license.
+- id:         '2-4'
+  question:   '4. How much does it cost to take the exam?'
+  answer:     'The answer is it depends. Some groups offer testing for free while others charge a small fee, usually $10-$20. The fees range in price for different groups. Theoretically if you take all of your exams through a free testing group, your only costs will be for transportation. If you take one exam per testing session at a fee-based group, your total fees can add up to $60 or more excluding personal transportation costs.'
 
-- id:         2-5
-  question:   5. What should I bring to an exam?
-  answer:     You should bring a number 2 pencil, your ID, a copy of your previous Amateur Radio license if you have one, a basic calculator, and enough money to cover the fee if any.
+- id:         '2-5'
+  question:   '5. How can I study for the exam?'
+  answer:     'We recommend <a href="https://hamstudy.org" target="_blank">HamStudy.org</a> to study for the exam. In addition, <a href="https://arrl.org/9" target="_blank">ARRL</a> has a textbook for each class of license.'
 
-- id:         2-6
-  question:   6. Can I attempt the exam more than once?
-  answer:     Yes. Most testing groups will allow you to attempt the exam 2-3 times at a minimum if time permits.
+- id:         '2-6'
+  question:   '6. What should I bring to an exam?'
+  answer:     'You should bring a #2 pencil, your ID, an official copy of your current Amateur Radio license if you have one, a basic calculator, and enough money to cover the fee, if any.'
 
-- id:         2-7
-  question:   7. Can I take more than one class of license on the same day?
-  answer:     Yes. Once you pass one exam, you can attempt the next class of license exam on the same testing day. It is possible to go from Unlicensed to Amateur Extra in one sitting.
+- id:         '2-7'
+  question:   '7. What type of IDs are accepted?'
+  answer:     'Generally, state IDs, driver''s licenses, and school IDs are accepted. However, it is up to the proctors which IDs are accepted at the testing session. We recommend an official state or federal ID.'
 
-- id:         2-8
-  question:   8. What classes of license are there?
-  answer:     There are currently 5 different classes of license. Novice, Technician, General, Advanced, and Amateur Extra. Novice and Advanced are retired and can no longer be obtained.
+- id:         '2-8'
+  question:   '8. How can I get an official copy of my current license?'
+  answer:     'You can get an official copy of your license by logging into the <a href="https://apps.fcc.gov/cores/userLogin.do" target="_blank">FCC CORES system</a>. The official copy of the license is a PDF with an "Official Copy" watermark.'
 
-- id:         2-9
-  question:   9. What is the difference in each class of license?
-  answer:     Different classes of license define what frequencies, power limits, and modes a holder may use.
+- id:         '2-9'
+  question:   '9. Can I attempt the exam more than once?'
+  answer:     'Yes. Most testing groups will allow you to attempt the exam 2-3 times at a minimum if time permits.'
 
-- id:         2-10
-  question:   10. What frequencies does each license class have access to?
-  answer:     We recommend <a href="site.arrl-band-chart" target="_blank">this</a> chart for referencing frequency allocations for each license class.
+- id:         '2-10'
+  question:   '10. Can I take exams for more than one class of license on the same day?'
+  answer:     'Yes. Once you pass one exam, you can attempt the next class of license exam on the same testing day. It is possible to go from Unlicensed to Amateur Extra in one sitting. However, you must do them in order.'
+
+- id:         '2-11'
+  question:   '11. What classes of license are there?'
+  answer:     'There are currently 5 different classes of license. Novice, Technician, General, Advanced, and Amateur Extra. Novice and Advanced are retired and can no longer be obtained but are still held by many operators.'
+
+- id:         '2-12'
+  question:   '12. What is the difference in each class of license?'
+  answer:     'Different classes of license define what frequencies, power limits, and modes a holder may use.'
+
+- id:         '2-13'
+  question:   '13. What frequencies does each license class have access to?'
+  answer:     'We recommend the <a href="site.arrl-band-chart" target="_blank">ARRL Band Chart</a> for referencing frequency allocations for each license class.'

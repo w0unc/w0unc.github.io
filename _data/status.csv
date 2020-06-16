@@ -1,22 +1,22 @@
 MDCStatus,FleetSyncStatus,Message
-,10,Testing
-1,12,ACK
-2,20,10-20?
-3,21,Atkins
-4,22,Cone
-5,23,SAC
-6,24,Prospector
-7,25,McEniry
-8,26,Woodward
-9,27,CRI Deck
-10,28,EPIC
-11,29,NOC (Not On Campus)
-12,30,GOTO Discord
-13,31,West Deck
-14,32,Union
-15,33,South Deck
-16,34,East Deck
-,40,SWITCH to Talkaround
-,41,SWITCH to TAC-1
-,42,SWITCH to TAC-2
-,43,SWITCH to GMRS
+,			10,		Testing
+1,		12,		ACK
+2,		20,		10-20?
+3,		21,		Atkins
+4,		22,		Cone
+5,		23,		SAC
+6,		24,		Prospector
+7,		25,		McEniry
+8,		26,		Woodward
+9,		27,		CRI Deck
+10,		28,		EPIC
+11,		29,		NOC (Not On Campus)
+12,		30,		GOTO Discord
+13,		31,		West Deck
+14,		32,		Union
+15,		33,		South Deck
+16,		34,		East Deck
+,			40,		SWITCH to Talkaround
+,			41,		SWITCH to TAC-1
+,			42,		SWITCH to TAC-2
+,			43,		SWITCH to GMRS

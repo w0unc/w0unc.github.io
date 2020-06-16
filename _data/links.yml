@@ -45,7 +45,7 @@
 
 - title:    Local Emergency
   links:
-  - links:
+  - link:
     name:   ARES & RACES
     url:    https://mecklenburgares.org
 
@@ -78,16 +78,19 @@
 
 - title:    Testing Groups
   links:
-  - links:
+  - link:
     name:   ARRL
     url:    https://arrl.org/find-an-amateur-radio-license-exam-session
-  - links:
+  - link:
     name:   Laurel VEC
     url:    https://laurelvec.com/?pg=exams
 
 - title:    Tools
   links:
-  - links:
+  - link:
+    name:   RF Line-of-Sight
+    url:    https://scadacore.com/tools/rf-path/rf-line-of-sight/
+  - link:
     name:   Time.is
     url:    https://time.is
 

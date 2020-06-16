@@ -25,7 +25,7 @@ layout: default
 						</div>
 						<div id="collapse{{ faq.id }}" class="collapse" aria-labelledby="heading{{ faq.id }}" data-parent="#ClubFAQ">
 							<div class="card-body">
-								{{ faq.answer | replace: "site.email", site.email | replace: "site.ninerengage", site.ninerengage }}
+								{{ faq.answer | replace: "site.baseurl", site.baseurl | replace: "site.email", site.email | replace: "site.ninerengage", site.ninerengage }}
 							</div>
 						</div>
 					</div>
@@ -58,7 +58,7 @@ layout: default
 						</div>
 						<div id="collapse{{ faq.id }}" class="collapse" aria-labelledby="heading{{ faq.id }}" data-parent="#LicensingFAQ">
 							<div class="card-body">
-								{{ faq.answer | replace: "site.arrl-band-chart", site.arrl-band-chart }}
+								{{ faq.answer | replace: "site.baseurl", site.baseurl | replace: "site.arrl-band-chart", site.arrl-band-chart }}
 							</div>
 						</div>
 					</div>
