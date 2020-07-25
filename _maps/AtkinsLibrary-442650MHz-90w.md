@@ -1,5 +1,5 @@
 ---
-title:				'WØUNC VHF Hypothetical Map' # The name of the map.
+title:				'WØUNC VHF Repeater Map' # The name of the map.
 name:					'AtkinsLibrary442650MHz90w' # Map library friendly name.
 landmark:			'Atkins Library, UNC Charlotte' # The location of the antenna.
 agl:					169 # The Above Ground Level of the antenna in feet.
