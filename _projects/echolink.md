@@ -9,4 +9,4 @@ published:							true # Hides or shows the project in feeds.
 ---
 
 
-We have created an EchoLink node that is currently operational. The EchoLink runs on call sign W0UNC-L with a node ID of 497953. The EchoLink node will allow amateur radio operators from all over the world to connect to our repeater using their computer or mobile device.
+We have created an EchoLink node that is currently operational. The EchoLink runs on call sign W0UNC-R with a node ID of 497953. The EchoLink node will allow amateur radio operators from all over the world to connect to our repeater using their computer or mobile device.

@@ -13,6 +13,7 @@ toc:							true # Enable or disable wiki page table of contents.
 
 <!-- Change the 'published' field above to true before committing. Start the content below this line. -->
 Below is a list of events we may or may not be attending throughout the year. Check the [events]({{ site.baseurl }}/events) page for scheduled events.
+Travel times are based on departing from the UNC Charlotte main campus.
 
 {% include wt-section-title.html text="List" %}
 
