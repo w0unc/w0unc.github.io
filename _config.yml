@@ -37,6 +37,10 @@ ninerengage: https://ninerengage.uncc.edu/organization/amateur-radio-club
 arrl-band-chart: https://arrl.org/files/file/Regulatory/Band%20Chart/Band%20Chart%208_5%20X%2011%20Color.pdf
 
 
+# Other
+echolink-id: 573102
+
+
 # Post settings
 future: true
 excerpt_separator: <!--more-->

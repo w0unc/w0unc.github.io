@@ -56,7 +56,7 @@
   links:
   - link:
     name:   10m within 100 miles
-    url:    https://www.repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=100&Dunit=m&band1=29&band2=&freq=&call=&features%5B%5D=FM&features%5B%5D=DStar&features%5B%5D=DMR&features%5B%5D=NXDN&features%5B%5D=P25&features%5B%5D=YSF&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
+    url:    https://www.repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=100&Dunit=m&band1=29&band2=&freq=&call=&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
   - link:
     name:   2m FM within 50 miles
     url:    https://www.repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=50&Dunit=m&band1=14&band2=&freq=&call=&features%5B%5D=FM&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
