@@ -24,6 +24,9 @@ title: 'WØUNC'
 email: 'club@w0unc.org'
 description: 'The WØUNC Amateur Radio Club is a student interest group registered on the campus of UNC Charlotte.'
 TZ: 'America/New_York'
+feed:
+  collections:
+    - events
 
 
 # GitHub
