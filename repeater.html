@@ -10,9 +10,8 @@ title:		'Repeater Information'
 		<dl class="row">
 			<dt class="col-sm-6 text-sm-right">WØUNC</dt><dd class="col-sm-6">442.650MHz (+5MHz Offset) 88.5 PL In/Out</dd>
 			<dt class="col-sm-6 text-sm-right">Location</dt><dd class="col-sm-6">Atkins Library, UNC Charlotte</dd>
-			<dt class="col-sm-6 text-sm-right">Modes</dt><dd class="col-sm-6">Analog, P25</dd>
-			<dt class="col-sm-6 text-sm-right">P25 NAC</dt><dd class="col-sm-6">293</dd>
-			<dt class="col-sm-6 text-sm-right">EchoLink</dt><dd class="col-sm-6">W0UNC-R ({{ site.echolink-id }})</dd>
+			<dt class="col-sm-6 text-sm-right">Modes</dt><dd class="col-sm-6">Analog, P25 (293)</dd>
+			<dt class="col-sm-6 text-sm-right">Nodes</dt><dd class="col-sm-6">EchoLink (W0UNC-R, {{ site.echolink-id }})</dd>
 		</dl>
 	</div>
 </div>
@@ -27,18 +26,16 @@ title:		'Repeater Information'
 		<div class="card-deck card-deck-2">
 			{% for map in site.maps reversed %}
 				<div class="card mb-4 mx-auto shadow-sm">
+					<h5 class="card-header">{{ map.title }}</h5>
 					<div class="card-body">
-						<h5 class="card-title">{{ map.title }}</h5>
 						<ul class="list-unstyled">
 							<li><span class="font-weight-bold">Location:</span> {{ map.landmark }}</li>
 							<li><span class="font-weight-bold">Altitude:</span> {{ map.agl }}ft AGL ({{ map.msl }}ft MSL)</li>
 							<li><span class="font-weight-bold">Frequency:</span> {{ map.frequency }}MHz</li>
 							<li><span class="font-weight-bold">Power:</span> {{ map.power }}w</li>
 						</ul>
-						<div class="btn-group" role="group" aria-label="Map Files">
-							<a href="{{ site.baseurl }}/assets/img/maps/coverage/{{ map.link75 }}" class="btn btn-primary" role="button" aria-pressed="true" target="_blank">75 Mile ⌀</a>
-							<a href="{{ site.baseurl }}/assets/img/maps/coverage/{{ map.link150 }}" class="btn btn-primary" role="button" aria-pressed="true" target="_blank">150 Mile ⌀</a>
-						</div>
+						<a href="{{ site.baseurl }}/assets/img/maps/coverage/{{ map.link75 }}" class="badge badge-pill badge-primary" target="_blank">75 Mile ⌀ Image</a>
+						<a href="{{ site.baseurl }}/assets/img/maps/coverage/{{ map.link150 }}" class="badge badge-pill badge-primary" target="_blank">150 Mile ⌀ Image</a>
 					</div>
 					<div id="{{ map.name }}" style="min-height: 500px; width: 100%;"></div>
 				</div>

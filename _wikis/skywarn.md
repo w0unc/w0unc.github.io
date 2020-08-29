@@ -17,6 +17,8 @@ The Skywarn program is a collection of groups and individuals who volunteer thei
 
 {% include wt-section-title.html text="North Carolina Skywarn Groups" %}
 
+*The information on this page is collected from the individual Skywarn group websites, NOT the National Weather Service website.*
+
 [Blacksburg Skywarn](http://blacksburgskywarn.org){:target="_blank"} - Ashe, Alleghany, Caswell², Rockingham², Stokes², Surry², Watauga, Wilkes, and Yadkin.
 
 [Blue Ridge Weather Watch](http://thebrww.org){:target="_blank"} - Buncombe, Burke, Catawba¹, Cleveland¹, Gaston¹, Haywood, Henderson, Lincoln¹, Madison, McDowell, Mecklenburg¹, Mitchell, Polk, Rutherford¹, Transylvania, and Yancey.
@@ -39,10 +41,10 @@ The Skywarn program is a collection of groups and individuals who volunteer thei
 
 *¹ - Counties are shared between the Blue Ridge Spotter Group and the Gaston Spotter Group.*
 
-*² - Counties are shared between the Triad Skywarn Blacksburg Skywarn.*
+*² - Counties are shared between the Triad Skywarn and Blacksburg Skywarn.*
 
 {% include wt-section-title.html text="North Carolina Skywarn Map" %}
 
-*The information on this map is collected from the individual Skywarn group websites, NOT the National Weather Service website.*
+*The information on this page is collected from the individual Skywarn group websites, NOT the National Weather Service website.*
 
 <img src="/assets/img/wiki/skywarn.png" width="100%">

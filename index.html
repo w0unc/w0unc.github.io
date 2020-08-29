@@ -40,9 +40,9 @@ layout: home
 
 <!-- Planned Events -->
 <div class="container">
-	<div class="row mb-4 mb-md-5 text-center">
+	<div class="row mb-4 mb-md-5">
 		<div class="col">
-			<h2>Future Events</h2>
+			<h2 class="text-center">Future Events</h2>
 			<hr>
 			{% assign count = 0 %}
 			{% assign curDate = site.time | date: '%s' %}
@@ -58,33 +58,38 @@ layout: home
 						{% assign eventStartDate = event.date | date: '%s' %}
 						{% if eventStartDate > curDate %}
 							<div class="card mb-4 mx-auto shadow-sm">
-								<div class="row no-gutters">
-									<div class="col-md-2" style="font-family: 'Open Sans';">
-										<span style="font-size: 50px;">{{ event.date | date: "%-d" }}</span><br>
-										<span style="font-size: 25px;">{{ event.date | date: "%b" }}</span><br>
-										{{ event.date | date: "%Y" }}
-									</div>
-									<div class="col-md-5">
-										<ul class="list-group list-group-flush">
-											<li class="list-group-item">{{ event.location }}</li>
-											<li class="list-group-item">{{ event.street }}</li>
-											<li class="list-group-item">{{ event.address }}</li>
-											<li class="list-group-item">{{ event.date | date: "%-d %B %Y" }}</li>
+								<div class="row no-gutters h-100">
+									<div class="col-md-2 text-center bg-dark text-white" style="font-family: 'Open Sans';">
+										<ul class="list-unstyled">
+											<li><span style="font-weight: bold; font-size: 50px;">{{ event.date | date: "%-d" }}</span></li>
+											<li><span style="font-size: 25px;">{{ event.date | date: "%b" }}</span></li>
+											<li><span style="font-size: 15px;">{{ event.date | date: "%Y" }}</span></li>
+											{% if event.start-date != event.end-date %}
+												<li><hr></li>
+												<li>{{ event.start-date | date: "%-d" }} {{ event.start-date | date: "%b" }} -</li>
+												<li>{{ event.end-date | date: "%-d" }} {{ event.end-date | date: "%b" }}</li>
+											{% endif %}
 										</ul>
 									</div>
-									<div class="col-md-5">
+									<div class="col-md-10">
+										{% if event.status == 'Attending' %}
+											<h5 class="card-header"><a href="{{ event.url }}">{{ event.title }}</a> <span class="badge badge-success">Attending</span></h5>
+										{% endif %}
+										{% if event.status == 'Planned' %}
+											<h5 class="card-header"><a href="{{ event.url }}">{{ event.title }}</a> <span class="badge badge-info">Planned</span></h5>
+										{% endif %}
+										{% if event.status == 'Cancelled' %}
+											<h5 class="card-header"><a href="{{ event.url }}">{{ event.title }}</a> <span class="badge badge-danger">Cancelled</span></h5>
+										{% endif %}
 										<div class="card-body">
-											<h5 class="card-title">{{ event.title }}</h5>
+											<ul class="list-unstyled">
+												<li><span class="font-weight-bold">Location:</span> {{ event.location }}</li>
+												<li><span class="font-weight-bold">Street:</span> {{ event.street }}</li>
+												<li><span class="font-weight-bold">City:</span> {{ event.address }}</li>
+												<li><span class="font-weight-bold">Time:</span> {{ event.time | join: ', ' }}</li>
+											</ul>
 											<p class="card-text">{{ event.excerpt }}</p>
-											{% if event.status == 'Attending' %}
-												<a href="{{ event.url }}" class="btn btn-primary">Info</a>
-											{% endif %}
-											{% if event.status == 'Planned' %}
-												<a href="{{ event.url }}" class="btn btn-info">Planned</a>
-											{% endif %}
-											{% if event.status == 'Cancelled' %}
-												<a href="{{ event.url }}" class="btn btn-danger">CANCELLED</a>
-											{% endif %}
+											<p class="card-text"><a href="{{ event.url }}">[ More ]</a></p>
 										</div>
 									</div>
 								</div>
@@ -92,8 +97,12 @@ layout: home
 						{% endif %}
 					{% endfor %}
 				</div>
+				<div class="col-12 text-center">
+					<hr>
+					<a href="{{ site.baseurl }}/events" class="btn btn-primary">More Events</a>
+				</div>
 			{% else %}
-				<p>There are currently no future events.</p>
+				<p class="text-center">There are currently no future events.</p>
 			{% endif %}
 		</div>
 	</div>

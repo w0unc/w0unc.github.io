@@ -25,8 +25,26 @@ title:		'Club Projects'
 			{% for project in sorted_projects %}
 				{% if project.progress < 100 %}
 					<div class="card mb-4 mx-auto shadow-sm">
+						<h5 class="card-header"><a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></h5>
 						<div class="card-body">
-							<h5 class="card-title">{{ project.title }}</h5>
+							{% if project.status == 'Designing' %}
+								<span class="badge badge-pill badge-secondary">Designing</span>
+							{% endif %}
+							{% if project.status == 'Building' %}
+								<span class="badge badge-pill badge-info">Building</span>
+							{% endif %}
+							{% if project.status == 'Testing' %}
+								<span class="badge badge-pill badge-primary">Testing</span>
+							{% endif %}
+							{% if project.status == 'On-Hold' %}
+								<span class="badge badge-pill badge-warning">On-Hold</span>
+							{% endif %}
+							{% if project.status == 'Cancelled' %}
+								<span class="badge badge-pill badge-danger">Cancelled</span>
+							{% endif %}
+							{% if project.status == 'Complete' %}
+								<span class="badge badge-pill badge-success">Complete</span>
+							{% endif %}
 							<p class="card-text">{{ project.excerpt }}</p>
 						</div>
 						<div class="card-footer">
@@ -37,7 +55,7 @@ title:		'Club Projects'
 									<div class="progress-bar" role="progressbar" style="width: {{ project.progress }}%;" aria-valuenow="{{ project.progress }}" aria-valuemin="0" aria-valuemax="100">{{ project.progress }}%</div>
 								{% endif %}
 							</div>
-							<a href="{{ site.baseurl }}{{ project.url }}" class="btn btn-primary">More</a>
+							<a href="{{ site.baseurl }}{{ project.url }}">[ More ]</a>
 						</div>
 					</div>
 				{% endif %}
@@ -56,8 +74,11 @@ title:		'Club Projects'
 		{% for project in site.projects %}
 			{% if project.progress == 100 %}
 				<div class="card mb-4 mx-auto shadow-sm">
+					<h5 class="card-header"><a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></h5>
 					<div class="card-body">
-						<h5 class="card-title">{{ project.title }}</h5>
+						{% if project.status == 'Complete' %}
+							<span class="badge badge-pill badge-success">Complete</span>
+						{% endif %}
 						<p class="card-text">{{ project.excerpt }}</p>
 					</div>
 					<div class="card-footer">
@@ -68,7 +89,7 @@ title:		'Club Projects'
 								<div class="progress-bar" role="progressbar" style="width: {{ project.progress }}%;" aria-valuenow="{{ project.progress }}" aria-valuemin="0" aria-valuemax="100">{{ project.progress }}%</div>
 							{% endif %}
 						</div>
-						<a href="{{ site.baseurl }}{{ project.url }}" class="btn btn-primary">More</a>
+						<a href="{{ site.baseurl }}{{ project.url }}">[ More ]</a>
 					</div>
 				</div>
 			{% endif %}

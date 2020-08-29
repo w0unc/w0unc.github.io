@@ -7,7 +7,7 @@ title:		'License Testing'
 <!-- FCC Registration Number (FRN) -->
 <div class="container mb-4 mb-md-5 text-center">
 	<h2>FCC Registration Number (FRN)</h2>
-	<p>It is highly recommended that you get a FCC Registration Number (FRN) before attending a testing session. It can take the place of a Social Security Number and in some cases, it will be the only number you can use. Remember to write it down or store it someplace safe after you receive it. You will need to bring it with you to testing sessions.</p>
+	<p>It is highly recommended that you get a FCC Registration Number (FRN) before attending a testing session. It can take the place of a Social Security Number and in some cases, it will be the only number you will be allowed to use. Remember to write it down or store it someplace safe after you receive it. You will need to bring it with you to testing sessions.</p>
 	<a class="btn btn-primary" href="https://apps.fcc.gov/coresWeb/publicHome.do" target="_blank">Get FRN</a>
 </div>
 <!-- End FCC Registration Number (FRN) -->
@@ -34,7 +34,16 @@ title:		'License Testing'
 					{% if eventStartDate > curDate and event.tags contains 'tests' and i < 4 %}
 						<div class="card mb-4 mx-auto shadow-sm">
 							<div class="card-body">
-								<h5 class="card-title">{{ event.title }}</h5>
+								<h5 class="card-title"><a href="{{ event.url }}">{{ event.title }}</a></h5>
+								{% if event.status == 'Attending' %}
+									<span class="badge badge-success">Attending</span>
+								{% endif %}
+								{% if event.status == 'Planned' %}
+									<span class="badge badge-info">Planned</span>
+								{% endif %}
+								{% if event.status == 'Cancelled' %}
+									<span class="badge badge-danger">Cancelled</span>
+								{% endif %}
 								<p class="card-text">{{ event.excerpt }}</p>
 							</div>
 							<div class="card-footer">
@@ -43,16 +52,9 @@ title:		'License Testing'
 									<li>{{ event.street }}</li>
 									<li>{{ event.address }}</li>
 									<li>{{ event.date | date: "%-d %B %Y" }}</li>
+									<li>{{ event.time | date: "%-d %B %Y" }}</li>
+									<li><a href="{{ event.url }}">[ More ]</a></li>
 								</ul>
-								{% if event.status == 'Attending' %}
-									<a href="{{ event.url }}" class="btn btn-primary">Info</a>
-								{% endif %}
-								{% if event.status == 'Planned' %}
-									<a href="{{ event.url }}" class="btn btn-info">Planned</a>
-								{% endif %}
-								{% if event.status == 'Cancelled' %}
-									<a href="{{ event.url }}" class="btn btn-danger">CANCELLED</a>
-								{% endif %}
 							</div>
 						</div>
 						{% assign i = i | plus: 1 %}
@@ -73,12 +75,12 @@ title:		'License Testing'
 		<div class="col-md-6 mb-4">
 			<h3>ARRL Testing Sessions</h3>
 			<p>These are a list of ARRL testing sessions. We will not be attending most of these. Check out our upcoming sessions for testing events we will be attending and providing transportation. The Amateur Radio Club at UNC Charlotte and ARRL are not affiliated. The ARRL Exam currently costs $15.00.</p>
-			<a href="http://www.arrl.org/find-an-amateur-radio-license-exam-session" class="btn btn-primary" target="_blank">View</a>
+			<a href="https://arrl.org/find-an-amateur-radio-license-exam-session" class="btn btn-primary" target="_blank">View</a>
 		</div>
 		<div class="col-md-6 mb-4">
 			<h3>Laurel Testing Sessions</h3>
 			<p>These are a list of Laurel testing sessions. We will not be attending most of these. Check out our upcoming sessions for testing events we will be attending and providing transportation. The Amateur Radio Club at UNC Charlotte and Laurel are not affiliated. The Laurel Exam is currently free.</p>
-			<a href="https://www.laurelvec.com/?pg=exams" class="btn btn-primary" target="_blank">View</a>
+			<a href="https://laurelvec.com/?pg=exams" class="btn btn-primary" target="_blank">View</a>
 		</div>
 	</div>
 </div>

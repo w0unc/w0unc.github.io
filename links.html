@@ -9,9 +9,9 @@ title:		'Links'
 	<div  class="card-columns">
 		{% for group in site.data.links %}
 			<div class="card mb-4 shadow-sm">
+				<h5 class="card-header">{{ group.title }}</h5>
 				<div class="card-body">
-					<h5 class="card-title">{{ group.title }}</h5>
-					<ul class="list-unstyled">
+					<ul class="list-unstyled card-text">
 						{% for link in group.links %}
 							<li><a href="{{ link.url | replace: 'site.ninerengage', site.ninerengage | replace: 'site.arrl-band-chart', site.arrl-band-chart }}" target="_blank">{{ link.name }}</a></li>
 						{% endfor %}

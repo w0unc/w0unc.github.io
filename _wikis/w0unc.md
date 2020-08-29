@@ -31,4 +31,4 @@ Charlotte, NC 28223-0001
 [Join us on Discord](https://ninerengage.uncc.edu/news/174684){:target="_blank"}
 
 {% include wt-section-title.html text="Related Links" %}
-[NinerEngage]({site.ninerengage}){:target="_blank"}  
+[NinerEngage]({{ site.ninerengage }}){:target="_blank"}  

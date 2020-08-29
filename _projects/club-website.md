@@ -1,7 +1,7 @@
 ---
 layout:									'project' # The layout to use for the project page. This should never be changed.
 title:									'Club Website' # The name of the project.
-status:									'Complete' # The status of the project. Values: 'Brainstorming', 'Designing', 'Building', 'Testing', 'Implementing', 'On-Hold', or 'Cancelled'.
+status:									'Complete' # The status of the project. Values: 'Designing', 'Building', 'Testing', 'On-Hold', 'Cancelled', or Complete.
 project-lead:						'KN4WXU Brandon' # The person who led the project.
 progress:								100 # Progress percentage of the project.
 categories:							[] # The categories for the project.
