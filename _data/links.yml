@@ -56,40 +56,40 @@
   links:
   - link:
     name:   10m within 100 miles
-    url:    https://www.repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=100&Dunit=m&band1=29&band2=&freq=&call=&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
+    url:    https://repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=100&Dunit=m&band1=29&band2=&freq=&call=&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
   - link:
     name:   2m FM within 50 miles
-    url:    https://www.repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=50&Dunit=m&band1=14&band2=&freq=&call=&features%5B%5D=FM&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
+    url:    https://repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=50&Dunit=m&band1=14&band2=&freq=&call=&features%5B%5D=FM&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
   - link:
     name:   70cm FM within 25 miles
-    url:    https://www.repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=25&Dunit=m&band1=4&band2=&freq=&call=&features%5B%5D=FM&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
+    url:    https://repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=25&Dunit=m&band1=4&band2=&freq=&call=&features%5B%5D=FM&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
   - link:
     name:   D-Star within 50 miles
-    url:    https://www.repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=50&Dunit=m&band1=%25&band2=&freq=&call=&features%5B%5D=DStar&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
+    url:    https://repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=50&Dunit=m&band1=%25&band2=&freq=&call=&features%5B%5D=DStar&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
   - link:
     name:   DMR within 50 miles
-    url:    https://www.repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=50&Dunit=m&band1=%25&band2=&freq=&call=&features%5B%5D=DMR&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
+    url:    https://repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=50&Dunit=m&band1=%25&band2=&freq=&call=&features%5B%5D=DMR&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
   - link:
     name:   NXDN within 50 miles
-    url:    https://www.repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=50&Dunit=m&band1=%25&band2=&freq=&call=&features%5B%5D=NXDN&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
+    url:    https://repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=50&Dunit=m&band1=%25&band2=&freq=&call=&features%5B%5D=NXDN&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
   - link:
     name:   P25 within 50 miles
-    url:    https://www.repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=50&Dunit=m&band1=%25&band2=&freq=&call=&features%5B%5D=P25&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
+    url:    https://repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=50&Dunit=m&band1=%25&band2=&freq=&call=&features%5B%5D=P25&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
   - link:
     name:   System Fusion within 50 miles
-    url:    https://www.repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=50&Dunit=m&band1=%25&band2=&freq=&call=&features%5B%5D=YSF&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
+    url:    https://repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=50&Dunit=m&band1=%25&band2=&freq=&call=&features%5B%5D=YSF&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
   - link:
     name:   AllStar within 50 miles
-    url:    https://www.repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=50&Dunit=m&band1=%25&band2=&freq=&call=&features%5B%5D=AllStar&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
+    url:    https://repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=50&Dunit=m&band1=%25&band2=&freq=&call=&features%5B%5D=AllStar&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
   - link:
     name:   EchoLink within 50 miles
-    url:    https://www.repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=50&Dunit=m&band1=%25&band2=&freq=&call=&features%5B%5D=EchoLink&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
+    url:    https://repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=50&Dunit=m&band1=%25&band2=&freq=&call=&features%5B%5D=EchoLink&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
   - link:
     name:   IRLP within 50 miles
-    url:    https://www.repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=50&Dunit=m&band1=%25&band2=&freq=&call=&features%5B%5D=IRLP&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
+    url:    https://repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=50&Dunit=m&band1=%25&band2=&freq=&call=&features%5B%5D=IRLP&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
   - link:
     name:   WIRES within 50 miles
-    url:    https://www.repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=50&Dunit=m&band1=%25&band2=&freq=&call=&features%5B%5D=WIRES&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
+    url:    https://repeaterbook.com/repeaters/prox_result.php?city=Atkins+Library&lat=&long=&distance=50&Dunit=m&band1=%25&band2=&freq=&call=&features%5B%5D=WIRES&status_id=%25&use=%25&order=distance_calc%2C+state_id%2C+%60call%60+ASC
 
 - title:     Band Information
   links:
@@ -131,7 +131,7 @@
   links:
   - link:
     name:   RF Line-of-Sight
-    url:    https://scadacore.com/tools/rf-path/rf-line-of-sight/
+    url:    https://scadacore.com/tools/rf-path/rf-line-of-sight
   - link:
     name:   Time.is
     url:    https://time.is

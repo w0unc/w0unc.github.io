@@ -60,10 +60,10 @@ layout: home
 							<div class="card mb-4 mx-auto shadow-sm">
 								<div class="row no-gutters h-100">
 									<div class="col-md-2 text-center bg-dark text-white" style="font-family: 'Open Sans';">
-										<ul class="list-unstyled">
-											<li><span style="font-weight: bold; font-size: 50px;">{{ event.date | date: "%-d" }}</span></li>
-											<li><span style="font-size: 25px;">{{ event.date | date: "%b" }}</span></li>
-											<li><span style="font-size: 15px;">{{ event.date | date: "%Y" }}</span></li>
+										<ul class="list-unstyled event-date">
+											<li><span class="event-date-day">{{ event.date | date: "%-d" }}</span></li>
+											<li><span class="event-date-month">{{ event.date | date: "%b" }}</span></li>
+											<li><span class="event-date-year">{{ event.date | date: "%Y" }}</span></li>
 											{% if event.start-date != event.end-date %}
 												<li><hr></li>
 												<li>{{ event.start-date | date: "%-d" }} {{ event.start-date | date: "%b" }} -</li>

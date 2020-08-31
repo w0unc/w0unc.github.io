@@ -61,6 +61,28 @@ header .btn-lg {
 
 
 /*******************************/
+/*         EVENT CARD          */
+/*******************************/
+
+.event-date {
+	font-family: 'Open Sans';
+}
+
+.event-date .event-date-day {
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.event-date .event-date-month {
+	font-size: 35px;
+}
+
+.event-date .event-date-year {
+	font-size: 20px;
+}
+
+
+/*******************************/
 /*           FOOTER            */
 /*******************************/
 
