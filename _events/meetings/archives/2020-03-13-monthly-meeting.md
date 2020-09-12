@@ -11,8 +11,6 @@ ninerengage-id:				'5178427' # An event id for the event on NinerEngage. Optiona
 link:									'' # An external link to the event. Optional.
 access:								'School' # Who will be able to join us for the event. Values: 'Club', 'School', or 'Public'.
 status:								'Attending' # Provides the status of the event. Values: 'Attending', 'Planned', 'Cancelled'.
-rsvp:									false # Provides a note if RSVP via email is required.
-transportation:				false # Provides a note if transportation will be provided.
 published:						true # Toggle visibility of the event in feeds.
 tags:									['meetings'] # The tags for the event.
 ---

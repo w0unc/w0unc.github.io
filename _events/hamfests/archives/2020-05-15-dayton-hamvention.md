@@ -11,8 +11,6 @@ ninerengage-id:				'' # An event id for the event on NinerEngage. Optional.
 link:									'https://hamvention.org' # An external link to the event. Optional.
 access:								'Public' # Who will be able to join us for the event. Values: 'Club', 'School', or 'Public'.
 status:								'Cancelled' # Provides the status of the event. Values: 'Attending', 'Planned', 'Cancelled'.
-rsvp:									false # Provides a note if RSVP via email is required.
-transportation:				false # Provides a note if transportation will be provided.
 published:						true # Toggle visibility of the event in feeds.
 tags:									['hamfests'] # The tags for the event.
 ---
