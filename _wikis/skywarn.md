@@ -25,7 +25,7 @@ The Skywarn program is a collection of groups and individuals who volunteer thei
 
 [Central Carolina Skywarn](https://centralcarolinaskywarn.net){:target="_blank"} - Chatham, Durham, Edgecombe, Franklin, Granville, Halifax, Harnett, Johnston, Lee, Nash, Orange, Person, Sampson, Vance, Wake, Warren, Wayne, and Wilson.
 
-[Gaston Spotter Group](http://gastonspotters.x10.bz){:target="_blank"} - Catawba¹, Cleveland¹, Gaston¹, Iredell, Lincoln¹, Mecklenburg¹, and Rutherford¹.
+[Metrolina Spotter Group](https://metrolinaspotters.com){:target="_blank"} - Catawba¹, Cleveland¹, Gaston¹, Iredell, Lincoln¹, Mecklenburg¹, and Rutherford¹.
 
 [ILM Skywarn](http://ilm-skywarn.net/){:target="_blank"} - Bladen, Brunswick, Columbus, New Hanover, Pender, and Robeson.
 

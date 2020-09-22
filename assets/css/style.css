@@ -98,6 +98,26 @@ footer > .copyright {
 
 
 /*******************************/
+/*         GOOGLE MAPS         */
+/*******************************/
+
+.google-maps {
+	height: 0;
+	padding-bottom: 75%;
+	position: relative;
+	overflow: hidden;
+}
+
+.google-maps iframe {
+	height: 100% !important;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100% !important;
+}
+
+
+/*******************************/
 /* BOOTSTRAP CARD COLUMNS FIX  */
 /*******************************/
 

@@ -27,5 +27,4 @@ When you enter the park, stay on Sandy Lane SW until you pass a half burned down
 Once you enter the second parking lot, turn right onto the dirt road and follow it around to the large parking lot.
 We will be setup in the back.
 
-![]({{ site.baseurl }}/assets/img/FrankLiskePark.png){:width="100%"}
-[Original]({{ site.baseurl }}/assets/img/FrankLiskePark.png)
+[![]({{ site.baseurl }}/assets/img/FrankLiskePark.png){:width="100%"}]({{ site.baseurl }}/assets/img/FrankLiskePark.png)
