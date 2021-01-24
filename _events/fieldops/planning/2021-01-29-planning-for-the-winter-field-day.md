@@ -18,4 +18,4 @@ tags:									['fieldops'] # The tags for the event.
 
 Planning for the Winter Field Day the following day.
 
-[Discord](https://ninerengage.uncc.edu/news/174684)
+[Zoom](https://uncc.zoom.us/j/93887297090)
