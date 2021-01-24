@@ -10,11 +10,15 @@ time:									['3:00 PM - 11:59 PM EST'] # The time range of the event. Does not
 ninerengage-id:				'6568411' # An event id for the event on NinerEngage. Optional.
 link:									'https://arrl.org/sweepstakes' # An external link to the event. Optional.
 access:								'Public' # Who will be able to join us for the event. Values: 'Club', 'School', or 'Public'.
-status:								'Attending' # Provides the status of the event. Values: 'Attending', 'Planned', 'Cancelled'.
+status:								'Cancelled' # Provides the status of the event. Values: 'Attending', 'Planned', 'Cancelled'.
 published:						true # Toggle visibility of the event in feeds.
 tags:									['fieldops'] # The tags for the event.
 ---
 
+
+This event has been cancelled.
+
+<!--more-->
 
 The Amateur Radio Club will be hosting a field ops for the ARRL Sweepstakes Contest, SSB, on the top of CRI Parking Deck on campus.
 
