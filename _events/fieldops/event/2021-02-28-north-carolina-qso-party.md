@@ -4,9 +4,9 @@ title:								'North Carolina QSO Party' # The name of the event.
 location:							'CRI Parking Deck' # The location or building of the event.
 street:								'9201 University City Blvd' # The street address of the event.
 address:							'Charlotte, NC' # The city and state of the event.
-start-date:						2021-02-27 # THe date the event will start. YYYY-MM-DD.
-end-date:							2021-02-27 # THe date the event will end. YYYY-MM-DD.
-time:									['12:00 PM - 11:59 PM EST'] # The time range of the event. Does not include travel. An array of times for multi-day events.
+start-date:						2021-02-28 # THe date the event will start. YYYY-MM-DD.
+end-date:							2021-02-28 # THe date the event will end. YYYY-MM-DD.
+time:									['03:00 PM - 08:00 PM EST'] # The time range of the event. Does not include travel. An array of times for multi-day events.
 ninerengage-id:				'6708955' # An event id for the event on NinerEngage. Optional.
 link:									'https://ncqsoparty.org' # An external link to the event. Optional.
 access:								'Public' # Who will be able to join us for the event. Values: 'Club', 'School', or 'Public'.
