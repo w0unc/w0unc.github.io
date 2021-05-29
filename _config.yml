@@ -27,7 +27,8 @@ TZ: 'America/New_York'
 feed:
   collections:
     - events
-
+exclude:
+  - events.html
 
 # GitHub
 github: https://github.com/w0unc
