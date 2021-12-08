@@ -2,8 +2,8 @@
 layout:						'wiki-default' # The layout to use for the wiki page.
 title:						'North Carolina Skywarn' # The title of the wiki page.
 image:						'' # The image for the wiki page. Images should be placed in '/assets/img/wiki/' and have the same name as the 'title' field in lowercase, replacing spaces with a '-'.
-last-edit-date:		'2020-08-16' # The last date the wiki page was edited. 'YYYY-MM-DD'.
-last-edit-time:		'11:39 AM EST' # The time of the last wiki page edit. 'HH:MM AM/PM TZ'.
+last-edit-date:		'2021-12-08' # The last date the wiki page was edited. 'YYYY-MM-DD'.
+last-edit-time:		'11:35 AM EST' # The time of the last wiki page edit. 'HH:MM AM/PM TZ'.
 editors:					['KN4WXU Brandon'] # The editors of the wiki page.
 categories:				['skywarn'] # The categories for the wiki page.
 published:				true # Hides or shows the wiki page in feeds.
