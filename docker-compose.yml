@@ -1,0 +1,13 @@
+version: '3.6'
+
+services:
+  w0uncgithub:
+    image: w0unc.github.io
+    build: .
+    volumes:
+      - .:/var/www/html
+    working_dir: /var/www/html
+    network_mode: host
+    restart: always
+    command: >
+      sh -c "bundle install && bundle exec jekyll server"

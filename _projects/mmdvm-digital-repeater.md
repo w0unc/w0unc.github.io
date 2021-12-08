@@ -1,7 +1,7 @@
 ---
 layout:									'project' # The layout to use for the project page. This should never be changed.
 title:									'Cross-Mode Repeater System' # The name of the project.
-status:									'Building' # The status of the project. Values: 'Designing', 'Building', 'Testing', 'On-Hold', 'Cancelled', or Complete.
+status:									'On-Hold' # The status of the project. Values: 'Designing', 'Building', 'Testing', 'On-Hold', 'Cancelled', or Complete.
 project-lead:						'W4HEK Justin' # The person who led the project.
 progress:								30 # Progress percentage of the project.
 categories:							[] # The categories for the project.

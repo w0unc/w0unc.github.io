@@ -19,13 +19,11 @@ The Skywarn program is a collection of groups and individuals who volunteer thei
 
 *The information on this page is collected from the individual Skywarn group websites, NOT the National Weather Service website.*
 
-[Blacksburg Skywarn](http://blacksburgskywarn.org){:target="_blank"} - Ashe, Alleghany, Caswell², Rockingham², Stokes², Surry², Watauga, Wilkes, and Yadkin.
-
-[Blue Ridge Weather Watch](http://thebrww.org){:target="_blank"} - Buncombe, Burke, Catawba¹, Cleveland¹, Gaston¹, Haywood, Henderson, Lincoln¹, Madison, McDowell, Mecklenburg¹, Mitchell, Polk, Rutherford¹, Transylvania, and Yancey.
+[Blacksburg Skywarn](http://blacksburgskywarn.org){:target="_blank"} - Ashe, Alleghany, Caswell¹, Rockingham¹, Stokes¹, Surry¹, Watauga, Wilkes, and Yadkin.
 
 [Central Carolina Skywarn](https://centralcarolinaskywarn.net){:target="_blank"} - Chatham, Durham, Edgecombe, Franklin, Granville, Halifax, Harnett, Johnston, Lee, Nash, Orange, Person, Sampson, Vance, Wake, Warren, Wayne, and Wilson.
 
-[Metrolina Spotter Group](https://metrolinaspotters.com){:target="_blank"} - Catawba¹, Cleveland¹, Gaston¹, Iredell, Lincoln¹, Mecklenburg¹, and Rutherford¹.
+[Metrolina Spotter Group](https://metrolinaspotters.com){:target="_blank"} - Alexander, Buncombe, Burke, Cabarrus, Caldwell, Catawba, Cleveland, Gaston, Haywood, Henderson, Iredell, Lincoln, Madison, McDowell, Mecklenburg, Mitchell, Polk, Rowan, Rutherford, Transylvania, Union, and Yancey.
 
 [ILM Skywarn](http://ilm-skywarn.net/){:target="_blank"} - Bladen, Brunswick, Columbus, New Hanover, Pender, and Robeson.
 
@@ -33,15 +31,13 @@ The Skywarn program is a collection of groups and individuals who volunteer thei
 
 [Southwest Carolina Skywarn](http://cherokee-ares.net/SKYWARN.htm){:target="_blank"} - Cherokee and Clay.
 
-[Triad Skywarn](https://triadskywarn.blogspot.com){:target="_blank"} - Alamance, Caswell², Davidson, Forsyth, Guilford, Montgomery, Moore, Randolph, Rockingham², Stanly, Stokes², and Surry².
+[Triad Skywarn](https://triadskywarn.blogspot.com){:target="_blank"} - Alamance, Caswell¹, Davidson, Forsyth, Guilford, Montgomery, Moore, Randolph, Rockingham¹, Stanly, Stokes¹, and Surry¹.
 
 [Wakefield Skywarn](https://wx4akq.org){:target="_blank"} - Bertie, Camden, Chowan, Currituck, Gates, Hertford, Pasquotank, and Perquimans.
 
-**NO SKYWARN GROUP** - Alexander, Anson, Avery, Cabarrus, Caldwell, Cumberland, Davie, Graham, Hoke, Jackson, Northampton, Richmond, Rowan, Scotland, Swain, and Union.
+**NO SKYWARN GROUP** - Anson, Avery, Cumberland, Davie, Graham, Hoke, Jackson, Macon, Northampton, Richmond, Scotland, and Swain.
 
-*¹ - Counties are shared between the Blue Ridge Spotter Group and the Gaston Spotter Group.*
-
-*² - Counties are shared between the Triad Skywarn and Blacksburg Skywarn.*
+*¹ - Counties are shared between the Triad Skywarn and Blacksburg Skywarn.*
 
 {% include wt-section-title.html text="North Carolina Skywarn Map" %}
 
